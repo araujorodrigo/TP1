@@ -10,7 +10,7 @@ using namespace std;
       A classe possui o VALOR a ser armazenado e função de VALIDAR como atribuições privadas.
       O valor deve passar por SETVALOR antes de ser armazenado.
 */
-class duracao {
+class Duracao {
     private:
         int valor;
         void validar(int);
@@ -23,9 +23,10 @@ class duracao {
       O método GETVALOR é posto como inline para evitar custo computacional,
       visto que é apenas retorno de uma informação.
 */
-inline int duracao::getValor() const{
+inline int Duracao::getValor() const{
     return valor;
 }
+
 
 /*
 class Cidade{

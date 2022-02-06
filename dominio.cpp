@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include "dominio.h"
 #include <exception>
+#include "dominio.h"
+
 
 /*void Cidade::validar(string cidadeNome){
 
@@ -30,7 +31,7 @@ void Cidade::setCidade (string nomeCidade){
     O instrutor pode oferecer seu passeio dentre estas opções de duração.
     A função abaixo busca validar se o valor incluído pode ser cadastrado ou não.
 */
-void duracao::validar(int valor){
+void Duracao::validar(int valor){
     if (valor != 30 && valor != 60 && valor != 90 && valor != 120 && valor != 180)
         throw invalid_argument("Argumento invalido.");
 }
@@ -39,8 +40,8 @@ void duracao::validar(int valor){
     SETVALOR é o meio pelo qual se faz adição de valor para a variável.
     Para isto, requer-se validção deste valor.
 */
-void duracao::setValor(int valor){
-    duracao::validar(valor);
+void Duracao::setValor(int valor){
+    Duracao::validar(valor);
     this->valor = valor;
 }
 

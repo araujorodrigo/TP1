@@ -1,6 +1,7 @@
 #include <iostream>
-#include "dominio.h"
 #include <exception>
+#include "dominio.h"
+#include "testes.h"
 
 using namespace std;
 
@@ -22,18 +23,33 @@ Cidade a;
 
     cout << nomeCidade << endl;*/
 
+///
+/// A classe DuraÃ§Ã£o serÃ¡ testada antes de sua utilizaÃ§Ã£o
+///
+
+    TUDuracao testeDuracao;
+
+    // Invocar mï¿½todo e apresentar mensagem acerca do resultado do teste.
+
+    switch(testeDuracao.run()){
+        case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUDuracao::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
 /*!
-    Declaração da função de duração do passeio.
-    Assim como, a validação do valor inserido.
+    DeclaraÃ§Ã£o da funÃ§Ã£o de duraÃ§Ã£o do passeio.
+    Assim como, a validaÃ§Ã£o do valor inserido.
 */
 
     int duracaoPasseio;
-    duracao passeio;
+    Duracao passeio;                                    //InstÃ¢ncia da classe Duracao
     cout << "Digite a duracao do passeio: " << endl;
     cin >> duracaoPasseio;
 
     try{
-        passeio.duracao::setValor(duracaoPasseio);
+        passeio.Duracao::setValor(duracaoPasseio);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
