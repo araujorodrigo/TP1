@@ -4,7 +4,7 @@
 #include <exception>
 
 using namespace std;
-
+//=========================================================================================
 //!   Classe duração
 /*!
       A classe possui o VALOR a ser armazenado e função de VALIDAR como atribuições privadas.
@@ -27,6 +27,25 @@ inline int Duracao::getValor() const{
     return valor;
 }
 
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// Classe Nota permite o armazenamento da avaliação dada pelo usuário para aquela excursão
+///
+class Nota{
+     private:
+        int valor;
+        void validar(int);
+    public:
+        void setValor(int valor);
+        int getValor() const;
+};
+
+inline int Nota::getValor() const{
+    return valor;
+}
 
 /*
 class Cidade{
@@ -43,5 +62,7 @@ class Cidade{
 inline string Cidade::getCidade(){
     return nomeCidade;
 }*/
+
+
 
 #endif // DOMINIO_H_INCLUDED

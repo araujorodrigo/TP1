@@ -29,8 +29,6 @@ Cidade a;
 
     TUDuracao testeDuracao;
 
-    // Invocar m�todo e apresentar mensagem acerca do resultado do teste.
-
     switch(testeDuracao.run()){
         case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
                                 break;
@@ -38,10 +36,29 @@ Cidade a;
                                 break;
     }
 
-/*!
-    Declaração da função de duração do passeio.
-    Assim como, a validação do valor inserido.
-*/
+///
+/// Teste Unidade - Nota
+/// A função 'run' irá rodar ambos os teste, recomenda-se comentar um dos teste em "testes.cpp"
+/// para uma melhor anélise.
+///
+    TUNota testeNota;
+
+    switch(testeNota.run()){
+        case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUNota::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+
+
+//================================================================================
+
+
+///
+/// Declaração da função de duração do passeio.
+/// Assim como, a validação do valor inserido.
+///
 
     int duracaoPasseio;
     Duracao passeio;                                    //Instância da classe Duracao
@@ -55,5 +72,24 @@ Cidade a;
         cout << "Excecao: " << exp.what() << endl;
     }
 
+
+///
+/// Declaração da função de Nota de avaliação.
+/// Assim como, a validação do valor inserido.
+///
+    // Declaração de instâncias
+    int notaPasseio;
+    Nota nota;
+
+    // Desenvolvimento
+    cout << "Digite a Nota de avaliação para a excursão: " << endl;
+    cin >> notaPasseio;
+
+    try{
+        nota.Nota::setValor(notaPasseio);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
     return 0;
 }

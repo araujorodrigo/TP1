@@ -1,8 +1,10 @@
 ///Inclusão de bibliotecas auxiliares
+#include <iostream>
 #include <exception>
 #include "dominio.h"
 #include "testes.h"
 
+using namespace std;
 ///
 ///   setUp cria um objeto no proposito de completação dos testes
 ///
@@ -21,7 +23,7 @@ void TUDuracao::testarCenarioSucesso(){
         if (duracao->getValor() != VALOR_VALIDO)
             estado = FALHA;
     }
-    catch(.../*invalid_argument &exc*/){
+    catch(invalid_argument &exc){
         estado = FALHA;
     }
 }
@@ -35,8 +37,9 @@ void TUDuracao::testarCenarioFalha(){
         duracao->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(.../*invalid_argument &exc*/){                 ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (duracao->getValor() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
+        //cout << "FALHA   - CODIGO. Excessao: " << exc.what() << duracao->getValor() << VALOR_INVALIDO << endl;          CÓDIGO DE TESTE
+        if (duracao->getValor() != VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
             estado = FALHA;
     }
 }
@@ -54,9 +57,67 @@ void TUDuracao::tearDown(){
 int TUDuracao::run(){
     setUp();
     testarCenarioSucesso();
-    testarCenarioFalha();
+    //testarCenarioFalha();
     tearDown();
     return estado;
 }
 
+
+//===========================================================================================================
+
+///
+/// Criação do objeto de testes de nota
+/// e atribuição de estado inicial.
+///
+void TUNota::setUp(){
+    nota = new Nota();                                ///inicializa o objeto DURACAO -------- Já não havia sido criado em testes.h ???
+    estado = SUCESSO;                                 ///inicializa a instância ESTADO
+}
+
+///
+/// Testes de cenário de sucesso e de falha.
+///
+void TUNota::testarCenarioSucesso(){
+    try{
+        nota->setValor(VALOR_VALIDO);
+        if (nota->getValor() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &exc){
+        estado = FALHA;
+    }
+}
+
+
+void TUNota::testarCenarioFalha(){
+    try{
+        nota->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
+        //cout << "FALHA   - CODIGO. Excessao: " << exc.what() << nota->getValor() << VALOR_INVALIDO << endl;          CÓDIGO DE TESTE
+        if (nota->getValor() != VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+            estado = FALHA;
+    }
+}
+
+
+///
+/// exclusão correta do objeto de testes
+///
+void TUNota::tearDown(){
+    delete nota;                                   ///Exclusão do objeto da maneira correta
+}
+
+///
+/// Script de teste de unidade para nota.
+/// Retorna somente um estado, é passível de melhoria.
+///
+int TUNota::run(){
+    setUp();
+    //testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
 
