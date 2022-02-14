@@ -1,11 +1,9 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <exception>
 #include "dominio.h"
 #include "testes.h"
-#include <unicode/unistr.h>
-#include <unicode/ustream.h>
-#include <unicode/locid.h>
 
 //=========================================================================================
 //=========================================================================================
@@ -57,35 +55,31 @@ void Nota::setValor(int valor){
 //=========================================================================================
 
 
-void Cidade::validar(string cidadeNome){
+void Cidade::validar(char *nomeCidade){
 
     string cidadeDisponivel[16] = {"hong kong", "bangkok", "macau", "singapura", "londres", "paris",
                                  "dubai", "delhi", "istambu", "kuala", "lumpur", "nova iorque",
                                  "antalya", "mumbai", "shenzhen", "phuket"};
 
-    //strlwr(cidadeNome);
-
-
-    //string string1 = u8"ÅSH to LoWer WÅN";
-    icu::UnicodeString unicodeString(cidadeNome.c_str());
-    std::cout << "input string:  " << cidadeNome << std::endl
-              << "output string: " << unicodeString.toLower() << std::endl;
-    //return 0;
+    cout << "Checkpoint: " << nomeCidade << endl;
+    strlwr(nomeCidade);
+    string cidadeNomeAux = nomeCidade;
+    cout << "Checkpoint: " << cidadeNomeAux << endl;
 
     int selecao = 0;
-    //int resto = 0;
 
-    for(int i=0; i<16, i++){
-        if(cidadeNome == cidadeDisponivel[i]){
+    for(int i=0; i<16; i++){
+        if(cidadeNomeAux == cidadeDisponivel[i]){
             selecao = selecao+1;
         }
     }
     if (selecao != 1){
+
         throw invalid_argument("Cidade invalida.");
     }
 }
 
-void Cidade::setCidade (string nomeCidade){
+void Cidade::setCidade (char *nomeCidade){
     validar(nomeCidade);
     this->nomeCidade = nomeCidade;
 }

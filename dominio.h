@@ -57,10 +57,10 @@ inline int Nota::getValor() const{
 class Cidade{
     private:
         string    nomeCidade;
-        void    validar(string);
+        void    validar(char*);
 
     public:
-        void  setCidade(string);
+        void  setCidade(char*);
         const string getCidade(); //Deve ser somente leitura
 
 };

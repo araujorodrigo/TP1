@@ -1,5 +1,7 @@
 #include <iostream>
 #include <exception>
+#include <string>
+#include <cstring>
 #include "dominio.h"
 #include "testes.h"
 
@@ -64,6 +66,7 @@ Cidade a;
     Duracao passeio;                                    //Instância da classe Duracao
     cout << "Digite a duracao do passeio: " << endl;
     cin >> duracaoPasseio;
+    cin.get();
 
     try{
         passeio.Duracao::setValor(duracaoPasseio);
@@ -83,10 +86,10 @@ Cidade a;
 
     // Desenvolvimento
     cout << "Digite a Nota de avaliação para a excursão: " << endl;
-    cin >> notaPasseio;
+    //cin >> notaPasseio;
 
     try{
-        nota.Nota::setValor(notaPasseio);
+        nota.Nota::setValor(30/*notaPasseio*/);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
@@ -99,12 +102,12 @@ Cidade a;
 /// Assim como, a validação do nome inserido.
 ///
     // Declaração de instâncias
-    string nomeCidade;
+    char nomeCidade[20];
     Cidade cidade;
 
     // Desenvolvimento
     cout << "Digite o Nome da cidade para a excursão: " << endl;
-    cin >> nomeCidade;
+    cin.getline(nomeCidade,20) ;
 
     //Verificação
     try{
