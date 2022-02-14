@@ -91,5 +91,30 @@ Cidade a;
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
+
+
+///
+/// Declaração da função nome da cidade.
+/// Assim como, a validação do nome inserido.
+///
+    // Declaração de instâncias
+    string nomeCidade;
+    Cidade cidade;
+
+    // Desenvolvimento
+    cout << "Digite o Nome da cidade para a excursão: " << endl;
+    cin >> nomeCidade;
+
+    //Verificação
+    try{
+        cidade.Cidade::setCidade(nomeCidade);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+//========================================================================================
+
     return 0;
 }

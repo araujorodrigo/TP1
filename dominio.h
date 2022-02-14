@@ -47,22 +47,27 @@ inline int Nota::getValor() const{
     return valor;
 }
 
-/*
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+
+
 class Cidade{
     private:
         string    nomeCidade;
         void    validar(string);
 
     public:
-        void    setCidade(string);
-        const string  getCidade(); //Deve ser somente leitura
+        void  setCidade(string);
+        const string getCidade(); //Deve ser somente leitura
 
-}; // CIDADE
+};
 
-inline string Cidade::getCidade(){
+inline const string Cidade::getCidade(){
     return nomeCidade;
-}*/
-
+}
 
 
 #endif // DOMINIO_H_INCLUDED

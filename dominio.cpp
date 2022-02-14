@@ -3,29 +3,9 @@
 #include <exception>
 #include "dominio.h"
 #include "testes.h"
-
-
-/*void Cidade::validar(string cidadeNome){
-
-    strlwr(cidadeNome);
-
-    if (cidadeNome.compare("hong kong") != 0 || cidadeNome.compare("bangkok") != 0      ||
-        cidadeNome.compare("macau") != 0     || cidadeNome.compare("singapura") != 0    ||
-        cidadeNome.compare("londres") != 0   || cidadeNome.compare("paris") != 0        ||
-        cidadeNome.compare("dubai") != 0     || cidadeNome.compare("delhi") != 0        ||
-        cidadeNome.compare("istambu") != 0   || cidadeNome.compare("kuala") != 0        ||
-        cidadeNome.compare("lumpur") != 0    || cidadeNome.compare("nova iorque") != 0  ||
-        cidadeNome.compare("antalya") != 0   || cidadeNome.compare("mumbai") != 0       ||
-        cidadeNome.compare("shenzhen") != 0  || cidadeNome.compare("phuket") != 0){
-            throw invalid_argument("Argumento inválido.");
-    }
-}
-
-void Cidade::setCidade (string nomeCidade){
-    validar(nomeCidade);
-    this->nomeCidade = nomeCidade;
-}
-*/
+#include <unicode/unistr.h>
+#include <unicode/ustream.h>
+#include <unicode/locid.h>
 
 //=========================================================================================
 //=========================================================================================
@@ -37,7 +17,7 @@ void Cidade::setCidade (string nomeCidade){
 ///
 void Duracao::validar(int valor){
     if (valor != 30 && valor != 60 && valor != 90 && valor != 120 && valor != 180)
-        throw invalid_argument("Argumento invalido.");
+        throw invalid_argument("Duracao invalida.");
 }
 
 ///
@@ -49,8 +29,10 @@ void Duracao::setValor(int valor){
     this->valor = valor;
 }
 
+
 //=========================================================================================
 //=========================================================================================
+
 
 ///
 /// A função de validação da nota possibilita a seleção dentro da faixa correta de valores para nota,
@@ -58,7 +40,7 @@ void Duracao::setValor(int valor){
 ///
 void Nota::validar(int valor){
     if (valor != 0 && valor != 1 && valor != 2 && valor != 3 && valor != 4 && valor != 5)
-        throw invalid_argument("Argumento invalido.");
+        throw invalid_argument("Nota invalida.");
 }
 
 ///
@@ -70,3 +52,40 @@ void Nota::setValor(int valor){
     this->valor = valor;
 }
 
+
+//=========================================================================================
+//=========================================================================================
+
+
+void Cidade::validar(string cidadeNome){
+
+    string cidadeDisponivel[16] = {"hong kong", "bangkok", "macau", "singapura", "londres", "paris",
+                                 "dubai", "delhi", "istambu", "kuala", "lumpur", "nova iorque",
+                                 "antalya", "mumbai", "shenzhen", "phuket"};
+
+    //strlwr(cidadeNome);
+
+
+    //string string1 = u8"ÅSH to LoWer WÅN";
+    icu::UnicodeString unicodeString(cidadeNome.c_str());
+    std::cout << "input string:  " << cidadeNome << std::endl
+              << "output string: " << unicodeString.toLower() << std::endl;
+    //return 0;
+
+    int selecao = 0;
+    //int resto = 0;
+
+    for(int i=0; i<16, i++){
+        if(cidadeNome == cidadeDisponivel[i]){
+            selecao = selecao+1;
+        }
+    }
+    if (selecao != 1){
+        throw invalid_argument("Cidade invalida.");
+    }
+}
+
+void Cidade::setCidade (string nomeCidade){
+    validar(nomeCidade);
+    this->nomeCidade = nomeCidade;
+}
