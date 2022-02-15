@@ -8,24 +8,9 @@
 using namespace std;
 
 int main (){
-/*
-string nomeCidade;
-Cidade a;
-
-    try
-    {
-        nomeCidade="Hong Kong";
-        a.setCidade(nomeCidade);
-    }
-    catch(invalid_argument &exp)
-    {
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-    cout << nomeCidade << endl;*/
 
 ///
+/// Teste Unidade - Duracao
 /// A classe Duração será testada antes de sua utilização
 ///
 
@@ -56,18 +41,38 @@ Cidade a;
 
 //================================================================================
 
+///
+/// Teste Unidade - Cidade
+/// A função 'run' irá rodar ambos os teste, recomenda-se comentar um dos teste em "testes.cpp"
+/// para uma melhor anélise.
+///
+    TUCidade testeCidade;
+
+    switch(testeCidade.run()){
+        case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUNota::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+
+
+//================================================================================
 
 ///
 /// Declaração da função de duração do passeio.
 /// Assim como, a validação do valor inserido.
 ///
 
-    int duracaoPasseio;
+    int duracaoPasseio = 30;
     Duracao passeio;                                    //Instância da classe Duracao
-    cout << "Digite a duracao do passeio: " << endl;
-    cin >> duracaoPasseio;
-    cin.get();
+    //cout << "Digite a duracao do passeio: " << endl;
+    //cin >> duracaoPasseio;
+    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim não influencia no getline.
 
+///
+/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
+///
     try{
         passeio.Duracao::setValor(duracaoPasseio);
     }
@@ -81,15 +86,16 @@ Cidade a;
 /// Assim como, a validação do valor inserido.
 ///
     // Declaração de instâncias
-    int notaPasseio;
+    int notaPasseio = 5;
     Nota nota;
 
     // Desenvolvimento
-    cout << "Digite a Nota de avaliação para a excursão: " << endl;
+    //cout << "Digite a Nota de avaliação para a excursão: " << endl;
     //cin >> notaPasseio;
+    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim não influencia no getline.
 
     try{
-        nota.Nota::setValor(30/*notaPasseio*/);
+        nota.Nota::setValor(notaPasseio);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;

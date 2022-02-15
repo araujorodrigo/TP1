@@ -5,11 +5,11 @@
 
 using namespace std;
 //=========================================================================================
-//!   Classe duração
-/*!
-      A classe possui o VALOR a ser armazenado e função de VALIDAR como atribuições privadas.
-      O valor deve passar por SETVALOR antes de ser armazenado.
-*/
+///   Classe duração
+///
+///   A classe possui o VALOR a ser armazenado e função de VALIDAR como atribuições privadas.
+///   O valor deve passar por SETVALOR antes de ser armazenado.
+///
 class Duracao {
     private:
         int valor;
@@ -19,10 +19,10 @@ class Duracao {
         int getValor() const;
 };
 
-/*!
-      O método GETVALOR é posto como inline para evitar custo computacional,
-      visto que é apenas retorno de uma informação.
-*/
+///
+///      O método GETVALOR é posto como inline para evitar custo computacional,
+///      visto que é apenas retorno de uma informação.
+///
 inline int Duracao::getValor() const{
     return valor;
 }
@@ -52,8 +52,9 @@ inline int Nota::getValor() const{
 //=========================================================================================
 //=========================================================================================
 
-
-
+///
+/// A Classe cidade permite o armazenamento correto das cidades disponiveis.
+///
 class Cidade{
     private:
         string    nomeCidade;

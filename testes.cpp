@@ -121,3 +121,63 @@ int TUNota::run(){
     return estado;
 }
 
+//===========================================================================================================
+
+///
+/// Criação do objeto de testes de nome de Cidade
+/// e atribuição de estado inicial.
+///
+void TUCidade::setUp(){
+    cidade = new Cidade();                            ///inicializa o objeto CIDADE ---- Já não havia sido criado em testes.h ???
+    estado = SUCESSO;                                 ///inicializa a instância ESTADO
+}
+
+///
+/// Testes de cenário de sucesso e de falha.
+///
+void TUCidade::testarCenarioSucesso(){
+    try{
+        cidade->setValor(VALOR_VALIDO);
+        string CidadeAuxSuc = VALOR_VALIDO;              /// Esta atribuição é necessária por que senão teria (string != char) no if abaixo.
+        if (cidade->getCidade() != CidadeAuxSuc)
+            estado = FALHA;
+    }
+    catch(invalid_argument &exc){
+        estado = FALHA;
+    }
+}
+
+
+void TUCidade::testarCenarioFalha(){
+    try{
+        cidade->setCidade(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
+        //cout << "FALHA   - CODIGO. Excessao: " << exc.what() << nota->getValor() << VALOR_INVALIDO << endl;          CÓDIGO DE TESTE
+        string CidadeAuxFalha = VALOR_VALIDO;
+        if (cidade->getCidade() != CidadeAuxFalha)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+            estado = FALHA;
+    }
+}
+
+
+///
+/// exclusão correta do objeto de testes
+///
+void TUCidade::tearDown(){
+    delete cidade;                                   ///Exclusão do objeto da maneira correta
+}
+
+///
+/// Script de teste de unidade para Cidade.
+/// Retorna somente um estado, é passível de melhoria.
+///
+int TUCidade::run(){
+    setUp();
+    //testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
