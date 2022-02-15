@@ -53,8 +53,10 @@ public:
 ///
 class TUCidade {
 private:
-    const static char VALOR_VALIDO[]   = 'macau';    // Defini��o de constante para evitar n�mero m�gico.
-    const static char VALOR_INVALIDO[] = 'brasilia';   // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    char VALOR_VALIDO[20]   = "macau";    // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    char VALOR_INVALIDO[20] = "brasilia";   // Defini��o de constante para evitar n�mero m�gico.
     Cidade *cidade;                             // Refer�ncia para unidade em teste.
     int estado;                             // Estado do teste.
     void setUp();                           // M�todo para criar unidade em teste.

@@ -137,7 +137,7 @@ void TUCidade::setUp(){
 ///
 void TUCidade::testarCenarioSucesso(){
     try{
-        cidade->setValor(VALOR_VALIDO);
+        cidade->setCidade(VALOR_VALIDO);
         string CidadeAuxSuc = VALOR_VALIDO;              /// Esta atribuição é necessária por que senão teria (string != char) no if abaixo.
         if (cidade->getCidade() != CidadeAuxSuc)
             estado = FALHA;
@@ -175,8 +175,8 @@ void TUCidade::tearDown(){
 ///
 int TUCidade::run(){
     setUp();
-    //testarCenarioSucesso();
-    testarCenarioFalha();
+    testarCenarioSucesso();
+    //testarCenarioFalha();
     tearDown();
     return estado;
 }
