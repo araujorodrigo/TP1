@@ -70,5 +70,29 @@ inline const string Cidade::getCidade(){
     return nomeCidade;
 }
 
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// A Classe Codigo determina o código para escurssão.
+/// Os 6 primeiros digitos são de código e o 7º é digito verificador.
+/// O algorítimo de verificação será "Módulo 11", também usado para determinar
+/// numero de identidade (RG) SSP-SP.
+
+class Codigo{
+    private:
+        char *valor;
+        void  validar(char*);
+
+    public:
+        void  setValor(char*);
+        const char getValor(); //Deve ser somente leitura
+
+};
+
+inline const char Codigo::getValor(){
+    return *valor;
+}
 
 #endif // DOMINIO_H_INCLUDED

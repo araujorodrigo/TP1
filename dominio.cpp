@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring>
 #include <exception>
+#include <cstdlib>
 #include "dominio.h"
 #include "testes.h"
 
@@ -99,3 +100,39 @@ void Cidade::setCidade (char *nomeCidade){
 
 //=========================================================================================
 //=========================================================================================
+
+void Codigo::validar(char *valor){
+    int numerador = 0;
+    int resto = 0;
+    int digito;
+    char CODIGO_INVALIDO[10] = {0,0,0,0,0,0};                   //código inválido.
+
+    if (valor == CODIGO_INVALIDO || valor[0]== "-")       //Condição de excessão
+        throw invalid_argument("Codigo invalido.");
+
+    for(int i=0; i<6; i++){
+        digito = atoi(valor[i]);                          // transforma char em int
+        numerador += digito*(7-i);                        // somador de int
+    }
+
+    resto = numerador % 11;                               //O resto esta em INT
+
+    string toConvert = to_string(resto);                  // Essas duas linhas convertem o DigVerif que e
+    char const *digVerificacao = toConvert.c_str();       // int em char
+
+    if(resto == 10){
+        valor[6]="X";
+    }else{
+        valor[6]=digVerificacao;                          // inclui o Dig.Verificador
+    }
+
+}
+
+///
+///
+///
+///
+void Codigo::setValor(char *valor){
+    Codigo::validar(valor);
+    this->valor = valor;
+}

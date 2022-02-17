@@ -108,16 +108,37 @@ int main (){
 /// Assim como, a validação do nome inserido.
 ///
     // Declaração de instâncias
-    char nomeCidade[20];
+    char nomeCidade[20]="Macau";
     Cidade cidade;
 
     // Desenvolvimento
-    cout << "Digite o Nome da cidade para a excursão: " << endl;
-    cin.getline(nomeCidade,20) ;
+    //cout << "Digite o Nome da cidade para a excursão: " << endl;
+    //cin.getline(nomeCidade,20) ;
 
     //Verificação
     try{
         cidade.Cidade::setCidade(nomeCidade);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+
+///
+/// Declaração da função nome da cidade.
+/// Assim como, a validação do nome inserido.
+///
+    // Declaração de instâncias
+    char numCodigo[10]="010101";
+    Codigo Codigo;
+
+    // Desenvolvimento
+    //cout << "Digite o Nome da cidade para a excursão: " << endl;
+    //cin.getline(nomeCidade,20) ;
+
+    //Verificação
+    try{
+        codigo.Codigo::setValor(numCodigo);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
