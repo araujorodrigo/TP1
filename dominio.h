@@ -82,17 +82,40 @@ inline const string Cidade::getCidade(){
 
 class Codigo{
     private:
-        char *valor;
-        void  validar(char*);
+        string valor;
+        void   validar(string);
 
     public:
-        void  setValor(char*);
-        const char getValor(); //Deve ser somente leitura
+        void  setValor(string);
+        const string getValor(); //Deve ser somente leitura
 
 };
 
-inline const char Codigo::getValor(){
-    return *valor;
+inline const string Codigo::getValor(){
+    return valor;
+}
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// A Classe de Data
+///
+class Data{
+    private:
+        string data;
+        void   validar(string);
+
+    public:
+        void  setData(string);
+        const string getData(); //Deve ser somente leitura
+
+};
+
+inline const string Data::getData(){
+    return data;
 }
 
 #endif // DOMINIO_H_INCLUDED
+

@@ -11,7 +11,7 @@ int main (){
 
 ///
 /// Teste Unidade - Duracao
-/// A classe Dura√ß√£o ser√° testada antes de sua utiliza√ß√£o
+/// A classe DuraÁ„o ser· testada antes de sua utilizaÁ„o
 ///
 
     TUDuracao testeDuracao;
@@ -23,10 +23,10 @@ int main (){
                                 break;
     }
 
+
 ///
 /// Teste Unidade - Nota
-/// A fun√ß√£o 'run' ir√° rodar ambos os teste, recomenda-se comentar um dos teste em "testes.cpp"
-/// para uma melhor an√©lise.
+/// A funÁ„o 'run' ir· rodar ambos os teste.
 ///
     TUNota testeNota;
 
@@ -38,40 +38,64 @@ int main (){
     }
 
 
-
-//================================================================================
-
 ///
 /// Teste Unidade - Cidade
-/// A fun√ß√£o 'run' ir√° rodar ambos os teste, recomenda-se comentar um dos teste em "testes.cpp"
-/// para uma melhor an√©lise.
+/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final
 ///
     TUCidade testeCidade;
 
     switch(testeCidade.run()){
-        case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUCidade::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
                                 break;
-        case TUNota::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUCidade::FALHA  : cout << "FALHA   - CODIGO" << endl;
                                 break;
     }
 
 
+///
+/// Teste Unidade - Codigo
+/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a funÁ„o est· funcionando corretamente.
+///
+    TUCodigo testeCodigo;
 
-//================================================================================
+    switch(testeCodigo.run()){
+        case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUCodigo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+
+    ///
+/// Teste Unidade - Data
+/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a funÁ„o est· funcionando corretamente.
+///
+    TUData testeData;
+
+    switch(testeData.run()){
+        case TUData::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUData::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+//==============================================================================================================================
 
 ///
-/// Declara√ß√£o da fun√ß√£o de dura√ß√£o do passeio.
-/// Assim como, a valida√ß√£o do valor inserido.
+/// DeclaraÁ„o da funÁ„o de duraÁ„o do passeio.
+/// Assim como, a validaÁ„o do valor inserido.
 ///
 
     int duracaoPasseio = 30;
-    Duracao passeio;                                    //Inst√¢ncia da classe Duracao
+    Duracao passeio;                                    //Inst‚ncia da classe Duracao
     //cout << "Digite a duracao do passeio: " << endl;
     //cin >> duracaoPasseio;
-    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim n√£o influencia no getline.
+    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim n„o influencia no getline.
 
 ///
-/// A valida√ß√£o √© feita dentro de bloco try-catch, pois assim √© feito o tratamento adequado de excess√£o.
+/// A validaÁ„o È feita dentro de bloco try-catch, pois assim È feito o tratamento adequado de excess„o.
 ///
     try{
         passeio.Duracao::setValor(duracaoPasseio);
@@ -82,17 +106,17 @@ int main (){
 
 
 ///
-/// Declara√ß√£o da fun√ß√£o de Nota de avalia√ß√£o.
-/// Assim como, a valida√ß√£o do valor inserido.
+/// DeclaraÁ„o da funÁ„o de Nota de avaliaÁ„o.
+/// Assim como, a validaÁ„o do valor inserido.
 ///
-    // Declara√ß√£o de inst√¢ncias
-    int notaPasseio = 5;
+    // DeclaraÁ„o de inst‚ncias
+    int notaPasseio = 4;
     Nota nota;
 
     // Desenvolvimento
-    //cout << "Digite a Nota de avalia√ß√£o para a excurs√£o: " << endl;
+    //cout << "Digite a Nota de avaliaÁ„o para a excurs„o: " << endl;
     //cin >> notaPasseio;
-    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim n√£o influencia no getline.
+    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim n„o influencia no getline.
 
     try{
         nota.Nota::setValor(notaPasseio);
@@ -104,18 +128,18 @@ int main (){
 
 
 ///
-/// Declara√ß√£o da fun√ß√£o nome da cidade.
-/// Assim como, a valida√ß√£o do nome inserido.
+/// DeclaraÁ„o da funÁ„o nome da cidade.
+/// Assim como, a validaÁ„o do nome inserido.
 ///
-    // Declara√ß√£o de inst√¢ncias
+    // DeclaraÁ„o de inst‚ncias
     char nomeCidade[20]="Macau";
     Cidade cidade;
 
     // Desenvolvimento
-    //cout << "Digite o Nome da cidade para a excurs√£o: " << endl;
+    //cout << "Digite o Nome da cidade para a excurs„o: " << endl;
     //cin.getline(nomeCidade,20) ;
 
-    //Verifica√ß√£o
+    //VerificaÁ„o
     try{
         cidade.Cidade::setCidade(nomeCidade);
     }
@@ -125,20 +149,32 @@ int main (){
 
 
 ///
-/// Declara√ß√£o da fun√ß√£o nome da cidade.
-/// Assim como, a valida√ß√£o do nome inserido.
+/// DeclaraÁ„o da funÁ„o CODIGO.
+/// Assim como, a validaÁ„o do CODIGO.
 ///
-    // Declara√ß√£o de inst√¢ncias
-    char numCodigo[10]="010101";
-    Codigo Codigo;
+    // DeclaraÁ„o de inst‚ncias
+    string numCodigo= "123456";
+    Codigo codigo;
 
-    // Desenvolvimento
-    //cout << "Digite o Nome da cidade para a excurs√£o: " << endl;
-    //cin.getline(nomeCidade,20) ;
-
-    //Verifica√ß√£o
+    //VerificaÁ„o
     try{
-        codigo.Codigo::setValor(numCodigo);
+        codigo.setValor(numCodigo);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+///
+/// DeclaraÁ„o da funÁ„o DATA
+/// Assim como, a validaÁ„o dA DATA
+///
+    // DeclaraÁ„o de inst‚ncias
+    string numData = "32.JAN.2020";
+    Data data;
+
+    //VerificaÁ„o
+    try{
+        data.setData(numData);
     }
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;

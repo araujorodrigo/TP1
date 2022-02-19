@@ -71,4 +71,49 @@ public:
 };
 
 
+///
+///   Desenvolvimento da classe de Teste de unidade da classe Código de excursão
+///
+class TUCodigo {
+private:
+    //const static
+    string VALOR_VALIDO = "123456";         // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    string VALOR_INVALIDO = "012";          // Defini��o de constante para evitar n�mero m�gico.
+    Codigo *codigo;                         // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+    void testarCenarioFalha();              // Cen�rio de teste.
+
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
+
+///
+///   Desenvolvimento da classe de Teste de unidade da classe Data da excurssão
+///
+class TUData {
+private:
+    //const static
+    string VALOR_VALIDO = "12 abr 2007";         // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    string VALOR_INVALIDO = "29 fev 2005";          // Defini��o de constante para evitar n�mero m�gico.
+    Data *data;                         // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+    void testarCenarioFalha();              // Cen�rio de teste.
+
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
+
+
 #endif //TESTES_H_INCLUDED
