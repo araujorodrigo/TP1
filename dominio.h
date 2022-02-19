@@ -117,5 +117,30 @@ inline const string Data::getData(){
     return data;
 }
 
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// Classe Descrição
+///
+class Descricao{
+    private:
+        string descricao;
+        void   validar(string);
+
+    public:
+        void   setDescricao(string);
+        const string getDescricao(); //Deve ser somente leitura
+
+};
+
+inline const string Descricao::getDescricao(){
+    return descricao;
+}
+
+
+
 #endif // DOMINIO_H_INCLUDED
 

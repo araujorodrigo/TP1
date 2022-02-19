@@ -67,7 +67,7 @@ int main (){
     }
 
 
-    ///
+///
 /// Teste Unidade - Data
 /// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
 /// Isto significa que a função está funcionando corretamente.
@@ -81,8 +81,22 @@ int main (){
                                 break;
     }
 
-//==============================================================================================================================
+///
+/// Teste Unidade - Descrição
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUDescricao testeDescricao;
 
+    switch(testeDescricao.run()){
+        case TUData::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUData::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+//==============================================================================================================================
+/*
 ///
 /// Declaração da função de duração do passeio.
 /// Assim como, a validação do valor inserido.
@@ -169,7 +183,7 @@ int main (){
 /// Assim como, a validação dA DATA
 ///
     // Declaração de instâncias
-    string numData = "32.JAN.2020";
+    string numData = "31.JAN.2020";
     Data data;
 
     //Verificação
@@ -179,6 +193,28 @@ int main (){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
+*/
+///
+/// Declaração da função de descrição do passeio.
+/// Assim como, a validação do texto inserido.
+///
+
+    string descricaoExcurssao = "TESTE";
+    //                           ^                            ^
+    Descricao descricao;                                    //Instância da classe Duracao
+
+///
+/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
+///
+    try{
+        descricao.Descricao::setDescricao(descricaoExcurssao);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+
 
 //========================================================================================
 

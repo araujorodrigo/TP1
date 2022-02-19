@@ -239,3 +239,35 @@ void Data::setData(string data){
     validar(data);
     this->data = data;
 }
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A validacao da descricao abrange de 0 a 30 caracteres
+///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     @param descricao
+///
+void Descricao::validar(string descricao){
+    smatch matches;
+    regex DESCRICAO_INVALIDA("([ ]{2,})");                      //análise para cada caso separadamente.
+    regex DESCRICAO_INVALIDA2("([.]{2,})");
+
+    if(regex_search(descricao,matches,DESCRICAO_INVALIDA) ||
+       regex_search(descricao,matches,DESCRICAO_INVALIDA2))
+        throw invalid_argument ("Descricao invalida. use apenas 1 espaco e ponto por vez.");
+
+    if(descricao.length()>30)
+        throw invalid_argument("Entrada invalida. No max 30 caracteres.");
+
+}
+
+///
+///     Inclusão da descrição da excurssão
+///     @param descricao
+///
+void Descricao::setDescricao (string descricao){
+    validar(descricao);
+    this->descricao = descricao;
+}
+
