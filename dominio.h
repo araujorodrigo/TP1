@@ -141,6 +141,27 @@ inline const string Descricao::getDescricao(){
 }
 
 
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// Classe Endereço
+///
+class Endereco{
+    private:
+        string endereco;
+        void   validar(string);
+
+    public:
+        void   setEndereco(string);
+        const string getEndereco(); //Deve ser somente leitura
+
+};
+
+inline const string Endereco::getEndereco(){
+    return endereco;
+}
 
 #endif // DOMINIO_H_INCLUDED
 

@@ -89,12 +89,26 @@ int main (){
     TUDescricao testeDescricao;
 
     switch(testeDescricao.run()){
-        case TUData::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUDescricao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
                                 break;
-        case TUData::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUDescricao::FALHA  : cout << "FALHA   - CODIGO" << endl;
                                 break;
     }
 
+
+///
+/// Teste Unidade - Endereco
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUEndereco testeEndereco;
+
+    switch(testeEndereco.run()){
+        case TUEndereco::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUEndereco::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
 //==============================================================================================================================
 /*
 ///
@@ -194,7 +208,7 @@ int main (){
         cout << "Excecao: " << exp.what() << endl;
     }
 
-*/
+
 ///
 /// Declaração da função de descrição do passeio.
 /// Assim como, a validação do texto inserido.
@@ -213,9 +227,27 @@ int main (){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+*/
 
 
+///
+/// Declaração da função de Endereco da excursao.
+/// Assim como, a validação do texto inserido.
+///
 
+    string enderecoExcursao = "TESTE";
+    //                           ^                            ^
+    Endereco endereco;                                    //Instância da classe Endereco
+
+///
+/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
+///
+    try{
+        endereco.Endereco::setEndereco(enderecoExcursao);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
 //========================================================================================
 
     return 0;

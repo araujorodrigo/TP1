@@ -271,3 +271,34 @@ void Descricao::setDescricao (string descricao){
     this->descricao = descricao;
 }
 
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A validacao do endereco abrange de 0 a 20 caracteres
+///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     @param descricao
+///
+void Endereco::validar(string endereco){
+    smatch matches;
+    regex ENDERECO_INVALIDO("([ ]{2,})");                      //análise para cada caso separadamente.
+    regex ENDERECO_INVALIDO2("([.]{2,})");
+
+    if(regex_search(endereco,matches,ENDERECO_INVALIDO) ||
+       regex_search(endereco,matches,ENDERECO_INVALIDO2))
+        throw invalid_argument ("Endereco invalido. use apenas 1 espaco e ponto por vez.");
+
+    if(endereco.length()>20)
+        throw invalid_argument("Endereco invalido. No max 20 caracteres.");
+
+}
+
+///
+///     Inclusão do Endereco da excurssão
+///     @param endereco
+///
+void Endereco::setEndereco (string endereco){
+    validar(endereco);
+    this->endereco = endereco;
+}
