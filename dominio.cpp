@@ -301,6 +301,7 @@ void Endereco::setEndereco (string endereco){
 }
 
 
+/// Lembrar de apagar esta linha
 
 //=========================================================================================
 //=========================================================================================
@@ -389,7 +390,7 @@ void Idioma::setIdioma (char *linguagem){
 void Titulo::validar(string titulo){
     smatch matches;
 
-    regex TITULO_INVALIDO("([ ]{2,})|([.]{2,})|([0-9])");
+    regex TITULO_INVALIDO("([ ]{2,})|([.]{2,})|([0-9])");  "()[@]()"
 
     if(regex_search(titulo,matches,TITULO_INVALIDO)){ //||
        //regex_search(titulo,matches,TITULO_INVALIDO2))
