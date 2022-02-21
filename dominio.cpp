@@ -147,6 +147,9 @@ void Codigo::setValor(string valor){
     this->valor = valor;
 }
 
+//=========================================================================================
+//=========================================================================================
+
 
 ///
 ///   Validação da Data em que dia, mês e ano, serão representados por
@@ -184,6 +187,7 @@ void Data::validar(string data){
         if (ano<2000 || ano>9999){                  // Verificação do ano.
             throw invalid_argument("Entrada invalida. O ano deve ser entre 2000 - 9999.");
         }
+
 ///
 /// Tratamento dos Meses com 30 dias
 ///
@@ -193,7 +197,6 @@ void Data::validar(string data){
             if(dia30<1 || dia30>30)
                 throw invalid_argument("Entrada invalida. Este mes possui 30 dias.");
         }
-
 
 ///
 /// Tratamento dos Meses com 31 dias
@@ -218,18 +221,12 @@ void Data::validar(string data){
             }else if(diaMaxFev == 29 && !(ano%4 == 0 && (ano%100 != 0 || ano%400 == 0))){
                     throw invalid_argument("Entrada invalida. Este ano nao e bissexto.");
                     }
-
-
         }
-
 
     }else{
         throw invalid_argument("Data invalida, deve ser DIA-MES-ANO, numeros para DIA e ANO e 3 letras para o MES.");
     }
 }
-
-
-
 
 ///
 /// Após a validação da data, este é passado para o interior da classe
@@ -301,4 +298,187 @@ void Endereco::validar(string endereco){
 void Endereco::setEndereco (string endereco){
     validar(endereco);
     this->endereco = endereco;
+}
+
+
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A validacao do Horario abrange de 00-23 Horas e 00-59 minutos.
+///     @param horario
+///
+void Horario::validar(string horario){
+    smatch matches;
+    string HH, MM;
+    int hora, minuto;
+    regex HORA_VALIDA("([0-2][0-9])[:]([0-5][0-9])");
+
+    if(regex_search(horario,matches,HORA_VALIDA)){
+        HH = matches.str(1);
+        hora = stoi(HH);
+        MM = matches.str(2);
+        minuto = stoi(MM);
+
+        if(hora<0 || hora>23 || minuto<0 || minuto>59)
+            throw invalid_argument("Horario invalido. Formato valido: 00:00 ate 23:59.");
+    }else{throw invalid_argument("Formato de horario invalido.");}
+
+}
+
+///
+///     Inclusão do Horario da excursão
+///     @param endereco
+///
+void Horario::setHorario (string horario){
+    validar(horario);
+    this->horario = horario;
+}
+
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A função recebe um vetor de char pois é mais pratico de se manipular.
+///     Apos transformar a string para padrao minusculo, pode ser feita comparacao.
+///     @param idioma
+///
+void Idioma::validar(char *linguagem){
+///
+///     O vetor de string estatico e sulficiente para a aplicacao, pois os Idiomas sao constante
+///
+    string idiomaDisponivel[10] = {"ingles", "chines mandarim", "hindi", "espanhol", "frances", "arabe",
+                                   "bengali", "russo", "portugues", "indonesio"};
+
+    strlwr(linguagem);                                     //  Manipula a string para minusculo e salva na mesma variavel
+    string idiomaAux = linguagem;
+
+
+    int selecao = 0;                                        //  Contador de igualdade entre cidades
+
+    for(int i=0; i<10; i++){
+        if(idiomaAux == idiomaDisponivel[i]){
+            selecao = selecao+1;
+        }
+    }
+    if (selecao != 1){
+        throw invalid_argument("Idioma invalido. Suas opcoes sao: ingles, chines mandarim, hindi, espanhol, frances, arabe, bengali, russo, portugues, indonesio");
+    }
+}
+
+///
+///     Antes de incluir o idioma deve-se verificar se esta na lista de idiomas disponiveis.
+///     @param idioma
+///
+void Idioma::setIdioma (char *linguagem){
+    validar(linguagem);
+    this->idioma = linguagem;
+}
+
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A validacao do endereco abrange de 0 a 20 caracteres
+///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     @param descricao
+///
+void Titulo::validar(string titulo){
+    smatch matches;
+
+    regex TITULO_INVALIDO("([ ]{2,})|([.]{2,})|([0-9])");
+
+    if(regex_search(titulo,matches,TITULO_INVALIDO)){ //||
+       //regex_search(titulo,matches,TITULO_INVALIDO2))
+        throw invalid_argument ("Endereco invalido. E permitido apenas letras e use apenas 1 espaco e ponto por vez.");
+    }
+    if(titulo.length()<5 || titulo.length()>20)
+       throw invalid_argument("Endereco invalido. No min 5 e no max 20 caracteres.");
+
+}
+
+///
+///     Inclusão do Endereco da excurssão
+///     @param endereco
+///
+void Titulo::setTitulo (string titulo){
+    validar(titulo);
+    this->titulo = titulo;
+}
+
+
+
+//=========================================================================================
+//=========================================================================================
+
+
+
+///
+///     A validacao da senha abrange 6 caracteres
+///     Não é permitido caracter repetido e deve conter, no minimo, 1 letra Mais., 1 letra min. e 1 num.
+///     @param segredo
+///
+void Senha::validar(string segredo){
+
+    smatch matches;
+    int charMin = 0, charMai = 0, charNum = 0;
+    char caracter;
+    string caracterStr;
+    regex CHAR_MIN("[a-z]");
+    regex CHAR_MAI("[A-Z]");
+    regex CHAR_NUM("[0-9]");
+    regex SENHA_INVALIDA("[ ]|[\.]|[!@#$%&¨&*\(\)+=£¢¬§]");
+///
+/// 1 verificação de senha: caracteres invalidos e comprimento de senha.
+///
+
+    if (segredo.length()<6 || segredo.length()>6 || regex_search(segredo,matches,SENHA_INVALIDA))
+        throw invalid_argument ("Senha invalida. So sao permitido 6 digitos de aA-zZ 0-9.");
+
+///
+/// Tratamento de Senha para verificacoes 2 e 3
+///
+
+    for (int i=0; i<segredo.length(); i++){
+        caracter = segredo[i];
+        caracterStr = segredo[i];
+        if(regex_match(caracterStr,CHAR_MIN)){
+           charMin++;
+        }else{ if(regex_match(caracterStr,CHAR_MAI)){
+                 charMai++;
+                }else{ if(regex_match(caracterStr,CHAR_NUM)){
+                         charNum++;
+                        }
+                }
+        }
+
+///
+/// 2 verificação de senha: Vedada ocorrencia de 'char' repetido em sequencia.
+///
+
+        if(i != (segredo.length()-1)){
+            if(caracter == segredo[i+1])
+            throw invalid_argument("Senha invalida. Nao e permito caracteres repetidos em sequencia.");
+        }
+    }
+
+///
+/// 3 verificacao de senha: pelo menos 1 ocorrencia de 'char': minusc., maiusc., numero.
+///
+
+    if(charMin == 0 || charMai == 0 || charNum == 0)
+            throw invalid_argument("Senha invalida. Deve conter pelo menos 1 caracter minusculo, 1 maiusculo e 1 numero");
+
+}
+
+///
+///     Inclusão do Endereco da excurssão
+///     @param endereco
+///
+void Senha::setSenha(string segredo){
+    validar(segredo);
+    this->senha = segredo;
 }

@@ -163,5 +163,103 @@ inline const string Endereco::getEndereco(){
     return endereco;
 }
 
+
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// Classe Horario
+///
+class Horario{
+    private:
+        string horario;
+        void   validar(string);
+
+    public:
+        void   setHorario(string);
+        const string getHorario(); //Deve ser somente leitura
+
+};
+
+inline const string Horario::getHorario(){
+    return horario;
+}
+
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// A Classe Idioma permite o armazenamento correto dos idiomas disponiveis.
+///
+class Idioma{
+    private:
+        string  idioma;
+        void    validar(char*);
+
+    public:
+        void  setIdioma(char*);
+        const string getIdioma(); //Deve ser somente leitura
+
+};
+
+inline const string Idioma::getIdioma(){
+    return idioma;
+}
+
+
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// A Classe Titulo permite o armazenamento correto.
+///
+class Titulo{
+    private:
+        string  titulo;
+        void    validar(string);
+
+    public:
+        void  setTitulo(string);
+        const string getTitulo(); //Deve ser somente leitura
+
+};
+
+inline const string Titulo::getTitulo(){
+    return titulo;
+}
+
+
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// A Classe Senha permite o armazenamento correto.
+///
+class Senha{
+    private:
+        string  senha;
+        void    validar(string);
+
+    public:
+        void  setSenha(string);
+        const string getSenha(); //Deve ser somente leitura
+
+};
+
+inline const string Senha::getSenha(){
+    return senha;
+}
+
+
+
+
 #endif // DOMINIO_H_INCLUDED
 

@@ -109,6 +109,67 @@ int main (){
         case TUEndereco::FALHA  : cout << "FALHA   - CODIGO" << endl;
                                 break;
     }
+
+
+///
+/// Teste Unidade - Horario
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUHorario testeHorario;
+
+    switch(testeHorario.run()){
+        case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUHorario::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+
+
+///
+/// Teste Unidade - Idioma
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUIdioma testeIdioma;
+
+    switch(testeIdioma.run()){
+        case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUHorario::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+
+///
+/// Teste Unidade - Titulo
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUTitulo testeTitulo;
+
+    switch(testeTitulo.run()){
+        case TUTitulo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUTitulo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
+///
+/// Teste Unidade - Senha
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUSenha testeSenha;
+
+    switch(testeSenha.run()){
+        case TUSenha::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUSenha::FALHA  : cout << "FALHA   - CODIGO" << endl;
+                                break;
+    }
+
 //==============================================================================================================================
 /*
 ///
@@ -227,7 +288,7 @@ int main (){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
-*/
+
 
 
 ///
@@ -248,6 +309,80 @@ int main (){
     catch(invalid_argument &exp){
         cout << "Excecao: " << exp.what() << endl;
     }
+
+
+
+///
+/// Declaração da função Horario da excursao.
+/// Assim como, a validação do texto inserido.
+///
+
+    string horarioExcursao = "23:59";
+    //                           ^                            ^
+    Horario horario;                                    //Instância da classe Endereco
+
+///
+/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
+///
+    try{
+        horario.Horario::setHorario(horarioExcursao);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+*/
+
+///
+/// Declaração da função idioma.
+/// Assim como a validação
+///
+    // Declaração de instâncias
+    char linguagem[20]="PorTugUeS";
+    Idioma idioma;
+
+    //Verificação
+    try{
+        idioma.Idioma::setIdioma(linguagem);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+
+
+///
+/// Declaração da função Titulo.
+/// Assim como a validação
+///
+    // Declaração de instâncias
+    string texto = "Excursao Camelo.";
+    Titulo titulo;
+
+    //Verificação
+    try{
+        titulo.Titulo::setTitulo(texto);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
+///
+/// Declaração da função Senha.
+/// Assim como a validação
+///
+    // Declaração de instâncias
+    string segredo = "123aQp";
+    Senha senha;
+
+    //Verificação
+    try{
+        senha.Senha::setSenha(segredo);
+    }
+    catch(invalid_argument &exp){
+        cout << "Excecao: " << exp.what() << endl;
+    }
+
 //========================================================================================
 
     return 0;
