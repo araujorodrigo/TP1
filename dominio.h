@@ -58,10 +58,10 @@ inline int Nota::getValor() const{
 class Cidade{
     private:
         string    nomeCidade;
-        void    validar(char*);
+        void    validar(string);  /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
 
     public:
-        void  setCidade(char*);
+        void  setCidade(string); /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
         const string getCidade(); //Deve ser somente leitura
 
 };
@@ -198,10 +198,10 @@ inline const string Horario::getHorario(){
 class Idioma{
     private:
         string  idioma;
-        void    validar(char*);
+        void    validar(string);  /// ESTA LINHA FOI DE char* PARA string
 
     public:
-        void  setIdioma(char*);
+        void  setIdioma(string);   /// ESTA LINHA FOI DE char* PARA string
         const string getIdioma(); //Deve ser somente leitura
 
 };

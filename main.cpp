@@ -2,16 +2,18 @@
 #include <exception>
 #include <string>
 #include <cstring>
+#include <locale>
 #include "dominio.h"
 #include "testes.h"
-
 using namespace std;
 
 int main (){
+setlocale(LC_ALL, "portuguese");
 
+//____________         TESTES DE UNIDADE DE DOMINIO        __________________
 ///
 /// Teste Unidade - Duracao
-/// A classe DuraÁ„o ser· testada antes de sua utilizaÁ„o
+/// A classe Dura√ß√£o ser√° testada antes de sua utiliza√ß√£o
 ///
 
     TUDuracao testeDuracao;
@@ -26,7 +28,7 @@ int main (){
 
 ///
 /// Teste Unidade - Nota
-/// A funÁ„o 'run' ir· rodar ambos os teste.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste.
 ///
     TUNota testeNota;
 
@@ -40,7 +42,7 @@ int main (){
 
 ///
 /// Teste Unidade - Cidade
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final
 ///
     TUCidade testeCidade;
 
@@ -54,8 +56,8 @@ int main (){
 
 ///
 /// Teste Unidade - Codigo
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUCodigo testeCodigo;
 
@@ -69,8 +71,8 @@ int main (){
 
 ///
 /// Teste Unidade - Data
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUData testeData;
 
@@ -82,9 +84,9 @@ int main (){
     }
 
 ///
-/// Teste Unidade - DescriÁ„o
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// Teste Unidade - Descri√ß√£o
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUDescricao testeDescricao;
 
@@ -98,8 +100,8 @@ int main (){
 
 ///
 /// Teste Unidade - Endereco
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUEndereco testeEndereco;
 
@@ -113,8 +115,8 @@ int main (){
 
 ///
 /// Teste Unidade - Horario
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUHorario testeHorario;
 
@@ -129,8 +131,8 @@ int main (){
 
 ///
 /// Teste Unidade - Idioma
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUIdioma testeIdioma;
 
@@ -144,8 +146,8 @@ int main (){
 
 ///
 /// Teste Unidade - Titulo
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUTitulo testeTitulo;
 
@@ -158,8 +160,8 @@ int main (){
 
 ///
 /// Teste Unidade - Senha
-/// A funÁ„o 'run' ir· rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÁ„o est· funcionando corretamente.
+/// A fun√ß√£o 'run' ir√° rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a fun√ß√£o est√° funcionando corretamente.
 ///
     TUSenha testeSenha;
 
@@ -170,21 +172,59 @@ int main (){
                                 break;
     }
 
+
+//____________         TESTES DE UNIDADE DE ENTIDADE        __________________
+//____________________________________________________________________________
+
+ TUAvaliacao testeAvaliacao;
+
+    // Invocar mÔøΩtodo e apresentar mensagem acerca do resultado do teste.
+
+    switch(testeAvaliacao.run()){
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+                                break;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+                                break;
+    }
+
+
+ TUSessao testeSessao;
+
+    // Invocar mÔøΩtodo e apresentar mensagem acerca do resultado do teste.
+
+    switch(testeSessao.run()){
+        case TUSessao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+                                break;
+        case TUSessao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+                                break;
+    }
+
+ TUExcursao testeExcursao;
+
+    // Invocar mÔøΩtodo e apresentar mensagem acerca do resultado do teste.
+
+    switch(testeExcursao.run()){
+        case TUExcursao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+                                break;
+        case TUExcursao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+                                break;
+    }
+
 //==============================================================================================================================
-/*
+
 ///
-/// DeclaraÁ„o da funÁ„o de duraÁ„o do passeio.
-/// Assim como, a validaÁ„o do valor inserido.
+/// Declara√ß√£o da fun√ß√£o de dura√ß√£o do passeio.
+/// Assim como, a valida√ß√£o do valor inserido.
 ///
 
     int duracaoPasseio = 30;
-    Duracao passeio;                                    //Inst‚ncia da classe Duracao
+    Duracao passeio;                                    //Inst√¢ncia da classe Duracao
     //cout << "Digite a duracao do passeio: " << endl;
     //cin >> duracaoPasseio;
-    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim n„o influencia no getline.
+    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim n√£o influencia no getline.
 
 ///
-/// A validaÁ„o È feita dentro de bloco try-catch, pois assim È feito o tratamento adequado de excess„o.
+/// A valida√ß√£o √© feita dentro de bloco try-catch, pois assim √© feito o tratamento adequado de excess√£o.
 ///
     try{
         passeio.Duracao::setValor(duracaoPasseio);
@@ -195,17 +235,17 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o de Nota de avaliaÁ„o.
-/// Assim como, a validaÁ„o do valor inserido.
+/// Declara√ß√£o da fun√ß√£o de Nota de avalia√ß√£o.
+/// Assim como, a valida√ß√£o do valor inserido.
 ///
-    // DeclaraÁ„o de inst‚ncias
+    // Declara√ß√£o de inst√¢ncias
     int notaPasseio = 4;
     Nota nota;
 
     // Desenvolvimento
-    //cout << "Digite a Nota de avaliaÁ„o para a excurs„o: " << endl;
+    //cout << "Digite a Nota de avalia√ß√£o para a excurs√£o: " << endl;
     //cin >> notaPasseio;
-    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim n„o influencia no getline.
+    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim n√£o influencia no getline.
 
     try{
         nota.Nota::setValor(notaPasseio);
@@ -217,18 +257,18 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o nome da cidade.
-/// Assim como, a validaÁ„o do nome inserido.
+/// Declara√ß√£o da fun√ß√£o nome da cidade.
+/// Assim como, a valida√ß√£o do nome inserido.
 ///
-    // DeclaraÁ„o de inst‚ncias
-    char nomeCidade[20]="Macau";
+    // Declara√ß√£o de inst√¢ncias
+    string nomeCidade = "Macau"; //char nomeCidade[20]="Macau";
     Cidade cidade;
 
     // Desenvolvimento
-    //cout << "Digite o Nome da cidade para a excurs„o: " << endl;
+    //cout << "Digite o Nome da cidade para a excurs√£o: " << endl;
     //cin.getline(nomeCidade,20) ;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         cidade.Cidade::setCidade(nomeCidade);
     }
@@ -238,14 +278,14 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o CODIGO.
-/// Assim como, a validaÁ„o do CODIGO.
+/// Declara√ß√£o da fun√ß√£o CODIGO.
+/// Assim como, a valida√ß√£o do CODIGO.
 ///
-    // DeclaraÁ„o de inst‚ncias
+    // Declara√ß√£o de inst√¢ncias
     string numCodigo= "123456";
     Codigo codigo;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         codigo.setValor(numCodigo);
     }
@@ -254,14 +294,14 @@ int main (){
     }
 
 ///
-/// DeclaraÁ„o da funÁ„o DATA
-/// Assim como, a validaÁ„o dA DATA
+/// Declara√ß√£o da fun√ß√£o DATA
+/// Assim como, a valida√ß√£o dA DATA
 ///
-    // DeclaraÁ„o de inst‚ncias
+    // Declara√ß√£o de inst√¢ncias
     string numData = "31.JAN.2020";
     Data data;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         data.setData(numData);
     }
@@ -271,16 +311,16 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o de descriÁ„o do passeio.
-/// Assim como, a validaÁ„o do texto inserido.
+/// Declara√ß√£o da fun√ß√£o de descri√ß√£o do passeio.
+/// Assim como, a valida√ß√£o do texto inserido.
 ///
 
     string descricaoExcurssao = "TESTE";
     //                           ^                            ^
-    Descricao descricao;                                    //Inst‚ncia da classe Duracao
+    Descricao descricao;                                    //Inst√¢ncia da classe Duracao
 
 ///
-/// A validaÁ„o È feita dentro de bloco try-catch, pois assim È feito o tratamento adequado de excess„o.
+/// A valida√ß√£o √© feita dentro de bloco try-catch, pois assim √© feito o tratamento adequado de excess√£o.
 ///
     try{
         descricao.Descricao::setDescricao(descricaoExcurssao);
@@ -292,16 +332,16 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o de Endereco da excursao.
-/// Assim como, a validaÁ„o do texto inserido.
+/// Declara√ß√£o da fun√ß√£o de Endereco da excursao.
+/// Assim como, a valida√ß√£o do texto inserido.
 ///
 
     string enderecoExcursao = "TESTE";
     //                           ^                            ^
-    Endereco endereco;                                    //Inst‚ncia da classe Endereco
+    Endereco endereco;                                    //Inst√¢ncia da classe Endereco
 
 ///
-/// A validaÁ„o È feita dentro de bloco try-catch, pois assim È feito o tratamento adequado de excess„o.
+/// A valida√ß√£o √© feita dentro de bloco try-catch, pois assim √© feito o tratamento adequado de excess√£o.
 ///
     try{
         endereco.Endereco::setEndereco(enderecoExcursao);
@@ -313,16 +353,16 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o Horario da excursao.
-/// Assim como, a validaÁ„o do texto inserido.
+/// Declara√ß√£o da fun√ß√£o Horario da excursao.
+/// Assim como, a valida√ß√£o do texto inserido.
 ///
 
     string horarioExcursao = "23:59";
     //                           ^                            ^
-    Horario horario;                                    //Inst‚ncia da classe Endereco
+    Horario horario;                                    //Inst√¢ncia da classe Endereco
 
 ///
-/// A validaÁ„o È feita dentro de bloco try-catch, pois assim È feito o tratamento adequado de excess„o.
+/// A valida√ß√£o √© feita dentro de bloco try-catch, pois assim √© feito o tratamento adequado de excess√£o.
 ///
     try{
         horario.Horario::setHorario(horarioExcursao);
@@ -331,17 +371,17 @@ int main (){
         cout << "Excecao: " << exp.what() << endl;
     }
 
-*/
+
 
 ///
-/// DeclaraÁ„o da funÁ„o idioma.
-/// Assim como a validaÁ„o
+/// Declara√ß√£o da fun√ß√£o idioma.
+/// Assim como a valida√ß√£o
 ///
-    // DeclaraÁ„o de inst‚ncias
-    char linguagem[20]="PorTugUeS";
+    // Declara√ß√£o de inst√¢ncias
+    string linguagem = "PorTugUeS";  /// ESTA LINHA FOI DE char PARA string
     Idioma idioma;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         idioma.Idioma::setIdioma(linguagem);
     }
@@ -352,14 +392,14 @@ int main (){
 
 
 ///
-/// DeclaraÁ„o da funÁ„o Titulo.
-/// Assim como a validaÁ„o
+/// Declara√ß√£o da fun√ß√£o Titulo.
+/// Assim como a valida√ß√£o
 ///
-    // DeclaraÁ„o de inst‚ncias
+    // Declara√ß√£o de inst√¢ncias
     string texto = "Excursao Camelo.";
     Titulo titulo;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         titulo.Titulo::setTitulo(texto);
     }
@@ -368,14 +408,14 @@ int main (){
     }
 
 ///
-/// DeclaraÁ„o da funÁ„o Senha.
-/// Assim como a validaÁ„o
+/// Declara√ß√£o da fun√ß√£o Senha.
+/// Assim como a valida√ß√£o
 ///
-    // DeclaraÁ„o de inst‚ncias
+    // Declara√ß√£o de inst√¢ncias
     string segredo = "123aQp";
     Senha senha;
 
-    //VerificaÁ„o
+    //Verifica√ß√£o
     try{
         senha.Senha::setSenha(segredo);
     }

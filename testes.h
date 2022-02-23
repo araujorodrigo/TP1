@@ -4,6 +4,7 @@
 ///Inclusão de bibliotecas auxiliares
 #include <exception>
 #include "dominio.h"
+#include "entidades.h"
 
 using namespace std;
 
@@ -54,9 +55,9 @@ public:
 class TUCidade {
 private:
     //const static
-    char VALOR_VALIDO[20]   = "macau";    // Defini��o de constante para evitar n�mero m�gico.
+    string VALOR_VALIDO   = "macau";    /// char PARA string // Defini��o de constante para evitar n�mero m�gico.
     //const static
-    char VALOR_INVALIDO[20] = "brasilia";   // Defini��o de constante para evitar n�mero m�gico.
+    string VALOR_INVALIDO = "brasilia"; /// char PARA string // Defini��o de constante para evitar n�mero m�gico.
     Cidade *cidade;                             // Refer�ncia para unidade em teste.
     int estado;                             // Estado do teste.
     void setUp();                           // M�todo para criar unidade em teste.
@@ -192,9 +193,9 @@ public:
 class TUIdioma {
 private:
     //const static
-    char VALOR_VALIDO[20] = "PortugUES";               // Defini��o de constante para evitar n�mero m�gico.
+    string VALOR_VALIDO = "PortugUES";   /// ESTA LINHA FOI DE char PARA string            // Defini��o de constante para evitar n�mero m�gico.
     //const static
-    char VALOR_INVALIDO[20] = "Sueco";            // Defini��o de constante para evitar n�mero m�gico.
+    string VALOR_INVALIDO = "Sueco";     /// ESTA LINHA FOI DE char PARA string       // Defini��o de constante para evitar n�mero m�gico.
     Idioma *idioma;                                             // Refer�ncia para unidade em teste.
     int estado;                                                     // Estado do teste.
     void setUp();                                                   // M�todo para criar unidade em teste.
@@ -257,6 +258,61 @@ public:
 };
 
 
+///     Declaração de header file das entidades
 
 
+class TUAvaliacao {
+private:
+     string             VALOR_VALIDO1   = "123456";                     // Codigo
+    const static int    VALOR_VALIDO2   = 1;                            // Nota
+     string             VALOR_VALIDO3   = "Excurssao a pe em Macau.";   // Descrição
+    Avaliacao *avaliacao;                   // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
+
+
+class TUSessao {
+private:
+     string             VALOR_VALIDO1   = "123456";                     // Codigo
+     string             VALOR_VALIDO2   = "12 abr 2007";                // Data
+     string             VALOR_VALIDO3   = "23:59";                      // Horario
+     string             VALOR_VALIDO4   = "PortugUES";                  // Idioma
+    Sessao *sessao;                         // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
+
+
+class TUExcursao {
+private:
+     string             VALOR_VALIDO1   = "123456";                     // Codigo
+     string             VALOR_VALIDO2   = "Excursao Safari";            // Titulo
+     const static int   VALOR_VALIDO3   = 1;                            // Nota
+     string             VALOR_VALIDO4   = "macau";                      // Cidade
+     const static int   VALOR_VALIDO5   = 30;                           // Duracao
+     string             VALOR_VALIDO6   = "Excurssao a pe em Macau.";   // Descrição
+     string             VALOR_VALIDO7   = "Praca Civica av. L2.";       // Endereço
+    Excursao *excursao;                    // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
 #endif //TESTES_H_INCLUDED

@@ -1,0 +1,114 @@
+# depslib dependency file v1.0
+1645242725 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\trabalho1_aux\dominio.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<exception>
+	<cstdlib>
+	<regex>
+	"dominio.h"
+	"testes.h"
+
+1645242820 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\trabalho1_aux\dominio.h
+	<exception>
+
+1645243079 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\trabalho1_aux\testes.h
+	<exception>
+	"dominio.h"
+
+1645243942 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\trabalho1_aux\teste.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
+1645244045 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\trabalho1_aux\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<cstring>
+	"dominio.h"
+	"testes.h"
+
+1645458091 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\teste.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
+1645578240 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.h
+	<exception>
+
+1645591644 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.h
+	<exception>
+	"dominio.h"
+	"entidades.h"
+
+1645578285 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<exception>
+	<cstdlib>
+	<regex>
+	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+
+1645591580 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<cstring>
+	<locale>
+	"dominio.h"
+	"testes.h"
+
+1645591734 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
+1645589926 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\entidades.h
+	"dominio.h"
+
+1645591580 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<cstring>
+	<locale>
+	"dominio.h"
+	"testes.h"
+
+1645578240 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\dominio.h
+	<exception>
+
+1645591644 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\testes.h
+	<exception>
+	"dominio.h"
+	"entidades.h"
+
+1645589926 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\entidades.h
+	"dominio.h"
+
+1645564318 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
+1645578285 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\dominio.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<exception>
+	<cstdlib>
+	<regex>
+	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+

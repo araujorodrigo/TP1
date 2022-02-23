@@ -2,11 +2,27 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <algorithm>
 #include <exception>
 #include <cstdlib>
 #include <regex>
+#include <bits/stdc++.h>
 #include "dominio.h"
 #include "testes.h"
+
+using namespace std;
+
+
+void lowerstr(string &str){
+
+	transform(str.begin(), str.end(), str.begin(), ::tolower);
+}
+
+void upperstr(string &str){
+
+	transform(str.begin(), str.end(), str.begin(), ::toupper);
+}
+
 
 //=========================================================================================
 //=========================================================================================
@@ -65,7 +81,7 @@ void Nota::setValor(int valor){
 ///     Apos transformar a string para padrao minusculo, pode ser feita comparacao.
 ///     @param nomeCidade
 ///
-void Cidade::validar(char *nomeCidade){
+void Cidade::validar(string nomeCidade){ /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
 ///
 ///     O vetor de string estatico e sulficiente para a aplicacao, pois as cidades nao vao mudar
 ///
@@ -74,7 +90,8 @@ void Cidade::validar(char *nomeCidade){
                                  "antalya", "mumbai", "shenzhen", "phuket"};
 
     //cout << "Checkpoint: " << nomeCidade << endl;             TESTE 1
-    strlwr(nomeCidade);                                     //  Manipula a string para minusculo e salva na mesma variavel
+    lowerstr(nomeCidade);
+    //strlwr(nomeCidade);                                     //  Manipula a string para minusculo e salva na mesma variavel
     string cidadeNomeAux = nomeCidade;
     //cout << "Checkpoint: " << cidadeNomeAux << endl;          TESTE 2
 
@@ -94,7 +111,7 @@ void Cidade::validar(char *nomeCidade){
 ///     Antes de incluir o nome da cidade deve-se verificar se esta na lista de cidades disponiveis.
 ///     @param nomeCidade
 ///
-void Cidade::setCidade (char *nomeCidade){
+void Cidade::setCidade (string nomeCidade){ /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
     validar(nomeCidade);
     this->nomeCidade = nomeCidade;
 }
@@ -160,7 +177,7 @@ void Data::validar(string data){
     std::smatch matches;
     string DIA, MES, ANO;
 
-    regex DATA_VALIDA ("\\b(\\d{2})[- /\.]([a-zA-Z]{3})[- /\.](\\d{4})\\b");
+    regex DATA_VALIDA ("\\b(\\d{2})[- /\\.]([a-zA-Z]{3})[- /\\.](\\d{4})\\b");
 
     regex JAN ("[jJ][aA][nN]");                             //a Codificacao dos meses generaliza
     regex FEV ("[fF][eE][vV]");                             //a entrada, sendo no-sensitive.
@@ -346,14 +363,15 @@ void Horario::setHorario (string horario){
 ///     Apos transformar a string para padrao minusculo, pode ser feita comparacao.
 ///     @param idioma
 ///
-void Idioma::validar(char *linguagem){
+void Idioma::validar(string linguagem){   /// ESTA LINHA FOI DE char* PARA string
 ///
 ///     O vetor de string estatico e sulficiente para a aplicacao, pois os Idiomas sao constante
 ///
     string idiomaDisponivel[10] = {"ingles", "chines mandarim", "hindi", "espanhol", "frances", "arabe",
                                    "bengali", "russo", "portugues", "indonesio"};
 
-    strlwr(linguagem);                                     //  Manipula a string para minusculo e salva na mesma variavel
+    lowerstr(linguagem);
+    //strlwr(linguagem);                                     //  Manipula a string para minusculo e salva na mesma variavel
     string idiomaAux = linguagem;
 
 
@@ -373,7 +391,7 @@ void Idioma::validar(char *linguagem){
 ///     Antes de incluir o idioma deve-se verificar se esta na lista de idiomas disponiveis.
 ///     @param idioma
 ///
-void Idioma::setIdioma (char *linguagem){
+void Idioma::setIdioma (string linguagem){ /// ESTA LINHA FOI DE char* PARA string
     validar(linguagem);
     this->idioma = linguagem;
 }
@@ -385,12 +403,12 @@ void Idioma::setIdioma (char *linguagem){
 ///
 ///     A validacao do endereco abrange de 0 a 20 caracteres
 ///     e nao há nem espaco em branco nem ponto final em sequencia.
-///     @param descricao
+///     @param descricao l
 ///
 void Titulo::validar(string titulo){
     smatch matches;
 
-    regex TITULO_INVALIDO("([ ]{2,})|([.]{2,})|([0-9])");  "()[@]()"
+    regex TITULO_INVALIDO("([ ]{2,})|([.]{2,})|([0-9])");
 
     if(regex_search(titulo,matches,TITULO_INVALIDO)){ //||
        //regex_search(titulo,matches,TITULO_INVALIDO2))
@@ -428,10 +446,10 @@ void Senha::validar(string segredo){
     int charMin = 0, charMai = 0, charNum = 0;
     char caracter;
     string caracterStr;
-    regex CHAR_MIN("[a-z]");
-    regex CHAR_MAI("[A-Z]");
-    regex CHAR_NUM("[0-9]");
-    regex SENHA_INVALIDA("[ ]|[\.]|[!@#$%&¨&*\(\)+=£¢¬§]");
+    regex CAR_MIN("[a-z]");
+    regex CAR_MAI("[A-Z]");
+    regex CAR_NUM("[0-9]");
+    regex SENHA_INVALIDA("[ ]|[\\.]|[!@#$%&¨&*)\(+=£¢¬§]");
 ///
 /// 1 verificação de senha: caracteres invalidos e comprimento de senha.
 ///
@@ -446,11 +464,11 @@ void Senha::validar(string segredo){
     for (int i=0; i<segredo.length(); i++){
         caracter = segredo[i];
         caracterStr = segredo[i];
-        if(regex_match(caracterStr,CHAR_MIN)){
+        if(regex_match(caracterStr,CAR_MIN)){
            charMin++;
-        }else{ if(regex_match(caracterStr,CHAR_MAI)){
+        }else{ if(regex_match(caracterStr,CAR_MAI)){
                  charMai++;
-                }else{ if(regex_match(caracterStr,CHAR_NUM)){
+                }else{ if(regex_match(caracterStr,CAR_NUM)){
                          charNum++;
                         }
                 }
