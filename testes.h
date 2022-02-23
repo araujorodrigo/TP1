@@ -257,6 +257,49 @@ public:
     int run();                              // M�todo para executar teste.
 };
 
+///
+///   Desenvolvimento da classe de Teste de unidade da classe Email de usuário
+///
+class TUEmail {
+private:
+    //const static
+    string VALOR_VALIDO = "iago.cossentino@gmailcom";               // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    string VALOR_INVALIDO = "ya.@mail!";            // Defini��o de constante para evitar n�mero m�gico.
+    Email *email;                                             // Refer�ncia para unidade em teste.
+    int estado;                                                     // Estado do teste.
+    void setUp();                                                   // M�todo para criar unidade em teste.
+    void tearDown();                                                // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();                                    // Cen�rio de teste.
+    void testarCenarioFalha();                                      // Cen�rio de teste.
+
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
+
+///
+///   Desenvolvimento da classe de Nome de unidade da classe Email de usuário
+///
+class TUNome {
+private:
+    //const static
+    string VALOR_VALIDO = "Iago";               // Defini��o de constante para evitar n�mero m�gico.
+    //const static
+    string VALOR_INVALIDO = "Ya.go";            // Defini��o de constante para evitar n�mero m�gico.
+    Nome *nome;                                             // Refer�ncia para unidade em teste.
+    int estado;                                                     // Estado do teste.
+    void setUp();                                                   // M�todo para criar unidade em teste.
+    void tearDown();                                                // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();                                    // Cen�rio de teste.
+    void testarCenarioFalha();                                      // Cen�rio de teste.
+
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
 
 ///     Declaração de header file das entidades
 
@@ -277,6 +320,21 @@ public:
     int run();                              // M�todo para executar teste.
 };
 
+class TUUsuario {
+private:
+     string             VALOR_VALIDO1   = "Iago";                       // Nome
+     string             VALOR_VALIDO2   = "iago.cossentino@gmail.com";  // Email
+     string             VALOR_VALIDO3   = "5EnH4a";                     // Senha
+    Usuario *usuario;                       // Refer�ncia para unidade em teste.
+    int estado;                             // Estado do teste.
+    void setUp();                           // M�todo para criar unidade em teste.
+    void tearDown();                        // M�todo para destruir unidade em teste.
+    void testarCenarioSucesso();            // Cen�rio de teste.
+public:
+    const static int SUCESSO =  0;          // Defini��o de constante para reportar resultado de teste.
+    const static int FALHA   = -1;          // Defini��o de constante para reportar resultado de teste.
+    int run();                              // M�todo para executar teste.
+};
 
 class TUSessao {
 private:

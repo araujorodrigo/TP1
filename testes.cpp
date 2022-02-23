@@ -645,6 +645,118 @@ int TUSenha::run(){
     return estado;
 }
 
+///
+/// Criação do objeto de testes para email de usuário
+/// e atribuição de estado inicial.
+///
+
+void TUEmail::setUp(){
+    email = new Email();                                ///inicializa o objeto Idioma
+    estado = SUCESSO;
+}
+
+///
+/// Testes de cenário de sucesso e de falha.
+///
+
+void TUEmail::testarCenarioSucesso(){
+    try{
+        email->setEmail(VALOR_VALIDO);
+        if (email->getEmail() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &exc){
+        estado = FALHA;
+    }
+}
+
+
+void TUEmail::testarCenarioFalha(){
+    try{
+        email->setEmail(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+        if (email->getEmail() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+
+///
+/// exclusão correta do objeto de testes
+///
+void TUEmail::tearDown(){
+    delete email;                                      ///Exclusão do objeto da maneira correta
+}
+
+///
+/// Script de teste de unidade para Endereco.
+///
+int TUEmail::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
+///
+/// Criação do objeto de testes para nome de usuário
+/// e atribuição de estado inicial.
+///
+
+void TUNome::setUp(){
+    nome = new Nome();                                ///inicializa o objeto Idioma
+    estado = SUCESSO;
+}
+
+///
+/// Testes de cenário de sucesso e de falha.
+///
+
+void TUNome::testarCenarioSucesso(){
+    try{
+        nome->setNome(VALOR_VALIDO);
+        if (nome->getNome() != VALOR_VALIDO)
+            estado = FALHA;
+    }
+    catch(invalid_argument &exc){
+        estado = FALHA;
+    }
+}
+
+
+void TUNome::testarCenarioFalha(){
+    try{
+        nome->setNome(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+        if (nome->getNome() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+
+///
+/// exclusão correta do objeto de testes
+///
+void TUNome::tearDown(){
+    delete nome;                                      ///Exclusão do objeto da maneira correta
+}
+
+///
+/// Script de teste de unidade para Endereco.
+///
+int TUNome::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
+
 //__________________________________________________________________________________________________________
 //______________________     Testes de unidade de Entidades      ___________________________________________
 //__________________________________________________________________________________________________________
@@ -681,6 +793,46 @@ void TUAvaliacao::testarCenarioSucesso(){
 }
 
 int TUAvaliacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+//__________________________________________________________________________________________________________
+//__________                TU - Usuario                     ________________________________________________
+
+
+void TUUsuario::setUp(){
+    usuario = new Usuario();
+    estado = SUCESSO;
+}
+
+void TUUsuario::tearDown(){
+    delete usuario;
+}
+
+void TUUsuario::testarCenarioSucesso(){
+    Nome nome;
+    nome.setNome(VALOR_VALIDO1);
+    usuario->setNomeE(nome);
+    if(usuario->getNomeE().getNome() != VALOR_VALIDO1)
+        estado = FALHA;
+
+    Email email;
+    email.setEmail(VALOR_VALIDO2);
+    usuario->setEmailE(email);
+    if(usuario->getEmailE().getEmail() != VALOR_VALIDO2)
+        estado = FALHA;
+
+    Senha senha;
+    senha.setSenha(VALOR_VALIDO3);
+    usuario->setSenhaE(senha);
+    if(usuario->getSenhaE().getSenha() != VALOR_VALIDO3)
+        estado = FALHA;
+}
+
+int TUUsuario::run(){
     setUp();
     testarCenarioSucesso();
     tearDown();

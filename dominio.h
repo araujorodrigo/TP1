@@ -258,8 +258,48 @@ inline const string Senha::getSenha(){
     return senha;
 }
 
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
 
+///
+/// A Classe Email permite o armazenamento correto.
+///
+class Email{
+    private:
+        string  email;
+        void    validar(string);
 
+    public:
+        void  setEmail(string);
+        const string getEmail(); //Deve ser somente leitura
 
+};
+
+inline const string Email::getEmail(){
+    return email;
+}
+
+//=========================================================================================
+//=========================================================================================
+//=========================================================================================
+
+///
+/// Classe Nome permite o armazenamento
+///
+class Nome{
+    private:
+        string  nome;
+        void    validar(string);
+
+    public:
+        void  setNome(string);
+        const string getNome(); //Deve ser somente leitura
+
+};
+
+inline const string Nome::getNome(){
+    return nome;
+}
 #endif // DOMINIO_H_INCLUDED
 

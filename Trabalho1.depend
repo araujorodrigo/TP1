@@ -112,3 +112,41 @@
 	"dominio.h"
 	"testes.h"
 
+1645629765 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<exception>
+	<cstdlib>
+	<regex>
+	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+
+1645628499 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.h
+	<exception>
+
+1645628750 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.h
+	<exception>
+	"dominio.h"
+	"entidades.h"
+
+1645628804 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\entidades.h
+	"dominio.h"
+
+1645628916 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<cstring>
+	<locale>
+	"dominio.h"
+	"testes.h"
+
+1645629673 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
