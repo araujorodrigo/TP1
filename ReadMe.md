@@ -1,4 +1,9 @@
-@mainpage Excursão guiada à pé
-@author Iago Conssentino & Rodrigo Alves
+@mainpage Excurs&atildeo guiada a pe.
 
-### O programa implementa classes domínio para a aplicação, assim como as entidades de domínios. Isto é a base para uma aplicação de software que consiste em: Excursão guiada à pe.
+@author Iago Conssentino
+_______
+@author Rodrigo Alves
+_______
+@date 23 de Fevereiro de 2022
+
+### O programa implementa classes dominio para a aplicacao, assim como as entidades de dominios. Isto e a base para uma aplicacao de software que consiste em: Excursao guiada a pe.

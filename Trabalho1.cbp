@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="apresentacao.md" />
+		<Unit filename="ReadMe.md" />
 		<Unit filename="dominio.cpp" />
 		<Unit filename="dominio.h" />
 		<Unit filename="entidades.h" />

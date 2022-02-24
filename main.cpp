@@ -1,21 +1,32 @@
+/** @file main.cpp
+*   @version 1.0
+*/
+/**************************************************************************************************
+                                         BIBLIOTECAS
+***************************************************************************************************/
+
 #include <iostream>
 #include <exception>
 #include <string>
-#include <cstring>
+//#include <cstring>   <===   Tirar esta biblioteca
 #include <locale>
 #include "dominio.h"
 #include "testes.h"
+
 using namespace std;
 
-int main (){
-setlocale(LC_ALL, "portuguese");
+/**************************************************************************************************
+*                                  DESENVOLVIMENTO main.cpp
+***************************************************************************************************/
 
-//____________         TESTES DE UNIDADE DE DOMINIO        __________________
-///
-/// Teste Unidade - Duracao
-/// A classe Duração será testada antes de sua utilização
-///
+int main ()
+{setlocale(LC_ALL, "portuguese");
 
+/**************************************************************************************************
+*      TESTES DE UNIDADE DE DOM�NIOS: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
+**************************************************************************************************/
+/// @brief Teste de unidade: Duracao
+///
     TUDuracao testeDuracao;
 
     switch(testeDuracao.run()){
@@ -26,9 +37,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Nota
-/// A função 'run' irá rodar ambos os teste.
+/// @brief Teste de unidade: Nota
 ///
     TUNota testeNota;
 
@@ -40,9 +49,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Cidade
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final
+/// @brief Teste de unidade: Cidade
 ///
     TUCidade testeCidade;
 
@@ -54,10 +61,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Codigo
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Codigo
 ///
     TUCodigo testeCodigo;
 
@@ -69,10 +73,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Data
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Data
 ///
     TUData testeData;
 
@@ -83,10 +84,8 @@ setlocale(LC_ALL, "portuguese");
                                 break;
     }
 
-///
-/// Teste Unidade - Descrição
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+
+/// @brief Teste de unidade: Descricao
 ///
     TUDescricao testeDescricao;
 
@@ -98,10 +97,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Endereco
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Endereco
 ///
     TUEndereco testeEndereco;
 
@@ -113,10 +109,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Horario
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Horario
 ///
     TUHorario testeHorario;
 
@@ -128,11 +121,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-
-///
-/// Teste Unidade - Idioma
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Idioma
 ///
     TUIdioma testeIdioma;
 
@@ -144,10 +133,7 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-///
-/// Teste Unidade - Titulo
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+/// @brief Teste de unidade: Titulo
 ///
     TUTitulo testeTitulo;
 
@@ -158,10 +144,8 @@ setlocale(LC_ALL, "portuguese");
                                 break;
     }
 
-///
-/// Teste Unidade - Senha
-/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a função está funcionando corretamente.
+
+/// @brief Teste de unidade: Senha
 ///
     TUSenha testeSenha;
 
@@ -173,12 +157,12 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
-//____________         TESTES DE UNIDADE DE ENTIDADE        __________________
-//____________________________________________________________________________
-
- TUAvaliacao testeAvaliacao;
-
-    // Invocar m�todo e apresentar mensagem acerca do resultado do teste.
+/**************************************************************************************************
+*    TESTES DE UNIDADE DE ENTIDADES: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
+**************************************************************************************************/
+/// @brief Teste de unidade: Avaliacao
+///
+    TUAvaliacao testeAvaliacao;
 
     switch(testeAvaliacao.run()){
         case TUAvaliacao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
@@ -188,9 +172,9 @@ setlocale(LC_ALL, "portuguese");
     }
 
 
- TUSessao testeSessao;
-
-    // Invocar m�todo e apresentar mensagem acerca do resultado do teste.
+/// @brief Teste de unidade: Sessao
+///
+    TUSessao testeSessao;
 
     switch(testeSessao.run()){
         case TUSessao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
@@ -199,9 +183,10 @@ setlocale(LC_ALL, "portuguese");
                                 break;
     }
 
- TUExcursao testeExcursao;
 
-    // Invocar m�todo e apresentar mensagem acerca do resultado do teste.
+/// @brief Teste de unidade: Excursao
+///
+    TUExcursao testeExcursao;
 
     switch(testeExcursao.run()){
         case TUExcursao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
@@ -210,220 +195,6 @@ setlocale(LC_ALL, "portuguese");
                                 break;
     }
 
-//==============================================================================================================================
-
-///
-/// Declaração da função de duração do passeio.
-/// Assim como, a validação do valor inserido.
-///
-
-    int duracaoPasseio = 30;
-    Duracao passeio;                                    //Instância da classe Duracao
-    //cout << "Digite a duracao do passeio: " << endl;
-    //cin >> duracaoPasseio;
-    //cin.get();                                          // este "get" coleta "\n" deixado por "cin" acima. Assim não influencia no getline.
-
-///
-/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
-///
-    try{
-        passeio.Duracao::setValor(duracaoPasseio);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-///
-/// Declaração da função de Nota de avaliação.
-/// Assim como, a validação do valor inserido.
-///
-    // Declaração de instâncias
-    int notaPasseio = 4;
-    Nota nota;
-
-    // Desenvolvimento
-    //cout << "Digite a Nota de avaliação para a excursão: " << endl;
-    //cin >> notaPasseio;
-    //cin.get()                                         // este "get" coleta "\n" deixado por "cin" acima. Assim não influencia no getline.
-
-    try{
-        nota.Nota::setValor(notaPasseio);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-
-///
-/// Declaração da função nome da cidade.
-/// Assim como, a validação do nome inserido.
-///
-    // Declaração de instâncias
-    string nomeCidade = "Macau"; //char nomeCidade[20]="Macau";
-    Cidade cidade;
-
-    // Desenvolvimento
-    //cout << "Digite o Nome da cidade para a excursão: " << endl;
-    //cin.getline(nomeCidade,20) ;
-
-    //Verificação
-    try{
-        cidade.Cidade::setCidade(nomeCidade);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-///
-/// Declaração da função CODIGO.
-/// Assim como, a validação do CODIGO.
-///
-    // Declaração de instâncias
-    string numCodigo= "123456";
-    Codigo codigo;
-
-    //Verificação
-    try{
-        codigo.setValor(numCodigo);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-///
-/// Declaração da função DATA
-/// Assim como, a validação dA DATA
-///
-    // Declaração de instâncias
-    string numData = "31.JAN.2020";
-    Data data;
-
-    //Verificação
-    try{
-        data.setData(numData);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-///
-/// Declaração da função de descrição do passeio.
-/// Assim como, a validação do texto inserido.
-///
-
-    string descricaoExcurssao = "TESTE";
-    //                           ^                            ^
-    Descricao descricao;                                    //Instância da classe Duracao
-
-///
-/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
-///
-    try{
-        descricao.Descricao::setDescricao(descricaoExcurssao);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-
-///
-/// Declaração da função de Endereco da excursao.
-/// Assim como, a validação do texto inserido.
-///
-
-    string enderecoExcursao = "TESTE";
-    //                           ^                            ^
-    Endereco endereco;                                    //Instância da classe Endereco
-
-///
-/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
-///
-    try{
-        endereco.Endereco::setEndereco(enderecoExcursao);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-
-///
-/// Declaração da função Horario da excursao.
-/// Assim como, a validação do texto inserido.
-///
-
-    string horarioExcursao = "23:59";
-    //                           ^                            ^
-    Horario horario;                                    //Instância da classe Endereco
-
-///
-/// A validação é feita dentro de bloco try-catch, pois assim é feito o tratamento adequado de excessão.
-///
-    try{
-        horario.Horario::setHorario(horarioExcursao);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-
-///
-/// Declaração da função idioma.
-/// Assim como a validação
-///
-    // Declaração de instâncias
-    string linguagem = "PorTugUeS";  /// ESTA LINHA FOI DE char PARA string
-    Idioma idioma;
-
-    //Verificação
-    try{
-        idioma.Idioma::setIdioma(linguagem);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-
-
-///
-/// Declaração da função Titulo.
-/// Assim como a validação
-///
-    // Declaração de instâncias
-    string texto = "Excursao Camelo.";
-    Titulo titulo;
-
-    //Verificação
-    try{
-        titulo.Titulo::setTitulo(texto);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-///
-/// Declaração da função Senha.
-/// Assim como a validação
-///
-    // Declaração de instâncias
-    string segredo = "123aQp";
-    Senha senha;
-
-    //Verificação
-    try{
-        senha.Senha::setSenha(segredo);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << endl;
-    }
-
-//========================================================================================
 
     return 0;
 }

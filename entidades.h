@@ -1,7 +1,7 @@
 #ifndef ENTIDADES_H_INCLUDED
 #define ENTIDADES_H_INCLUDED
 
-#include "dominio.h"
+//#include "dominio.h"
 
 
 using namespace std;

@@ -1,4 +1,10 @@
+/** \file dominio
+*   \version 1.0
+*/
 
+/**************************************************************************************************
+                                         BIBLIOTECAS
+***************************************************************************************************/
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -12,7 +18,16 @@
 
 using namespace std;
 
-
+/**************************************************************************************************
+*                                  DESENVOLVIMENTO dominio.cpp
+**************************************************************************************************/
+///
+/// \brief Esta Funcao transforma os caracteres da string passada como parametro.
+/// lowerstr transforma caracteres maiusculos em minusculos.
+/// upperstr transforma caracteres minusculos em maiusculos.
+/// \param str
+/// \return void
+///
 void lowerstr(string &str){
 
 	transform(str.begin(), str.end(), str.begin(), ::tolower);
@@ -24,14 +39,11 @@ void upperstr(string &str){
 }
 
 
-//=========================================================================================
-//=========================================================================================
-
 ///
-/// A duração do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
+/// \brief Duração do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
 /// O instrutor pode oferecer seu passeio dentre estas opções de duração.
-/// A função abaixo busca validar se o valor incluído pode ser cadastrado ou não.
-/// @param valor
+/// A função abaixo busca validar o valor de entrada.
+/// \param valor
 ///
 void Duracao::validar(int valor){
     if (valor != 30 && valor != 60 && valor != 90 && valor != 120 && valor != 180)
@@ -39,9 +51,9 @@ void Duracao::validar(int valor){
 }
 
 ///
-/// SETVALOR é o meio pelo qual se faz adição de valor para a variável.
-/// Para isto, requer-se validção deste valor.
-/// @param valor
+/// \brief Metodo setValor permite salvar numeros validos.
+///
+/// \param valor
 ///
 void Duracao::setValor(int valor){
     Duracao::validar(valor);
@@ -49,54 +61,44 @@ void Duracao::setValor(int valor){
 }
 
 
-//=========================================================================================
-//=========================================================================================
-
-
+/// \brief Validacao de nota.
 ///
-/// A função de validação da nota possibilita a seleção dentro da faixa correta de valores para nota,
-/// evitando valores grandes ou até negativos.
-/// @param valor
-///
+/// \param valor
 void Nota::validar(int valor){
     if (valor != 0 && valor != 1 && valor != 2 && valor != 3 && valor != 4 && valor != 5)
         throw invalid_argument("Nota invalida.");
 }
 
+/// @brief Metodo setValor permite salvar numeros validos.
 ///
-/// SETVALOR é o meio pelo qual se faz adição da nota para a variável de avaliação.
-/// Para isto, requer-se validção deste valor, antes de sua inclusão.
-///
+/// @param valor
 void Nota::setValor(int valor){
     Nota::validar(valor);
     this->valor = valor;
 }
 
 
-//=========================================================================================
-//=========================================================================================
+/// @brief Ha 16 cidades validas para excursao.
+/// hong kong, bangkok, macau, singapura, londres, paris, dubai, delhi, istambu,
+/// kuala, lumpur, nova iorque, antalya, mumbai, shenzhen, phuket.
+/// @param nomeCidade
+void Cidade::validar(string nomeCidade){
 
-///
-///     A função recebe um vetor de char pois é mais pratico de se manipular.
-///     Apos transformar a string para padrao minusculo, pode ser feita comparacao.
-///     @param nomeCidade
-///
-void Cidade::validar(string nomeCidade){ /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
-///
-///     O vetor de string estatico e sulficiente para a aplicacao, pois as cidades nao vao mudar
-///
+    // O vetor estatico e sulficiente para a aplicacao
     string cidadeDisponivel[16] = {"hong kong", "bangkok", "macau", "singapura", "londres", "paris",
                                  "dubai", "delhi", "istambu", "kuala", "lumpur", "nova iorque",
                                  "antalya", "mumbai", "shenzhen", "phuket"};
 
-    //cout << "Checkpoint: " << nomeCidade << endl;             TESTE 1
+    // Passar a string para minusculo garante que a funcao seja 'case no sensitive'
     lowerstr(nomeCidade);
-    //strlwr(nomeCidade);                                     //  Manipula a string para minusculo e salva na mesma variavel
+
+    // A criacao de variavel auxiliar objetiva nao alterar o valor original da variavel parametro.
     string cidadeNomeAux = nomeCidade;
-    //cout << "Checkpoint: " << cidadeNomeAux << endl;          TESTE 2
 
-    int selecao = 0;                                        //  Contador de igualdade entre cidades
+    // Contador de igualdade entre cidades
+    int selecao = 0;
 
+    // Mecanismo de comparacao entre parametro e vetor de cidades possiveis.
     for(int i=0; i<16; i++){
         if(cidadeNomeAux == cidadeDisponivel[i]){
             selecao = selecao+1;
@@ -107,24 +109,21 @@ void Cidade::validar(string nomeCidade){ /// ESTA LINHA FOI ALTERADA DE char * P
     }
 }
 
+/// @brief Metodo setCidade permite salvar cidade valida.
 ///
-///     Antes de incluir o nome da cidade deve-se verificar se esta na lista de cidades disponiveis.
-///     @param nomeCidade
-///
-void Cidade::setCidade (string nomeCidade){ /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
+/// @param nomeCidade
+void Cidade::setCidade (string nomeCidade){
     validar(nomeCidade);
     this->nomeCidade = nomeCidade;
 }
 
 
-//=========================================================================================
-//=========================================================================================
-
+/// @brief Validacao de codigo de excursao.
 ///
-///   A validação do código evita aceitar códigos com escrita errada, entrada nula e menor quantidade de algarismos necessários.
-///   Há a adição do código verificador ao final do código.
-///   @param valor
-///
+/// Codigo deve ser composto por 6 digitos numericos, salvo codigo '000000'.
+/// O setimo caracter e o digito verificador.
+/// algoritmo de verificacao => Titulo eleitoral <A HREF = "http://ghiorzi.org/DVnew.htm" </A>
+/// @param string valor
 void Codigo::validar(string valor){
     int numerador = stoi(valor);                                  // Conversão de string para int;
     int somatorio = 0;

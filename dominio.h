@@ -1,15 +1,19 @@
+/** @file dominio
+*   @version 1.0
+*/
 #ifndef DOMINIO_H_INCLUDED
 #define DOMINIO_H_INCLUDED
 
-#include <exception>
+//#include <exception>
 
 using namespace std;
-//=========================================================================================
-///   Classe duração
-///
-///   A classe possui o VALOR a ser armazenado e função de VALIDAR como atribuições privadas.
-///   O valor deve passar por SETVALOR antes de ser armazenado.
-///
+
+/**
+*   Classe duração
+*
+*   O VALOR a ser armazenado sera antes validado em VALIDAR.
+*   O valor deve passar por SETVALOR antes de ser armazenado.
+*/
 class Duracao {
     private:
         int valor;

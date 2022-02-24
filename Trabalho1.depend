@@ -36,12 +36,9 @@
 	"dominio.h"
 	"testes.h"
 
-1645578240 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.h
-	<exception>
+1645616762 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.h
 
-1645591644 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.h
-	<exception>
-	"dominio.h"
+1645617297 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.h
 	"entidades.h"
 
 1645578285 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.cpp
@@ -56,11 +53,10 @@
 	"dominio.h"
 	"testes.h"
 
-1645591580 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\main.cpp
+1645616641 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\main.cpp
 	<iostream>
 	<exception>
 	<string>
-	<cstring>
 	<locale>
 	"dominio.h"
 	"testes.h"
@@ -71,8 +67,7 @@
 	"dominio.h"
 	"testes.h"
 
-1645589926 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\entidades.h
-	"dominio.h"
+1645617297 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\entidades.h
 
 1645591580 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\git iago-rodrigo\main.cpp
 	<iostream>
@@ -109,6 +104,27 @@
 	<cstdlib>
 	<regex>
 	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+
+1645626533 source:c:\users\rodry\desktop\codigo\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<locale>
+	"dominio.h"
+	"testes.h"
+
+1645616762 c:\users\rodry\desktop\codigo\dominio.h
+
+1645617297 c:\users\rodry\desktop\codigo\testes.h
+	"entidades.h"
+
+1645617297 c:\users\rodry\desktop\codigo\entidades.h
+
+1645591734 source:c:\users\rodry\desktop\codigo\testes.cpp
+	<iostream>
+	<exception>
 	"dominio.h"
 	"testes.h"
 

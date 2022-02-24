@@ -2,8 +2,8 @@
 #define TESTES_H_INCLUDED
 
 ///Inclusão de bibliotecas auxiliares
-#include <exception>
-#include "dominio.h"
+//#include <exception>
+//#include "dominio.h"
 #include "entidades.h"
 
 using namespace std;
