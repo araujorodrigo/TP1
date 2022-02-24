@@ -459,7 +459,7 @@ void Cidade::setCidade (string nomeCidade){
         throw invalid_argument ("Senha invalida. So sao permitido 6 digitos de aA-zZ 0-9.");
 
     // Tratamento de Senha para verificacoes 2 e 3
-    for (int i=0; i<segredo.length(); i++){
+    for (int i=0; i<(int)segredo.length(); i++){
         caracter = segredo[i];
         caracterStr = segredo[i];
         if(regex_match(caracterStr,CAR_MIN)){
@@ -473,7 +473,7 @@ void Cidade::setCidade (string nomeCidade){
         }
 
         // 2 verificação de senha: Vedada ocorrencia de 'char' repetido em sequencia.
-        if(i != (segredo.length()-1)){
+        if(i != ((int)segredo.length()-1)){
             if(caracter == segredo[i+1])
             throw invalid_argument("Senha invalida. Nao e permito caracteres repetidos em sequencia.");
         }

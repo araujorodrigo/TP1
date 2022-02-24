@@ -46,3 +46,50 @@
 	"testes.h"
 	"func.h"
 
+1645746887 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<exception>
+	<cstdlib>
+	<regex>
+	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+	"func.h"
+
+1645740360 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.h
+	<exception>
+
+1645746328 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.h
+	<exception>
+	"dominio.h"
+	"entidades.h"
+
+1645740360 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\entidades.h
+	"dominio.h"
+	"testes.h"
+
+1645740360 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\func.h
+	<string>
+	<bits/stdc++.h>
+
+1645740360 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\func.cpp
+	"func.h"
+
+1645740360 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<locale>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+
+1645740361 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
