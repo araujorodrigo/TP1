@@ -285,7 +285,7 @@ public:
 class TUNome {
 private:
     //const static
-    string VALOR_VALIDO = "Iago";               // Defini��o de constante para evitar n�mero m�gico.
+    string VALOR_VALIDO = "Iago C.";               // Defini��o de constante para evitar n�mero m�gico.
     //const static
     string VALOR_INVALIDO = "Ya.go";            // Defini��o de constante para evitar n�mero m�gico.
     Nome *nome;                                             // Refer�ncia para unidade em teste.

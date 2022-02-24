@@ -571,42 +571,36 @@ void Email::setEmail(string email){
 ///     @param nome
 ///
 void Nome::validar(string nome){
-/*
+
     smatch matches;
-    int i = 0;
-    stringstream full_email(email);
+    stringstream ss_nome(nome);
     string intermediate;
-    regex EMAIL_VALIDO("[a-zA-Z0-9!#\\$%&'*\\+\\-\\/=^_`{|}~\\.]{1,64}[@][a-zA-Z0-9\\.\\-]{1,253}");
+    //regex NOME_VALIDO("[a-zA-Z \\.]{5,20}");
+    regex CAR_INVALIDO("[^a-zA-Z \\.]");
+    //
+    regex MINUSCULO_VALIDO_MEIO("[\\. ][a-z]");
+    regex MINUSCULO_VALIDO_INICIO("^[A-Z]");
+    //
+    regex PONTO_ESPACO_INVALIDO("([\\.][A-Za-z])|([\\.][\\.])|([ ][ ])|([ ][a-z\\.])");
 ///
-/// 1 verificação de email: caracteres invalidos, comprimento de email e formato.
-///
-
-    if(!regex_search(email,matches,EMAIL_VALIDO))
-        throw invalid_argument ("Email invalido 1");
-
-///
-/// 2 verificação de email: Ocorrência de ponto
-///
-    while(getline(full_email, intermediate, '@')){
-        if(i == 0 && (intermediate.front() == '.' || intermediate.back() == '.')){
-            throw invalid_argument ("Email invalido 2A");
-        }
-
-        if(i == 1 && intermediate.front() == '.'){
-            throw invalid_argument ("Email invalido 2B");
-        }
-
-        i++;
-    }
-
-///
-/// 3 verificacao de email: Pontos duplos
+/// 1 verificação de nome: caracteres invalidos, comprimento de nome e formato.
 ///
 
-    if(email.find("..") != string::npos){
-        throw invalid_argument ("Email invalido 3");
-    }
-*/
+    if(nome.length() < 5 || nome.length() > 20 || regex_search(nome,matches,CAR_INVALIDO))
+        throw invalid_argument ("Erro: NOME_INVALIDO");
+
+///
+/// 2 verificação de nome: Ocorrência nome iniciando minusculo
+///
+    if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
+        throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
+
+///
+/// 3 verificação de nome: Ocorrências com ponto e espaço
+///
+    if(regex_search(nome,matches,PONTO_ESPACO_INVALIDO))
+        throw invalid_argument ("Erro: PONTO_ESPACO_INVALIDO");
+
 }
 
 ///
