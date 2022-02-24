@@ -322,7 +322,7 @@ public:
 
 class TUUsuario {
 private:
-     string             VALOR_VALIDO1   = "Iago";                       // Nome
+     string             VALOR_VALIDO1   = "Iago C.";                       // Nome
      string             VALOR_VALIDO2   = "iago.cossentino@gmail.com";  // Email
      string             VALOR_VALIDO3   = "5EnH4a";                     // Senha
     Usuario *usuario;                       // Refer�ncia para unidade em teste.
