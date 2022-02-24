@@ -1,0 +1,152 @@
+\hypertarget{class_endereco}{}\doxysection{Endereco Class Reference}
+\label{class_endereco}\index{Endereco@{Endereco}}
+
+
+{\ttfamily \#include \char`\"{}dominio.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_endereco_a9c3f3042051c695390093eaf202d7401}{set\+Endereco}} (string)
+\item 
+const string \mbox{\hyperlink{class_endereco_aa1f9d573cac991a4f7d47c8ef334ba39}{get\+Endereco}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}{validar}} (string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe Endereço 
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00155}{155}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_endereco_aa1f9d573cac991a4f7d47c8ef334ba39}\label{class_endereco_aa1f9d573cac991a4f7d47c8ef334ba39}} 
+\index{Endereco@{Endereco}!getEndereco@{getEndereco}}
+\index{getEndereco@{getEndereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getEndereco()}{getEndereco()}}
+{\footnotesize\ttfamily const string Endereco\+::get\+Endereco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00166}{166}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166                                          \{}
+\DoxyCodeLine{00167     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}};}
+\DoxyCodeLine{00168 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00157}{endereco}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00384}{TUEndereco\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00372}{TUEndereco\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_endereco_a9c3f3042051c695390093eaf202d7401}\label{class_endereco_a9c3f3042051c695390093eaf202d7401}} 
+\index{Endereco@{Endereco}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily void Endereco\+::set\+Endereco (\begin{DoxyParamCaption}\item[{string}]{endereco }\end{DoxyParamCaption})}
+
+Inclus\~{a}o do Endere\c{c}o da excurs\~{a}o 
+\begin{DoxyParams}{Parameters}
+{\em endereco} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00299}{299}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00299                                           \{}
+\DoxyCodeLine{00300     \mbox{\hyperlink{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}{validar}}(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}});}
+\DoxyCodeLine{00301     this-\/>\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}} = \mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}};}
+\DoxyCodeLine{00302 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00157}{endereco}}, and \mbox{\hyperlink{dominio_8cpp_source_l00281}{validar()}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00384}{TUEndereco\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00372}{TUEndereco\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}\label{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}} 
+\index{Endereco@{Endereco}!validar@{validar}}
+\index{validar@{validar}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Endereco\+::validar (\begin{DoxyParamCaption}\item[{string}]{endereco }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A valida\c{c}\~{a}o do endere\c{c}o abrange de 0 a 20 caracteres e nao h\'{a} nem espa\c{c}o em branco nem ponto final em sequ\^{e}ncia. 
+\begin{DoxyParams}{Parameters}
+{\em descricao} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00281}{281}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281                                      \{}
+\DoxyCodeLine{00282     smatch matches;}
+\DoxyCodeLine{00283     regex ENDERECO\_INVALIDO(\textcolor{stringliteral}{"{}([ ]\{2,\})"{}});                      \textcolor{comment}{//análise para cada caso separadamente.}}
+\DoxyCodeLine{00284     regex ENDERECO\_INVALIDO2(\textcolor{stringliteral}{"{}([.]\{2,\})"{}});}
+\DoxyCodeLine{00285 }
+\DoxyCodeLine{00286     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}},matches,ENDERECO\_INVALIDO) ||}
+\DoxyCodeLine{00287        regex\_search(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}},matches,ENDERECO\_INVALIDO2))}
+\DoxyCodeLine{00288         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Endereco invalido. use apenas 1 espaco e ponto por vez."{}});}
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}}.length()>20)}
+\DoxyCodeLine{00291         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Endereco invalido. No max 20 caracteres."{}});}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00157}{endereco}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8cpp_source_l00299}{set\+Endereco()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}\label{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}} 
+\index{Endereco@{Endereco}!endereco@{endereco}}
+\index{endereco@{endereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{endereco}{endereco}}
+{\footnotesize\ttfamily string Endereco\+::endereco\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00157}{157}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8h_source_l00166}{get\+Endereco()}}, \mbox{\hyperlink{dominio_8cpp_source_l00299}{set\+Endereco()}}, and \mbox{\hyperlink{dominio_8cpp_source_l00281}{validar()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dominio_8h}{dominio.\+h}}\item 
+\mbox{\hyperlink{dominio_8cpp}{dominio.\+cpp}}\end{DoxyCompactItemize}

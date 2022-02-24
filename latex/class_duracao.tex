@@ -1,0 +1,153 @@
+\hypertarget{class_duracao}{}\doxysection{Duracao Class Reference}
+\label{class_duracao}\index{Duracao@{Duracao}}
+
+
+{\ttfamily \#include \char`\"{}dominio.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_duracao_adbac25345a732a7ef54c4427ff0a4584}{set\+Valor}} (int \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}})
+\begin{DoxyCompactList}\small\item\em M\'{e}todo set\+Valor permite salvar n\'{u}meros v\'{a}lidos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{get\+Valor}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}{validar}} (int)
+\begin{DoxyCompactList}\small\item\em Dura\c{c}\~{a}o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos. O instrutor pode oferecer seu passeio dentre estas op\c{c}\~{o}es de dura\c{c}\~{a}o. A fun\c{c}\~{a}o abaixo busca validar o valor de entrada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe duração
+
+O VALOR a ser armazenado sera antes validado em VALIDAR. O valor deve passar por SETVALOR antes de ser armazenado. 
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00017}{17}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}\label{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}} 
+\index{Duracao@{Duracao}!getValor@{getValor}}
+\index{getValor@{getValor}!Duracao@{Duracao}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily int Duracao\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+O método GETVALOR é posto como inline para evitar custo computacional, visto que é apenas retorno de uma informação. 
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00030}{30}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030                                   \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}};}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00019}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00038}{TUDuracao\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00023}{TUDuracao\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_duracao_adbac25345a732a7ef54c4427ff0a4584}\label{class_duracao_adbac25345a732a7ef54c4427ff0a4584}} 
+\index{Duracao@{Duracao}!setValor@{setValor}}
+\index{setValor@{setValor}!Duracao@{Duracao}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Duracao\+::set\+Valor (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+M\'{e}todo set\+Valor permite salvar n\'{u}meros v\'{a}lidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                \{}
+\DoxyCodeLine{00044     \mbox{\hyperlink{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}{Duracao::validar}}(\mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}});}
+\DoxyCodeLine{00045     this-\/>\mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} = \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}};}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8cpp_source_l00033}{validar()}}, and \mbox{\hyperlink{dominio_8h_source_l00019}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00038}{TUDuracao\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00023}{TUDuracao\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}\label{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}} 
+\index{Duracao@{Duracao}!validar@{validar}}
+\index{validar@{validar}!Duracao@{Duracao}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Duracao\+::validar (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dura\c{c}\~{a}o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos. O instrutor pode oferecer seu passeio dentre estas op\c{c}\~{o}es de dura\c{c}\~{a}o. A fun\c{c}\~{a}o abaixo busca validar o valor de entrada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                               \{}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 30 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 60 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 90 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 120 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 180)}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Duracao invalida."{}});}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00019}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8cpp_source_l00043}{set\+Valor()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}\label{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}} 
+\index{Duracao@{Duracao}!valor@{valor}}
+\index{valor@{valor}!Duracao@{Duracao}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily int Duracao\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00019}{19}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8h_source_l00030}{get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00043}{set\+Valor()}}, and \mbox{\hyperlink{dominio_8cpp_source_l00033}{validar()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dominio_8h}{dominio.\+h}}\item 
+\mbox{\hyperlink{dominio_8cpp}{dominio.\+cpp}}\end{DoxyCompactItemize}

@@ -25,9 +25,9 @@ using namespace std;
 
 
 ///
-/// \brief Duraç&atilde;o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
-/// O instrutor pode oferecer seu passeio dentre estas opções de duração.
-/// A função abaixo busca validar o valor de entrada.
+/// \brief Dura&ccedil;&atilde;o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
+/// O instrutor pode oferecer seu passeio dentre estas op&ccedil;&otilde;es de dura&ccedil;&atilde;o.
+/// A fun&ccedil;&atilde;o abaixo busca validar o valor de entrada.
 /// \param valor
 ///
 void Duracao::validar(int valor){
@@ -36,7 +36,7 @@ void Duracao::validar(int valor){
 }
 
 ///
-/// \brief Metodo setValor permite salvar numeros validos.
+/// \brief M&eacute;todo setValor permite salvar n&uacute;meros v&aacute;lidos.
 ///
 /// \param valor
 ///
@@ -46,7 +46,7 @@ void Duracao::setValor(int valor){
 }
 
 
-/// \brief Validacao de nota.
+/// \brief Valida&ccedil;&atilde;o de nota.
 ///
 /// \param valor
 void Nota::validar(int valor){
@@ -54,7 +54,7 @@ void Nota::validar(int valor){
         throw invalid_argument("Nota invalida.");
 }
 
-/// @brief Metodo setValor permite salvar numeros validos.
+/// @brief M&eacute;todo setValor permite salvar n&uacute;meros v&aacute;lidos.
 ///
 /// @param valor
 void Nota::setValor(int valor){
@@ -63,15 +63,15 @@ void Nota::setValor(int valor){
 }
 
 
-/// @brief Ha 16 cidades validas para excursao.
-/// hong kong, bangkok, macau, singapura, londres, paris, dubai, delhi, istambu,
+/// @brief Ha 16 cidades v&aacute;lidas para excurs&atilde;o.
+/// hong kong, bangkok, macau, singapura, londres, paris, dubai, delhi, istambul,
 /// kuala, lumpur, nova iorque, antalya, mumbai, shenzhen, phuket.
 /// @param nomeCidade
 void Cidade::validar(string nomeCidade){
 
-    // O vetor estatico e sulficiente para a aplicacao
+    // O vetor estatico e suficiente para a aplicacao
     string cidadeDisponivel[16] = {"hong kong", "bangkok", "macau", "singapura", "londres", "paris",
-                                 "dubai", "delhi", "istambu", "kuala", "lumpur", "nova iorque",
+                                 "dubai", "delhi", "istambul", "kuala", "lumpur", "nova iorque",
                                  "antalya", "mumbai", "shenzhen", "phuket"};
 
     // Passar a string para minusculo garante que a funcao seja 'case no sensitive'
@@ -94,7 +94,7 @@ void Cidade::validar(string nomeCidade){
     }
 }
 
-/// @brief Metodo setCidade permite salvar cidade valida.
+/// @brief M&eacute;todo setCidade permite salvar cidade v&aacute;lida.
 ///
 /// @param nomeCidade
 void Cidade::setCidade (string nomeCidade){
@@ -103,11 +103,11 @@ void Cidade::setCidade (string nomeCidade){
 }
 
 
-/// @brief Validacao de codigo de excursao.
+/// @brief Validacao de codigo de excurs&atilde;o.
 ///
-/// Codigo deve ser composto por 6 digitos numericos, salvo codigo '000000'.
-/// O setimo caracter e o digito verificador.
-/// algoritmo de verificacao => Titulo eleitoral <A HREF = "http://ghiorzi.org/DVnew.htm" </A>
+/// C&oacute;digo deve ser composto por 6 digitos n&uacute;mericos, salvo c&oacute;digo '000000'.
+/// O s&eacute;timo car&aacute;cter e o d&iacute;gito verificador.
+/// algoritmo de verifica&ccedil;&atilde;o => T&iacute;tulo eleitoral <A HREF = "http://ghiorzi.org/DVnew.htm" </A>
 /// @param string valor
 void Codigo::validar(string valor){
     int numerador = stoi(valor);                                  // Conversão de string para int;
@@ -123,7 +123,7 @@ void Codigo::validar(string valor){
         throw invalid_argument("Codigo invalido. O codigo deve conter 6 algarismos diferente de 000000.");
 
 ///
-///   Algoritmo de Dígito de verificação (Título Eleitoral)
+///   Algoritmo de D&iacute;gito de verifica&ccedil;&atilde;o (T&iacute;tulo Eleitoral)
 ///
     while(numerador>0){                                           // Neste laço cada algarismo é multiplicado por
         resto = (numerador%10)*(9-i);                             // uma constante diferente, conforme o algoritmo.
@@ -133,14 +133,14 @@ void Codigo::validar(string valor){
     }
 
     DV = somatorio % 11;                                          //O resto esta em INT
-    if(DV == 10)                                                  // Condição para %11 (div. por 11) = 10
+    if(DV == 10)                                                  // Condicao para %11 (div. por 11) = 10
         DV=0;
 
     valor = valor+to_string(DV);
 }
 
 ///
-/// Após a validação do código, este é passado para o interior da classe
+/// Ap&oacute;s a valida&ccedil;&atilde;o do c&oacute;digo, este &eacute; passado para o interior da classe
 ///
 ///
 void Codigo::setValor(string valor){
@@ -153,7 +153,7 @@ void Codigo::setValor(string valor){
 
 
 ///
-///   Validação da Data em que dia, mês e ano, serão representados por
+///   Valida&ccedil;&atilde;o da Data em que dia, m&ecirc;s e ano, ser&atilde;o representados por
 ///   ANO, MES, ANO, respectivamente.
 ///
 void Data::validar(string data){
@@ -185,7 +185,7 @@ void Data::validar(string data){
 /// Tratamento do ano
 ///
         int ano = stoi(ANO);
-        if (ano<2000 || ano>9999){                  // Verificação do ano.
+        if (ano<2000 || ano>9999){                  // Verificacao do ano.
             throw invalid_argument("Entrada invalida. O ano deve ser entre 2000 - 9999.");
         }
 
@@ -212,7 +212,7 @@ void Data::validar(string data){
         }
 
 ///
-/// Tratamento do mês de Fevereiro.
+/// Tratamento do m&ecirc;s de Fevereiro.
 ///
 
         if (regex_match(MES, FEV)){
@@ -225,12 +225,12 @@ void Data::validar(string data){
         }
 
     }else{
-        throw invalid_argument("Data invalida, deve ser DIA-MES-ANO, numeros para DIA e ANO e 3 letras para o MES.");
+        throw invalid_argument("Data invalida, deve ser DIA-MES-ANO, n&uacute;meros para DIA e ANO e 3 letras para o MES.");
     }
 }
 
 ///
-/// Após a validação da data, este é passado para o interior da classe
+/// Ap&oacute;s a valida&ccedil;&atilde;o da data, este &eacute; passado para o interior da classe
 ///
 ///
 void Data::setData(string data){
@@ -242,8 +242,8 @@ void Data::setData(string data){
 //=========================================================================================
 
 ///
-///     A validacao da descricao abrange de 0 a 30 caracteres
-///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     A valida&ccedil;&atilde;o da descri&ccedil;&atilde;o abrange de 0 a 30 caracteres
+///     e nao h&aacute; nem espaco em branco nem ponto final em sequ&ecirc;ncia.
 ///     @param descricao
 ///
 void Descricao::validar(string descricao){
@@ -261,7 +261,7 @@ void Descricao::validar(string descricao){
 }
 
 ///
-///     Inclusão da descrição da excurssão
+///     Inclus&atilde;o da descri&ccedil;&atilde;o da excurs&atilde;o
 ///     @param descricao
 ///
 void Descricao::setDescricao (string descricao){
@@ -274,8 +274,8 @@ void Descricao::setDescricao (string descricao){
 //=========================================================================================
 
 ///
-///     A validacao do endereco abrange de 0 a 20 caracteres
-///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     A valida&ccedil;&atilde;o do endere&ccedil;o abrange de 0 a 20 caracteres
+///     e nao h&aacute; nem espa&ccedil;o em branco nem ponto final em sequ&ecirc;ncia.
 ///     @param descricao
 ///
 void Endereco::validar(string endereco){
@@ -293,7 +293,7 @@ void Endereco::validar(string endereco){
 }
 
 ///
-///     Inclusão do Endereco da excurssão
+///     Inclus&atilde;o do Endere&ccedil;o da excurs&atilde;o
 ///     @param endereco
 ///
 void Endereco::setEndereco (string endereco){
@@ -301,14 +301,11 @@ void Endereco::setEndereco (string endereco){
     this->endereco = endereco;
 }
 
-
-/// Lembrar de apagar esta linha
-
 //=========================================================================================
 //=========================================================================================
 
 ///
-///     A validacao do Horario abrange de 00-23 Horas e 00-59 minutos.
+///     A valida&ccedil;&atilde;o do Hor&aacute;rio abrange de 00-23 Horas e 00-59 minutos.
 ///     @param horario
 ///
 void Horario::validar(string horario){
@@ -330,7 +327,7 @@ void Horario::validar(string horario){
 }
 
 ///
-///     Inclusão do Horario da excursão
+///     Inclus&atilde;o do Hor&aacute;rio da excurs&atilde;o
 ///     @param endereco
 ///
 void Horario::setHorario (string horario){
@@ -343,19 +340,19 @@ void Horario::setHorario (string horario){
 //=========================================================================================
 
 ///
-///     A função recebe um vetor de char pois é mais pratico de se manipular.
-///     Apos transformar a string para padrao minusculo, pode ser feita comparacao.
+///     A fun&ccedil;&atilde;o recebe um vetor de char pois &eacute; mais pratico de se manipular.
+///     Apos transformar a string para padrao min&uacute;sculo, pode ser feita comparacao.
 ///     @param idioma
 ///
 void Idioma::validar(string linguagem){   /// ESTA LINHA FOI DE char* PARA string
 ///
-///     O vetor de string estatico e sulficiente para a aplicacao, pois os Idiomas sao constante
+///     O vetor de string est&aacute;tico e sulficiente para a aplica&ccedil;&atilde;o, pois os Idiomas sao constante
 ///
     string idiomaDisponivel[10] = {"ingles", "chines mandarim", "hindi", "espanhol", "frances", "arabe",
                                    "bengali", "russo", "portugues", "indonesio"};
 
     lowerstr(linguagem);
-    //strlwr(linguagem);                                     //  Manipula a string para minusculo e salva na mesma variavel
+    //strlwr(linguagem);                                     //  Manipula a string para min&uacute;sculo e salva na mesma vari&aacute;vel
     string idiomaAux = linguagem;
 
 
@@ -372,7 +369,7 @@ void Idioma::validar(string linguagem){   /// ESTA LINHA FOI DE char* PARA strin
 }
 
 ///
-///     Antes de incluir o idioma deve-se verificar se esta na lista de idiomas disponiveis.
+///     Antes de incluir o idioma deve-se verificar se esta na lista de idiomas dispon&iacute;veis.
 ///     @param idioma
 ///
 void Idioma::setIdioma (string linguagem){ /// ESTA LINHA FOI DE char* PARA string
@@ -385,8 +382,8 @@ void Idioma::setIdioma (string linguagem){ /// ESTA LINHA FOI DE char* PARA stri
 //=========================================================================================
 
 ///
-///     A validacao do endereco abrange de 0 a 20 caracteres
-///     e nao há nem espaco em branco nem ponto final em sequencia.
+///     A valida&ccedil;&atilde;o do endere&ccedil;o abrange de 0 a 20 caracteres
+///     e nao h&aacute; nem espa&ccedil;o em branco nem ponto final em sequencia.
 ///     @param descricao l
 ///
 void Titulo::validar(string titulo){
@@ -404,7 +401,7 @@ void Titulo::validar(string titulo){
 }
 
 ///
-///     Inclusão do Endereco da excurssão
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
 ///     @param endereco
 ///
 void Titulo::setTitulo (string titulo){
@@ -421,7 +418,7 @@ void Titulo::setTitulo (string titulo){
 
 ///
 ///     A validacao da senha abrange 6 caracteres
-///     Não é permitido caracter repetido e deve conter, no minimo, 1 letra Mais., 1 letra min. e 1 num.
+///     N&atilde;o é permitido caracter repetido e deve conter, no minimo, 1 letra Mais., 1 letra min. e 1 num.
 ///     @param segredo
 ///
 void Senha::validar(string segredo){
@@ -435,7 +432,7 @@ void Senha::validar(string segredo){
     regex CAR_NUM("[0-9]");
     regex SENHA_INVALIDA("[ ]|[\\.]|[!@#$%&¨&*)\(+=£¢¬§]");
 ///
-/// 1 verificação de senha: caracteres invalidos e comprimento de senha.
+/// 1 verifica&ccedil;&atilde;o de senha: caracteres inv&aacute;lidos e comprimento de senha.
 ///
 
     if (segredo.length()<6 || segredo.length()>6 || regex_search(segredo,matches,SENHA_INVALIDA))
@@ -459,7 +456,7 @@ void Senha::validar(string segredo){
         }
 
 ///
-/// 2 verificação de senha: Vedada ocorrencia de 'char' repetido em sequencia.
+/// 2 verifica&ccedil;&atilde;o de senha: Vedada ocorrencia de 'char' repetido em sequencia.
 ///
 
         if(i != (segredo.length()-1)){
@@ -478,7 +475,7 @@ void Senha::validar(string segredo){
 }
 
 ///
-///     Inclusão do Endereco da excurssão
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
 ///     @param endereco
 ///
 void Senha::setSenha(string segredo){
@@ -504,14 +501,14 @@ void Email::validar(string email){
     string intermediate;
     regex EMAIL_VALIDO("[a-zA-Z0-9!#\\$%&'*\\+\\-\\/=^_`{|}~\\.]{1,64}[@][a-zA-Z0-9\\.\\-]{1,253}");
 ///
-/// 1 verificação de email: caracteres invalidos, comprimento de email e formato.
+/// 1 verifica&ccedil;&atilde;o de email: caracteres inv&aacute;lidos, comprimento de email e formato.
 ///
 
     if(!regex_search(email,matches,EMAIL_VALIDO))
         throw invalid_argument ("Email invalido 1");
 
 ///
-/// 2 verificação de email: Ocorrência de ponto
+/// 2 verifica&ccedil;&atilde;o de email: Ocorrência de ponto
 ///
     while(getline(full_email, intermediate, '@')){
         if(i == 0 && (intermediate.front() == '.' || intermediate.back() == '.')){
@@ -536,7 +533,7 @@ void Email::validar(string email){
 }
 
 ///
-///     Inclusão do Endereco da excurssão
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
 ///     @param endereco
 ///
 void Email::setEmail(string email){
@@ -567,20 +564,20 @@ void Nome::validar(string nome){
     //
     regex PONTO_ESPACO_INVALIDO("([\\.][A-Za-z])|([\\.][\\.])|([ ][ ])|([ ][a-z\\.])");
 ///
-/// 1 verificação de nome: caracteres invalidos, comprimento de nome e formato.
+/// 1 verifica&ccedil;&atilde;o de nome: caracteres inv&aacute;lidos, comprimento de nome e formato.
 ///
 
     if(nome.length() < 5 || nome.length() > 20 || regex_search(nome,matches,CAR_INVALIDO))
         throw invalid_argument ("Erro: NOME_INVALIDO");
 
 ///
-/// 2 verificação de nome: Ocorrência nome iniciando minusculo
+/// 2 verifica&ccedil;&atilde;o de nome: Ocorrência nome iniciando min&uacute;sculo
 ///
     if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
         throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
 
 ///
-/// 3 verificação de nome: Ocorrências com ponto e espaço
+/// 3 verifica&ccedil;&atilde;o de nome: Ocorrências com ponto e espa&ccedil;o
 ///
     if(regex_search(nome,matches,PONTO_ESPACO_INVALIDO))
         throw invalid_argument ("Erro: PONTO_ESPACO_INVALIDO");
@@ -588,7 +585,7 @@ void Nome::validar(string nome){
 }
 
 ///
-///     Inclusão do Endereco da excurssão
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
 ///     @param nome
 ///
 void Nome::setNome(string nome){

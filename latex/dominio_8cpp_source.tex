@@ -1,0 +1,436 @@
+\hypertarget{dominio_8cpp_source}{}\doxysection{dominio.\+cpp}
+\mbox{\hyperlink{dominio_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00005}00005 \textcolor{comment}{//  /**************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00006}00006 \textcolor{comment}{//                                         BIBLIOTECAS}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00007}00007 \textcolor{comment}{//  ***************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <regex>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{dominio_8h}{dominio.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{testes_8h}{testes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00018}00018 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{func_8h}{func.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00020}00020 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00022}00022 \textcolor{comment}{// **************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00023}00023 \textcolor{comment}{// *                                  DESENVOLVIMENTO dominio.cpp}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00024}00024 \textcolor{comment}{// **************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00033}\mbox{\hyperlink{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}{00033}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}{Duracao::validar}}(\textcolor{keywordtype}{int} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00034}00034     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 30 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 60 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 90 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 120 \&\& \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}} != 180)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00035}00035         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Duracao invalida."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00043}\mbox{\hyperlink{class_duracao_adbac25345a732a7ef54c4427ff0a4584}{00043}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_duracao_adbac25345a732a7ef54c4427ff0a4584}{Duracao::setValor}}(\textcolor{keywordtype}{int} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00044}00044     \mbox{\hyperlink{class_duracao_a5806d56962ffdfcc4fbb75f2c69a7e38}{Duracao::validar}}(\mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00045}00045     this-\/>valor = \mbox{\hyperlink{class_duracao_ad8cfac5fd8647efca6b78b8c5f361a95}{valor}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00052}\mbox{\hyperlink{class_nota_a0b165a29a21ea66a66907b82f64a3016}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nota_a0b165a29a21ea66a66907b82f64a3016}{Nota::validar}}(\textcolor{keywordtype}{int} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00053}00053     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 0 \&\& \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 1 \&\& \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 2 \&\& \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 3 \&\& \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 4 \&\& \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}} != 5)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00054}00054         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Nota invalida."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00060}\mbox{\hyperlink{class_nota_ac3b6dbd2ccb42d55a8438fd205c733c5}{00060}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nota_ac3b6dbd2ccb42d55a8438fd205c733c5}{Nota::setValor}}(\textcolor{keywordtype}{int} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00061}00061     \mbox{\hyperlink{class_nota_a0b165a29a21ea66a66907b82f64a3016}{Nota::validar}}(\mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00062}00062     this-\/>valor = \mbox{\hyperlink{class_nota_ae6263e6f02057e22253362df3f09a410}{valor}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00070}\mbox{\hyperlink{class_cidade_af65b0fa0b0c39f7011dcff5f8e52c1a3}{00070}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cidade_af65b0fa0b0c39f7011dcff5f8e52c1a3}{Cidade::validar}}(\textcolor{keywordtype}{string} nomeCidade)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00072}00072     \textcolor{comment}{// O vetor estatico e suficiente para a aplicacao}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00073}00073     \textcolor{keywordtype}{string} cidadeDisponivel[16] = \{\textcolor{stringliteral}{"{}hong kong"{}}, \textcolor{stringliteral}{"{}bangkok"{}}, \textcolor{stringliteral}{"{}macau"{}}, \textcolor{stringliteral}{"{}singapura"{}}, \textcolor{stringliteral}{"{}londres"{}}, \textcolor{stringliteral}{"{}paris"{}},}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00074}00074                                  \textcolor{stringliteral}{"{}dubai"{}}, \textcolor{stringliteral}{"{}delhi"{}}, \textcolor{stringliteral}{"{}istambul"{}}, \textcolor{stringliteral}{"{}kuala"{}}, \textcolor{stringliteral}{"{}lumpur"{}}, \textcolor{stringliteral}{"{}nova iorque"{}},}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00075}00075                                  \textcolor{stringliteral}{"{}antalya"{}}, \textcolor{stringliteral}{"{}mumbai"{}}, \textcolor{stringliteral}{"{}shenzhen"{}}, \textcolor{stringliteral}{"{}phuket"{}}\};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00077}00077     \textcolor{comment}{// Passar a string para minusculo garante que a funcao seja 'case no sensitive'}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00078}00078     \mbox{\hyperlink{func_8cpp_a71959b07d979b4fd128eb7cc7d4280f0}{lowerstr}}(\mbox{\hyperlink{class_cidade_a5a934f345f49cd83b278618cc7c3b5a0}{nomeCidade}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00080}00080     \textcolor{comment}{// A criacao de variavel auxiliar objetiva nao alterar o valor original da variavel parametro.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00081}00081     \textcolor{keywordtype}{string} cidadeNomeAux = \mbox{\hyperlink{class_cidade_a5a934f345f49cd83b278618cc7c3b5a0}{nomeCidade}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00083}00083     \textcolor{comment}{// Contador de igualdade entre cidades}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00084}00084     \textcolor{keywordtype}{int} selecao = 0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00086}00086     \textcolor{comment}{// Mecanismo de comparacao entre parametro e vetor de cidades possiveis.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00087}00087     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<16; i++)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00088}00088         \textcolor{keywordflow}{if}(cidadeNomeAux == cidadeDisponivel[i])\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00089}00089             selecao = selecao+1;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00090}00090         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00092}00092     \textcolor{keywordflow}{if} (selecao != 1)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00093}00093         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Cidade invalida."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00100}\mbox{\hyperlink{class_cidade_aeef5731f70dc20c2ede394dbd325d3f3}{00100}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cidade_aeef5731f70dc20c2ede394dbd325d3f3}{Cidade::setCidade}} (\textcolor{keywordtype}{string} nomeCidade)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00101}00101     \mbox{\hyperlink{class_cidade_af65b0fa0b0c39f7011dcff5f8e52c1a3}{validar}}(\mbox{\hyperlink{class_cidade_a5a934f345f49cd83b278618cc7c3b5a0}{nomeCidade}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00102}00102     this-\/>nomeCidade = \mbox{\hyperlink{class_cidade_a5a934f345f49cd83b278618cc7c3b5a0}{nomeCidade}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00103}00103 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00112}\mbox{\hyperlink{class_codigo_aedbb492294eec94107db134e04f53e2f}{00112}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_codigo_aedbb492294eec94107db134e04f53e2f}{Codigo::validar}}(\textcolor{keywordtype}{string} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00113}00113     \textcolor{keywordtype}{int} numerador = stoi(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}});                                  \textcolor{comment}{// Conversão de string para int;}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00114}00114     \textcolor{keywordtype}{int} somatorio = 0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00115}00115     \textcolor{keywordtype}{int} resto = 0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00116}00116     \textcolor{keywordtype}{int} i=0;                                                      \textcolor{comment}{// Índice Multiplicativo.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00118}00118     regex CODIGO\_VALIDO (\textcolor{stringliteral}{"{}[0-\/9]\{6\}"{}});                             \textcolor{comment}{// código aceitável}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00119}00119     regex CODIGO\_INVALIDO (\textcolor{stringliteral}{"{}[0]\{1,6\}"{}});                           \textcolor{comment}{// código inválido.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00120}00120     \textcolor{keywordtype}{int} DV=0;                                                     \textcolor{comment}{// Digito Verificador}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00122}00122     \textcolor{keywordflow}{if}  (regex\_match(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}, CODIGO\_INVALIDO) || !regex\_match(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}, CODIGO\_VALIDO))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00123}00123         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Codigo invalido. O codigo deve conter 6 algarismos diferente de 000000."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00128}00128     \textcolor{keywordflow}{while}(numerador>0)\{                                           \textcolor{comment}{// Neste laço cada algarismo é multiplicado por}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00129}00129         resto = (numerador\%10)*(9-\/i);                             \textcolor{comment}{// uma constante diferente, conforme o algoritmo.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00130}00130         somatorio = somatorio+resto;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00131}00131         numerador = numerador/10;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00132}00132         i++;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00135}00135     DV = somatorio \% 11;                                          \textcolor{comment}{//O resto esta em INT}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00136}00136     \textcolor{keywordflow}{if}(DV == 10)                                                  \textcolor{comment}{// Condicao para \%11 (div. por 11) = 10}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00137}00137         DV=0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00139}00139     \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}} = \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}+to\_string(DV);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00140}00140 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00146}\mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{00146}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{Codigo::setValor}}(\textcolor{keywordtype}{string} valor)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00147}00147     \mbox{\hyperlink{class_codigo_aedbb492294eec94107db134e04f53e2f}{validar}}(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00148}00148     this-\/>valor = \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00149}00149 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00151}00151 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00152}00152 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00159}\mbox{\hyperlink{class_data_a4d3e19547ec8d0bd1ad32e552cebc403}{00159}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a4d3e19547ec8d0bd1ad32e552cebc403}{Data::validar}}(\textcolor{keywordtype}{string} data)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00161}00161     std::smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00162}00162     \textcolor{keywordtype}{string} DIA, MES, ANO;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00164}00164     regex DATA\_VALIDA (\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)b(\(\backslash\)\(\backslash\)d\{2\})[-\/ /\(\backslash\)\(\backslash\).]([a-\/zA-\/Z]\{3\})[-\/ /\(\backslash\)\(\backslash\).](\(\backslash\)\(\backslash\)d\{4\})\(\backslash\)\(\backslash\)b"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00166}00166     regex JAN (\textcolor{stringliteral}{"{}[jJ][aA][nN]"{}});                             \textcolor{comment}{//a Codificacao dos meses generaliza}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00167}00167     regex FEV (\textcolor{stringliteral}{"{}[fF][eE][vV]"{}});                             \textcolor{comment}{//a entrada, sendo no-\/sensitive.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00168}00168     regex MAR (\textcolor{stringliteral}{"{}[mM][aA][rR]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00169}00169     regex ABR (\textcolor{stringliteral}{"{}[aA][bB][rR]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00170}00170     regex MAI (\textcolor{stringliteral}{"{}[mM][aA][iI]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00171}00171     regex JUN (\textcolor{stringliteral}{"{}[jJ][uU][nN]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00172}00172     regex JUL (\textcolor{stringliteral}{"{}[jJ][uU][lL]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00173}00173     regex AGO (\textcolor{stringliteral}{"{}[aA][gG][oO]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00174}00174     regex SET (\textcolor{stringliteral}{"{}[sS][eE][tT]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00175}00175     regex OUT (\textcolor{stringliteral}{"{}[oO][uU][tT]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00176}00176     regex NOV (\textcolor{stringliteral}{"{}[nN][oO][vV]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00177}00177     regex DEZ (\textcolor{stringliteral}{"{}[dD][eE][zZ]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00179}00179     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_data_ae3e630247f60efbc69086933fefa933a}{data}}, matches, DATA\_VALIDA))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00180}00180         DIA = matches.str(1);                       \textcolor{comment}{// Aqui será guardado DIA, MES e ANO}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00181}00181         MES = matches.str(2);                       \textcolor{comment}{// o tratamento da data será facilitado}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00182}00182         ANO = matches.str(3);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00187}00187         \textcolor{keywordtype}{int} ano = stoi(ANO);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00188}00188         \textcolor{keywordflow}{if} (ano<2000 || ano>9999)\{                  \textcolor{comment}{// Verificacao do ano.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00189}00189             \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. O ano deve ser entre 2000 -\/ 9999."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00190}00190         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00191}00191 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00195}00195         \textcolor{keywordflow}{if} (regex\_match(MES,ABR) || regex\_match(MES,JUN) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00196}00196             regex\_match(MES,SET) || regex\_match(MES,NOV))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00197}00197             \textcolor{keywordtype}{int} dia30 = stoi(DIA);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00198}00198             \textcolor{keywordflow}{if}(dia30<1 || dia30>30)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00199}00199                 \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. Este mes possui 30 dias."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00200}00200         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00205}00205         \textcolor{keywordflow}{if} (regex\_match(MES,JAN) || regex\_match(MES,MAR) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00206}00206             regex\_match(MES,MAI) || regex\_match(MES,JUL) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00207}00207             regex\_match(MES,AGO) || regex\_match(MES,OUT) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00208}00208             regex\_match(MES,DEZ))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00209}00209             \textcolor{keywordtype}{int} dia31 = stoi(DIA);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00210}00210             \textcolor{keywordflow}{if}(dia31<1 || dia31>31)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00211}00211                 \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. Este mes possui 31 dias."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00212}00212         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00218}00218         \textcolor{keywordflow}{if} (regex\_match(MES, FEV))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00219}00219             \textcolor{keywordtype}{int} diaMaxFev = stoi(DIA);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00220}00220             \textcolor{keywordflow}{if}(diaMaxFev>29)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00221}00221                 \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. Fevereiro nao possui mais de 29 dias"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00222}00222             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(diaMaxFev == 29 \&\& !(ano\%4 == 0 \&\& (ano\%100 != 0 || ano\%400 == 0)))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00223}00223                     \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. Este ano nao e bissexto."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00224}00224                     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00225}00225         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00227}00227     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00228}00228         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Data invalida, deve ser DIA-\/MES-\/ANO, n\&uacute;meros para DIA e ANO e 3 letras para o MES."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00229}00229     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00230}00230 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00236}\mbox{\hyperlink{class_data_a75a50f88bc966f20826a3959717a5acc}{00236}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a75a50f88bc966f20826a3959717a5acc}{Data::setData}}(\textcolor{keywordtype}{string} data)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00237}00237     \mbox{\hyperlink{class_data_a4d3e19547ec8d0bd1ad32e552cebc403}{validar}}(\mbox{\hyperlink{class_data_ae3e630247f60efbc69086933fefa933a}{data}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00238}00238     this-\/>data = \mbox{\hyperlink{class_data_ae3e630247f60efbc69086933fefa933a}{data}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00239}00239 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00241}00241 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00242}00242 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00249}\mbox{\hyperlink{class_descricao_ac87cc7439596fd015d8a7f87272ea5e8}{00249}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_descricao_ac87cc7439596fd015d8a7f87272ea5e8}{Descricao::validar}}(\textcolor{keywordtype}{string} descricao)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00250}00250     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00251}00251     regex DESCRICAO\_INVALIDA(\textcolor{stringliteral}{"{}([ ]\{2,\})"{}});                      \textcolor{comment}{//análise para cada caso separadamente.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00252}00252     regex DESCRICAO\_INVALIDA2(\textcolor{stringliteral}{"{}([.]\{2,\})"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00253}00253 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00254}00254     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_descricao_a98932ccd4326a50436f2fc8b32f0cd4a}{descricao}},matches,DESCRICAO\_INVALIDA) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00255}00255        regex\_search(\mbox{\hyperlink{class_descricao_a98932ccd4326a50436f2fc8b32f0cd4a}{descricao}},matches,DESCRICAO\_INVALIDA2))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00256}00256         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Descricao invalida. use apenas 1 espaco e ponto por vez."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00258}00258     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_descricao_a98932ccd4326a50436f2fc8b32f0cd4a}{descricao}}.length()>30)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00259}00259         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Entrada invalida. No max 30 caracteres."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00261}00261 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00267}\mbox{\hyperlink{class_descricao_a9754088913f998a2cfd2ba03191069a2}{00267}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_descricao_a9754088913f998a2cfd2ba03191069a2}{Descricao::setDescricao}} (\textcolor{keywordtype}{string} descricao)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00268}00268     \mbox{\hyperlink{class_descricao_ac87cc7439596fd015d8a7f87272ea5e8}{validar}}(\mbox{\hyperlink{class_descricao_a98932ccd4326a50436f2fc8b32f0cd4a}{descricao}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00269}00269     this-\/>descricao = \mbox{\hyperlink{class_descricao_a98932ccd4326a50436f2fc8b32f0cd4a}{descricao}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00270}00270 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00273}00273 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00274}00274 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00275}00275 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00281}\mbox{\hyperlink{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}{00281}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}{Endereco::validar}}(\textcolor{keywordtype}{string} endereco)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00282}00282     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00283}00283     regex ENDERECO\_INVALIDO(\textcolor{stringliteral}{"{}([ ]\{2,\})"{}});                      \textcolor{comment}{//análise para cada caso separadamente.}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00284}00284     regex ENDERECO\_INVALIDO2(\textcolor{stringliteral}{"{}([.]\{2,\})"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00285}00285 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00286}00286     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}},matches,ENDERECO\_INVALIDO) ||}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00287}00287        regex\_search(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}},matches,ENDERECO\_INVALIDO2))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00288}00288         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Endereco invalido. use apenas 1 espaco e ponto por vez."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00289}00289 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00290}00290     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}}.length()>20)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00291}00291         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Endereco invalido. No max 20 caracteres."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00292}00292 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00293}00293 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00299}\mbox{\hyperlink{class_endereco_a9c3f3042051c695390093eaf202d7401}{00299}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_endereco_a9c3f3042051c695390093eaf202d7401}{Endereco::setEndereco}} (\textcolor{keywordtype}{string} endereco)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00300}00300     \mbox{\hyperlink{class_endereco_ac309da5a7ede9e7b8d8fd4e4247c2f5f}{validar}}(\mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00301}00301     this-\/>endereco = \mbox{\hyperlink{class_endereco_aa2b5e6bc245138e15a34cc4b738601c5}{endereco}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00302}00302 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00304}00304 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00305}00305 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00306}00306 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00311}\mbox{\hyperlink{class_horario_ad745ae0133d0dc8c0104db4f81c60609}{00311}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_horario_ad745ae0133d0dc8c0104db4f81c60609}{Horario::validar}}(\textcolor{keywordtype}{string} horario)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00312}00312     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00313}00313     \textcolor{keywordtype}{string} HH, MM;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00314}00314     \textcolor{keywordtype}{int} hora, minuto;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00315}00315     regex HORA\_VALIDA(\textcolor{stringliteral}{"{}([0-\/2][0-\/9])[:]([0-\/5][0-\/9])"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00316}00316 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00317}00317     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_horario_a2a09ce8672ea9353ff614865855f1e36}{horario}},matches,HORA\_VALIDA))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00318}00318         HH = matches.str(1);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00319}00319         hora = stoi(HH);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00320}00320         MM = matches.str(2);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00321}00321         minuto = stoi(MM);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00322}00322 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00323}00323         \textcolor{keywordflow}{if}(hora<0 || hora>23 || minuto<0 || minuto>59)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00324}00324             \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Horario invalido. Formato valido: 00:00 ate 23:59."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00325}00325     \}\textcolor{keywordflow}{else}\{\textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Formato de horario invalido."{}});\}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00326}00326 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00327}00327 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00333}\mbox{\hyperlink{class_horario_a40c8660aecd2725dccd830b6248d1772}{00333}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_horario_a40c8660aecd2725dccd830b6248d1772}{Horario::setHorario}} (\textcolor{keywordtype}{string} horario)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00334}00334     \mbox{\hyperlink{class_horario_ad745ae0133d0dc8c0104db4f81c60609}{validar}}(\mbox{\hyperlink{class_horario_a2a09ce8672ea9353ff614865855f1e36}{horario}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00335}00335     this-\/>horario = \mbox{\hyperlink{class_horario_a2a09ce8672ea9353ff614865855f1e36}{horario}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00336}00336 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00337}00337 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00338}00338 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00339}00339 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00340}00340 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00341}00341 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00347}\mbox{\hyperlink{class_idioma_a453a820c6dbad5d7ec1490a8804343f9}{00347}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_idioma_a453a820c6dbad5d7ec1490a8804343f9}{Idioma::validar}}(\textcolor{keywordtype}{string} linguagem)\{   }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00351}00351     \textcolor{keywordtype}{string} idiomaDisponivel[10] = \{\textcolor{stringliteral}{"{}ingles"{}}, \textcolor{stringliteral}{"{}chines mandarim"{}}, \textcolor{stringliteral}{"{}hindi"{}}, \textcolor{stringliteral}{"{}espanhol"{}}, \textcolor{stringliteral}{"{}frances"{}}, \textcolor{stringliteral}{"{}arabe"{}},}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00352}00352                                    \textcolor{stringliteral}{"{}bengali"{}}, \textcolor{stringliteral}{"{}russo"{}}, \textcolor{stringliteral}{"{}portugues"{}}, \textcolor{stringliteral}{"{}indonesio"{}}\};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00353}00353 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00354}00354     \mbox{\hyperlink{func_8cpp_a71959b07d979b4fd128eb7cc7d4280f0}{lowerstr}}(linguagem);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00355}00355     \textcolor{comment}{//strlwr(linguagem);                                     //  Manipula a string para min\&uacute;sculo e salva na mesma vari\&aacute;vel}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00356}00356     \textcolor{keywordtype}{string} idiomaAux = linguagem;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00357}00357 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00358}00358 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00359}00359     \textcolor{keywordtype}{int} selecao = 0;                                        \textcolor{comment}{//  Contador de igualdade entre cidades}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00360}00360 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00361}00361     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<10; i++)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00362}00362         \textcolor{keywordflow}{if}(idiomaAux == idiomaDisponivel[i])\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00363}00363             selecao = selecao+1;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00364}00364         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00365}00365     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00366}00366     \textcolor{keywordflow}{if} (selecao != 1)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00367}00367         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Idioma invalido. Suas opcoes sao: ingles, chines mandarim, hindi, espanhol, frances, arabe, bengali, russo, portugues, indonesio"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00368}00368     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00369}00369 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00370}00370 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00375}\mbox{\hyperlink{class_idioma_a5c45d14cdaa691a0ac06f54845f4443e}{00375}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_idioma_a5c45d14cdaa691a0ac06f54845f4443e}{Idioma::setIdioma}} (\textcolor{keywordtype}{string} linguagem)\{ }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00376}00376     \mbox{\hyperlink{class_idioma_a453a820c6dbad5d7ec1490a8804343f9}{validar}}(linguagem);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00377}00377     this-\/>\mbox{\hyperlink{class_idioma_af19291b066e5b65f42365581e1e55cf1}{idioma}} = linguagem;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00378}00378 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00379}00379 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00380}00380 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00381}00381 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00382}00382 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00383}00383 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00389}\mbox{\hyperlink{class_titulo_a0eb6ad1cdc85aaa51129d7b26ea1f9ff}{00389}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_titulo_a0eb6ad1cdc85aaa51129d7b26ea1f9ff}{Titulo::validar}}(\textcolor{keywordtype}{string} titulo)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00390}00390     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00391}00391 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00392}00392     regex TITULO\_INVALIDO(\textcolor{stringliteral}{"{}([ ]\{2,\})|([.]\{2,\})|([0-\/9])"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00393}00393 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00394}00394     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_titulo_a135cf6437292c01c8af43f5e6dea84be}{titulo}},matches,TITULO\_INVALIDO))\{ \textcolor{comment}{//||}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00395}00395        \textcolor{comment}{//regex\_search(titulo,matches,TITULO\_INVALIDO2))}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00396}00396         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Endereco invalido. E permitido apenas letras e use apenas 1 espaco e ponto por vez."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00397}00397     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00398}00398     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_titulo_a135cf6437292c01c8af43f5e6dea84be}{titulo}}.length()<5 || \mbox{\hyperlink{class_titulo_a135cf6437292c01c8af43f5e6dea84be}{titulo}}.length()>20)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00399}00399        \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Endereco invalido. No min 5 e no max 20 caracteres."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00400}00400 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00401}00401 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00402}00402 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00407}\mbox{\hyperlink{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}{00407}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}{Titulo::setTitulo}} (\textcolor{keywordtype}{string} titulo)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00408}00408     \mbox{\hyperlink{class_titulo_a0eb6ad1cdc85aaa51129d7b26ea1f9ff}{validar}}(\mbox{\hyperlink{class_titulo_a135cf6437292c01c8af43f5e6dea84be}{titulo}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00409}00409     this-\/>titulo = \mbox{\hyperlink{class_titulo_a135cf6437292c01c8af43f5e6dea84be}{titulo}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00410}00410 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00411}00411 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00413}00413 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00414}00414 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00415}00415 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00416}00416 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00418}00418 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00424}\mbox{\hyperlink{class_senha_ac44607343a6883a44048471b76d1e3df}{00424}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_senha_ac44607343a6883a44048471b76d1e3df}{Senha::validar}}(\textcolor{keywordtype}{string} segredo)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00426}00426     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00427}00427     \textcolor{keywordtype}{int} charMin = 0, charMai = 0, charNum = 0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00428}00428     \textcolor{keywordtype}{char} caracter;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00429}00429     \textcolor{keywordtype}{string} caracterStr;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00430}00430     regex CAR\_MIN(\textcolor{stringliteral}{"{}[a-\/z]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00431}00431     regex CAR\_MAI(\textcolor{stringliteral}{"{}[A-\/Z]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00432}00432     regex CAR\_NUM(\textcolor{stringliteral}{"{}[0-\/9]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00433}00433     regex SENHA\_INVALIDA(\textcolor{stringliteral}{"{}[ ]|[\(\backslash\)\(\backslash\).]|[!@\#\$\%\&¨\&*)\(\backslash\)(+=£¢¬§]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00437}00437 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00438}00438     \textcolor{keywordflow}{if} (segredo.length()<6 || segredo.length()>6 || regex\_search(segredo,matches,SENHA\_INVALIDA))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00439}00439         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Senha invalida. So sao permitido 6 digitos de aA-\/zZ 0-\/9."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00440}00440 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00444}00444 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00445}00445     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<segredo.length(); i++)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00446}00446         caracter = segredo[i];}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00447}00447         caracterStr = segredo[i];}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00448}00448         \textcolor{keywordflow}{if}(regex\_match(caracterStr,CAR\_MIN))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00449}00449            charMin++;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00450}00450         \}\textcolor{keywordflow}{else}\{ \textcolor{keywordflow}{if}(regex\_match(caracterStr,CAR\_MAI))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00451}00451                  charMai++;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00452}00452                 \}\textcolor{keywordflow}{else}\{ \textcolor{keywordflow}{if}(regex\_match(caracterStr,CAR\_NUM))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00453}00453                          charNum++;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00454}00454                         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00455}00455                 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00456}00456         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00457}00457 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00461}00461 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00462}00462         \textcolor{keywordflow}{if}(i != (segredo.length()-\/1))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00463}00463             \textcolor{keywordflow}{if}(caracter == segredo[i+1])}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00464}00464             \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Senha invalida. Nao e permito caracteres repetidos em sequencia."{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00465}00465         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00466}00466     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00467}00467 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00471}00471 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00472}00472     \textcolor{keywordflow}{if}(charMin == 0 || charMai == 0 || charNum == 0)}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00473}00473             \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Senha invalida. Deve conter pelo menos 1 caracter minusculo, 1 maiusculo e 1 numero"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00474}00474 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00475}00475 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00476}00476 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00481}\mbox{\hyperlink{class_senha_a735e4bf5f65cc8d28daa7dbf202fd999}{00481}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_senha_a735e4bf5f65cc8d28daa7dbf202fd999}{Senha::setSenha}}(\textcolor{keywordtype}{string} segredo)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00482}00482     \mbox{\hyperlink{class_senha_ac44607343a6883a44048471b76d1e3df}{validar}}(segredo);}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00483}00483     this-\/>\mbox{\hyperlink{class_senha_a259a9fdd2b1c37168aba468cb7a434fc}{senha}} = segredo;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00484}00484 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00485}00485 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00486}00486 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00487}00487 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00488}00488 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00489}00489 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00490}00490 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00496}\mbox{\hyperlink{class_email_abdffea0a54b10fbaf3b9e3d2c9d6abbb}{00496}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_email_abdffea0a54b10fbaf3b9e3d2c9d6abbb}{Email::validar}}(\textcolor{keywordtype}{string} email)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00497}00497 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00498}00498     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00499}00499     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00500}00500     stringstream full\_email(\mbox{\hyperlink{class_email_ac0a91a44652858a0c5178ef836ec9c93}{email}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00501}00501     \textcolor{keywordtype}{string} intermediate;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00502}00502     regex EMAIL\_VALIDO(\textcolor{stringliteral}{"{}[a-\/zA-\/Z0-\/9!\#\(\backslash\)\(\backslash\)\$\%\&'*\(\backslash\)\(\backslash\)+\(\backslash\)\(\backslash\)-\/\(\backslash\)\(\backslash\)/=\string^\_`\{|\}\string~\(\backslash\)\(\backslash\).]\{1,64\}[@][a-\/zA-\/Z0-\/9\(\backslash\)\(\backslash\).\(\backslash\)\(\backslash\)-\/]\{1,253\}"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00506}00506 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00507}00507     \textcolor{keywordflow}{if}(!regex\_search(\mbox{\hyperlink{class_email_ac0a91a44652858a0c5178ef836ec9c93}{email}},matches,EMAIL\_VALIDO))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00508}00508         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Email invalido 1"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00509}00509 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00513}00513     \textcolor{keywordflow}{while}(getline(full\_email, intermediate, \textcolor{charliteral}{'@'}))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00514}00514         \textcolor{keywordflow}{if}(i == 0 \&\& (intermediate.front() == \textcolor{charliteral}{'.'} || intermediate.back() == \textcolor{charliteral}{'.'}))\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00515}00515             \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Email invalido 2A"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00516}00516         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00517}00517 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00518}00518         \textcolor{keywordflow}{if}(i == 1 \&\& intermediate.front() == \textcolor{charliteral}{'.'})\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00519}00519             \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Email invalido 2B"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00520}00520         \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00522}00522         i++;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00523}00523     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00524}00524 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00528}00528 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00529}00529     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_email_ac0a91a44652858a0c5178ef836ec9c93}{email}}.find(\textcolor{stringliteral}{"{}.."{}}) != string::npos)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00530}00530         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Email invalido 3"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00531}00531     \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00532}00532 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00533}00533 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00534}00534 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00539}\mbox{\hyperlink{class_email_a47fc9d4d76a2e2a7bc502f16c1d034be}{00539}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_email_a47fc9d4d76a2e2a7bc502f16c1d034be}{Email::setEmail}}(\textcolor{keywordtype}{string} email)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00540}00540     \mbox{\hyperlink{class_email_abdffea0a54b10fbaf3b9e3d2c9d6abbb}{validar}}(\mbox{\hyperlink{class_email_ac0a91a44652858a0c5178ef836ec9c93}{email}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00541}00541     this-\/>email = \mbox{\hyperlink{class_email_ac0a91a44652858a0c5178ef836ec9c93}{email}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00542}00542 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00543}00543 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00544}00544 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00545}00545 \textcolor{comment}{//=========================================================================================}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00546}00546 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00547}00547 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00548}00548 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00554}\mbox{\hyperlink{class_nome_a0f8a375558a40c9b0a6b1ab44487aa40}{00554}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nome_a0f8a375558a40c9b0a6b1ab44487aa40}{Nome::validar}}(\textcolor{keywordtype}{string} nome)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00555}00555 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00556}00556     smatch matches;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00557}00557     stringstream ss\_nome(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00558}00558     \textcolor{keywordtype}{string} intermediate;}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00559}00559     \textcolor{comment}{//regex NOME\_VALIDO("{}[a-\/zA-\/Z \(\backslash\)\(\backslash\).]\{5,20\}"{});}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00560}00560     regex CAR\_INVALIDO(\textcolor{stringliteral}{"{}[\string^a-\/zA-\/Z \(\backslash\)\(\backslash\).]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00561}00561     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00562}00562     regex MINUSCULO\_VALIDO\_MEIO(\textcolor{stringliteral}{"{}[\(\backslash\)\(\backslash\). ][a-\/z]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00563}00563     regex MINUSCULO\_VALIDO\_INICIO(\textcolor{stringliteral}{"{}\string^[A-\/Z]"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00564}00564     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00565}00565     regex PONTO\_ESPACO\_INVALIDO(\textcolor{stringliteral}{"{}([\(\backslash\)\(\backslash\).][A-\/Za-\/z])|([\(\backslash\)\(\backslash\).][\(\backslash\)\(\backslash\).])|([ ][ ])|([ ][a-\/z\(\backslash\)\(\backslash\).])"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00569}00569 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00570}00570     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}}.length() < 5 || \mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}}.length() > 20 || regex\_search(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}},matches,CAR\_INVALIDO))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00571}00571         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Erro: NOME\_INVALIDO"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00572}00572 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00576}00576     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}},matches,MINUSCULO\_VALIDO\_MEIO) || !regex\_search(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}},matches,MINUSCULO\_VALIDO\_INICIO))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00577}00577         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Erro: not MINUSCULO\_VALIDO"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00578}00578 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00582}00582     \textcolor{keywordflow}{if}(regex\_search(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}},matches,PONTO\_ESPACO\_INVALIDO))}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00583}00583         \textcolor{keywordflow}{throw} invalid\_argument (\textcolor{stringliteral}{"{}Erro: PONTO\_ESPACO\_INVALIDO"{}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00584}00584 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00585}00585 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00586}00586 }
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00591}\mbox{\hyperlink{class_nome_ab1507b81047efb89b50b6be0d33c08e5}{00591}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nome_ab1507b81047efb89b50b6be0d33c08e5}{Nome::setNome}}(\textcolor{keywordtype}{string} nome)\{}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00592}00592     \mbox{\hyperlink{class_nome_a0f8a375558a40c9b0a6b1ab44487aa40}{validar}}(\mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}});}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00593}00593     this-\/>nome = \mbox{\hyperlink{class_nome_ac3f8577d2bfac039271cc13c1c570df8}{nome}};}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00594}00594 \}}
+\DoxyCodeLine{\Hypertarget{dominio_8cpp_source_l00595}00595 }
+
+\end{DoxyCode}

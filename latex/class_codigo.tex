@@ -1,0 +1,164 @@
+\hypertarget{class_codigo}{}\doxysection{Codigo Class Reference}
+\label{class_codigo}\index{Codigo@{Codigo}}
+
+
+{\ttfamily \#include \char`\"{}dominio.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{set\+Valor}} (string)
+\item 
+const string \mbox{\hyperlink{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}{get\+Valor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_codigo_aedbb492294eec94107db134e04f53e2f}{validar}} (string)
+\begin{DoxyCompactList}\small\item\em Validacao de codigo de excurs\~{a}o. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Classe \mbox{\hyperlink{class_codigo}{Codigo}} determina o código para escurssão. Os 6 primeiros digitos são de código e o 7º é digito verificador. O algorítimo de verificação será \char`\"{}\+Módulo 11\char`\"{}, também usado para determinar numero de identidade (RG) SSP-\/\+SP. 
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00087}{87}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}\label{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}} 
+\index{Codigo@{Codigo}!getValor@{getValor}}
+\index{getValor@{getValor}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily const string Codigo\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00098}{98}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                                     \{}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}};}
+\DoxyCodeLine{00100 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00089}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00211}{TUCodigo\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00199}{TUCodigo\+::testar\+Cenario\+Sucesso()}}, \mbox{\hyperlink{testes_8cpp_source_l00775}{TUAvaliacao\+::testar\+Cenario\+Sucesso()}}, \mbox{\hyperlink{testes_8cpp_source_l00855}{TUSessao\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}\label{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}} 
+\index{Codigo@{Codigo}!setValor@{setValor}}
+\index{setValor@{setValor}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Codigo\+::set\+Valor (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
+
+Ap\'{o}s a valida\c{c}\~{a}o do c\'{o}digo, este \'{e} passado para o interior da classe 
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146                                  \{}
+\DoxyCodeLine{00147     \mbox{\hyperlink{class_codigo_aedbb492294eec94107db134e04f53e2f}{validar}}(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}});}
+\DoxyCodeLine{00148     this-\/>\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}} = \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}};}
+\DoxyCodeLine{00149 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8cpp_source_l00112}{validar()}}, and \mbox{\hyperlink{dominio_8h_source_l00089}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00211}{TUCodigo\+::testar\+Cenario\+Falha()}}, \mbox{\hyperlink{testes_8cpp_source_l00199}{TUCodigo\+::testar\+Cenario\+Sucesso()}}, \mbox{\hyperlink{testes_8cpp_source_l00775}{TUAvaliacao\+::testar\+Cenario\+Sucesso()}}, \mbox{\hyperlink{testes_8cpp_source_l00855}{TUSessao\+::testar\+Cenario\+Sucesso()}}, and \mbox{\hyperlink{testes_8cpp_source_l00902}{TUExcursao\+::testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_codigo_aedbb492294eec94107db134e04f53e2f}\label{class_codigo_aedbb492294eec94107db134e04f53e2f}} 
+\index{Codigo@{Codigo}!validar@{validar}}
+\index{validar@{validar}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Codigo\+::validar (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Validacao de codigo de excurs\~{a}o. 
+
+C\'{o}digo deve ser composto por 6 digitos n\'{u}mericos, salvo c\'{o}digo \textquotesingle{}000000\textquotesingle{}. O s\'{e}timo car\'{a}cter e o d\'{\i}gito verificador. algoritmo de verifica\c{c}\~{a}o =\texorpdfstring{$>$}{>} T\'{\i}tulo eleitoral \texorpdfstring{$<$}{<}A HREF = \char`\"{}http\+://ghiorzi.\+org/\+DVnew.\+htm\char`\"{}  
+\begin{DoxyParams}{Parameters}
+{\em string} & valor \\
+\hline
+\end{DoxyParams}
+Algoritmo de D\'{\i}gito de verifica\c{c}\~{a}o (T\'{\i}tulo Eleitoral)
+
+Definition at line \mbox{\hyperlink{dominio_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{dominio_8cpp_source}{dominio.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112                                 \{}
+\DoxyCodeLine{00113     \textcolor{keywordtype}{int} numerador = stoi(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}});                                  \textcolor{comment}{// Conversão de string para int;}}
+\DoxyCodeLine{00114     \textcolor{keywordtype}{int} somatorio = 0;}
+\DoxyCodeLine{00115     \textcolor{keywordtype}{int} resto = 0;}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{int} i=0;                                                      \textcolor{comment}{// Índice Multiplicativo.}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118     regex CODIGO\_VALIDO (\textcolor{stringliteral}{"{}[0-\/9]\{6\}"{}});                             \textcolor{comment}{// código aceitável}}
+\DoxyCodeLine{00119     regex CODIGO\_INVALIDO (\textcolor{stringliteral}{"{}[0]\{1,6\}"{}});                           \textcolor{comment}{// código inválido.}}
+\DoxyCodeLine{00120     \textcolor{keywordtype}{int} DV=0;                                                     \textcolor{comment}{// Digito Verificador}}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     \textcolor{keywordflow}{if}  (regex\_match(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}, CODIGO\_INVALIDO) || !regex\_match(\mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}, CODIGO\_VALIDO))}
+\DoxyCodeLine{00123         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Codigo invalido. O codigo deve conter 6 algarismos diferente de 000000."{}});}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00128     \textcolor{keywordflow}{while}(numerador>0)\{                                           \textcolor{comment}{// Neste laço cada algarismo é multiplicado por}}
+\DoxyCodeLine{00129         resto = (numerador\%10)*(9-\/i);                             \textcolor{comment}{// uma constante diferente, conforme o algoritmo.}}
+\DoxyCodeLine{00130         somatorio = somatorio+resto;}
+\DoxyCodeLine{00131         numerador = numerador/10;}
+\DoxyCodeLine{00132         i++;}
+\DoxyCodeLine{00133     \}}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135     DV = somatorio \% 11;                                          \textcolor{comment}{//O resto esta em INT}}
+\DoxyCodeLine{00136     \textcolor{keywordflow}{if}(DV == 10)                                                  \textcolor{comment}{// Condicao para \%11 (div. por 11) = 10}}
+\DoxyCodeLine{00137         DV=0;}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}} = \mbox{\hyperlink{class_codigo_a4158d3b1ba12793558108f8428af9315}{valor}}+to\_string(DV);}
+\DoxyCodeLine{00140 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{dominio_8h_source_l00089}{valor}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8cpp_source_l00146}{set\+Valor()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_codigo_a4158d3b1ba12793558108f8428af9315}\label{class_codigo_a4158d3b1ba12793558108f8428af9315}} 
+\index{Codigo@{Codigo}!valor@{valor}}
+\index{valor@{valor}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Codigo\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{dominio_8h_source_l00089}{89}} of file \mbox{\hyperlink{dominio_8h_source}{dominio.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{dominio_8h_source_l00098}{get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00146}{set\+Valor()}}, and \mbox{\hyperlink{dominio_8cpp_source_l00112}{validar()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dominio_8h}{dominio.\+h}}\item 
+\mbox{\hyperlink{dominio_8cpp}{dominio.\+cpp}}\end{DoxyCompactItemize}

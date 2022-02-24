@@ -1,0 +1,289 @@
+\hypertarget{class_t_u_horario}{}\doxysection{TUHorario Class Reference}
+\label{class_t_u_horario}\index{TUHorario@{TUHorario}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_horario_ac6e790d002f6854f57a6a85f9a3c9eeb}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_horario_a58974951411c48a2ef16b505b65ee991}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_horario_a6a247be3fdcdd25b3368550b12eb66b3}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_horario_a8b79ac212598c6cc2106ca56e61cfc05}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_horario_af3198652a0405a8ff99fad561994ddbf}{testar\+Cenario\+Sucesso}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_horario_a962a836ff96157b11d6b4e280db1a312}{testar\+Cenario\+Falha}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_u_horario_ae70410aa018503d8b72269e31e3af692}{VALOR\+\_\+\+VALIDO}} = \char`\"{}23\+:59\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_horario_a9003dff36f4cae697f2a13532257ecb5}{VALOR\+\_\+\+INVALIDO}} = \char`\"{}24\+:00\char`\"{}
+\item 
+\mbox{\hyperlink{class_horario}{Horario}} $\ast$ \mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}}
+\item 
+int \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Desenvolvimento da classe de Teste de unidade da classe \mbox{\hyperlink{class_horario}{Horario}} da excursÃ£o 
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00169}{169}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_horario_ac6e790d002f6854f57a6a85f9a3c9eeb}\label{class_t_u_horario_ac6e790d002f6854f57a6a85f9a3c9eeb}} 
+\index{TUHorario@{TUHorario}!run@{run}}
+\index{run@{run}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUHorario\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Script de teste de unidade para \mbox{\hyperlink{class_endereco}{Endereco}}. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00464}{464}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00464                   \{}
+\DoxyCodeLine{00465     \mbox{\hyperlink{class_t_u_horario_a6a247be3fdcdd25b3368550b12eb66b3}{setUp}}();}
+\DoxyCodeLine{00466     \mbox{\hyperlink{class_t_u_horario_af3198652a0405a8ff99fad561994ddbf}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00467     \mbox{\hyperlink{class_t_u_horario_a962a836ff96157b11d6b4e280db1a312}{testarCenarioFalha}}();}
+\DoxyCodeLine{00468     \mbox{\hyperlink{class_t_u_horario_a8b79ac212598c6cc2106ca56e61cfc05}{tearDown}}();}
+\DoxyCodeLine{00469     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}};}
+\DoxyCodeLine{00470 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00176}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00422}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00457}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00442}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00430}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a6a247be3fdcdd25b3368550b12eb66b3}\label{class_t_u_horario_a6a247be3fdcdd25b3368550b12eb66b3}} 
+\index{TUHorario@{TUHorario}!setUp@{setUp}}
+\index{setUp@{setUp}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUHorario\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Criação do objeto de testes para \mbox{\hyperlink{class_horario}{Horario}} da excursão e atribuição de estado inicial. inicializa o objeto \mbox{\hyperlink{class_endereco}{Endereco}} -\/--- Já não havia sido criado em \mbox{\hyperlink{testes_8h}{testes.\+h}} ???
+
+inicializa a instância ESTADO
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00422}{422}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00422                      \{}
+\DoxyCodeLine{00423     \mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_horario}{Horario}}();                                }
+\DoxyCodeLine{00424     \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}} = \mbox{\hyperlink{class_t_u_horario_a58974951411c48a2ef16b505b65ee991}{SUCESSO}};                                       }
+\DoxyCodeLine{00425 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00176}{estado}}, \mbox{\hyperlink{testes_8h_source_l00175}{horario}}, and \mbox{\hyperlink{testes_8h_source_l00183}{SUCESSO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00464}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a8b79ac212598c6cc2106ca56e61cfc05}\label{class_t_u_horario_a8b79ac212598c6cc2106ca56e61cfc05}} 
+\index{TUHorario@{TUHorario}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUHorario\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+exclusão correta do objeto de testes Exclusão do objeto da maneira correta
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00457}{457}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00457                         \{}
+\DoxyCodeLine{00458     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}};                                      }
+\DoxyCodeLine{00459 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00175}{horario}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00464}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a962a836ff96157b11d6b4e280db1a312}\label{class_t_u_horario_a962a836ff96157b11d6b4e280db1a312}} 
+\index{TUHorario@{TUHorario}!testarCenarioFalha@{testarCenarioFalha}}
+\index{testarCenarioFalha@{testarCenarioFalha}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{testarCenarioFalha()}{testarCenarioFalha()}}
+{\footnotesize\ttfamily void TUHorario\+::testar\+Cenario\+Falha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Se o valor está INVALIDO, ele nem será incluido para a variável
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00442}{442}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00442                                   \{}
+\DoxyCodeLine{00443     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00444         \mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}}-\/>\mbox{\hyperlink{class_horario_a40c8660aecd2725dccd830b6248d1772}{setHorario}}(\mbox{\hyperlink{class_t_u_horario_a9003dff36f4cae697f2a13532257ecb5}{VALOR\_INVALIDO}});}
+\DoxyCodeLine{00445         \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}} = \mbox{\hyperlink{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}{FALHA}};}
+\DoxyCodeLine{00446     \}}
+\DoxyCodeLine{00447     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{                           }
+\DoxyCodeLine{00448         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}}-\/>\mbox{\hyperlink{class_horario_aeed412eacf1d33c37ffffaed4686451e}{getHorario}}() == \mbox{\hyperlink{class_t_u_horario_a9003dff36f4cae697f2a13532257ecb5}{VALOR\_INVALIDO}})}
+\DoxyCodeLine{00449             \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}} = \mbox{\hyperlink{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}{FALHA}};}
+\DoxyCodeLine{00450     \}}
+\DoxyCodeLine{00451 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00176}{estado}}, \mbox{\hyperlink{testes_8h_source_l00184}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00190}{Horario\+::get\+Horario()}}, \mbox{\hyperlink{testes_8h_source_l00175}{horario}}, \mbox{\hyperlink{dominio_8cpp_source_l00333}{Horario\+::set\+Horario()}}, and \mbox{\hyperlink{testes_8h_source_l00174}{VALOR\+\_\+\+INVALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00464}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_af3198652a0405a8ff99fad561994ddbf}\label{class_t_u_horario_af3198652a0405a8ff99fad561994ddbf}} 
+\index{TUHorario@{TUHorario}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUHorario\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Testes de cenário de sucesso e de falha. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00430}{430}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00430                                     \{}
+\DoxyCodeLine{00431     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00432         \mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}}-\/>\mbox{\hyperlink{class_horario_a40c8660aecd2725dccd830b6248d1772}{setHorario}}(\mbox{\hyperlink{class_t_u_horario_ae70410aa018503d8b72269e31e3af692}{VALOR\_VALIDO}});}
+\DoxyCodeLine{00433         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_horario_a89dda884512ad027370b2864b926014b}{horario}}-\/>\mbox{\hyperlink{class_horario_aeed412eacf1d33c37ffffaed4686451e}{getHorario}}() != \mbox{\hyperlink{class_t_u_horario_ae70410aa018503d8b72269e31e3af692}{VALOR\_VALIDO}})}
+\DoxyCodeLine{00434             \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}} = \mbox{\hyperlink{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}{FALHA}};}
+\DoxyCodeLine{00435     \}}
+\DoxyCodeLine{00436     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{}
+\DoxyCodeLine{00437         \mbox{\hyperlink{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}{estado}} = \mbox{\hyperlink{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}{FALHA}};}
+\DoxyCodeLine{00438     \}}
+\DoxyCodeLine{00439 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00176}{estado}}, \mbox{\hyperlink{testes_8h_source_l00184}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00190}{Horario\+::get\+Horario()}}, \mbox{\hyperlink{testes_8h_source_l00175}{horario}}, \mbox{\hyperlink{dominio_8cpp_source_l00333}{Horario\+::set\+Horario()}}, and \mbox{\hyperlink{testes_8h_source_l00172}{VALOR\+\_\+\+VALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00464}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}\label{class_t_u_horario_a51513afb884c43c00816e138e06ca0b4}} 
+\index{TUHorario@{TUHorario}!estado@{estado}}
+\index{estado@{estado}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUHorario\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00176}{176}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00464}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00422}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00442}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00430}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}\label{class_t_u_horario_a93d6fabcab04d0ac3bc695bbf2e4cf1b}} 
+\index{TUHorario@{TUHorario}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUHorario\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00184}{184}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, \mbox{\hyperlink{testes_8cpp_source_l00442}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00430}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a89dda884512ad027370b2864b926014b}\label{class_t_u_horario_a89dda884512ad027370b2864b926014b}} 
+\index{TUHorario@{TUHorario}!horario@{horario}}
+\index{horario@{horario}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{horario}{horario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_horario}{Horario}}$\ast$ TUHorario\+::horario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00175}{175}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00422}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00457}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00442}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00430}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a58974951411c48a2ef16b505b65ee991}\label{class_t_u_horario_a58974951411c48a2ef16b505b65ee991}} 
+\index{TUHorario@{TUHorario}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUHorario\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00183}{183}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00422}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_a9003dff36f4cae697f2a13532257ecb5}\label{class_t_u_horario_a9003dff36f4cae697f2a13532257ecb5}} 
+\index{TUHorario@{TUHorario}!VALOR\_INVALIDO@{VALOR\_INVALIDO}}
+\index{VALOR\_INVALIDO@{VALOR\_INVALIDO}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{VALOR\_INVALIDO}{VALOR\_INVALIDO}}
+{\footnotesize\ttfamily string TUHorario\+::\+VALOR\+\_\+\+INVALIDO = \char`\"{}24\+:00\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00174}{174}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00442}{testar\+Cenario\+Falha()}}.
+
+\mbox{\Hypertarget{class_t_u_horario_ae70410aa018503d8b72269e31e3af692}\label{class_t_u_horario_ae70410aa018503d8b72269e31e3af692}} 
+\index{TUHorario@{TUHorario}!VALOR\_VALIDO@{VALOR\_VALIDO}}
+\index{VALOR\_VALIDO@{VALOR\_VALIDO}!TUHorario@{TUHorario}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO}{VALOR\_VALIDO}}
+{\footnotesize\ttfamily string TUHorario\+::\+VALOR\+\_\+\+VALIDO = \char`\"{}23\+:59\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00172}{172}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00430}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}

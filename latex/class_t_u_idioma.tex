@@ -1,0 +1,295 @@
+\hypertarget{class_t_u_idioma}{}\doxysection{TUIdioma Class Reference}
+\label{class_t_u_idioma}\index{TUIdioma@{TUIdioma}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_idioma_ae09ee051271e21ad675d5a34f0aaa1ea}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_idioma_a48c2d10268564d40d3dc3b78258e9aa5}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_idioma_abaa5a34d7ca89cc59ef92ce9209253de}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_idioma_abc9aa86ccab266f9d548a425151b1001}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_idioma_a868c73b446dae74e1c5c22d49c255fad}{testar\+Cenario\+Sucesso}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_idioma_acaba14bf3a4631d2c4a842b3fbb11411}{testar\+Cenario\+Falha}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_u_idioma_abdd017f90fc6d499d0e6e41e7f925a40}{VALOR\+\_\+\+VALIDO}} = \char`\"{}Portug\+UES\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_idioma_a3c2800de54c41ba494c2542c73056d77}{VALOR\+\_\+\+INVALIDO}} = \char`\"{}Sueco\char`\"{}
+\begin{DoxyCompactList}\small\item\em ESTA LINHA FOI DE char PARA string // Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_idioma}{Idioma}} $\ast$ \mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}}
+\begin{DoxyCompactList}\small\item\em ESTA LINHA FOI DE char PARA string // Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Desenvolvimento da classe de Teste de unidade da classe \mbox{\hyperlink{class_idioma}{Idioma}} da excursÃ£o 
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00193}{193}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_idioma_ae09ee051271e21ad675d5a34f0aaa1ea}\label{class_t_u_idioma_ae09ee051271e21ad675d5a34f0aaa1ea}} 
+\index{TUIdioma@{TUIdioma}!run@{run}}
+\index{run@{run}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUIdioma\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Script de teste de unidade para \mbox{\hyperlink{class_endereco}{Endereco}}. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00524}{524}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00524                  \{}
+\DoxyCodeLine{00525     \mbox{\hyperlink{class_t_u_idioma_abaa5a34d7ca89cc59ef92ce9209253de}{setUp}}();}
+\DoxyCodeLine{00526     \mbox{\hyperlink{class_t_u_idioma_a868c73b446dae74e1c5c22d49c255fad}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00527     \mbox{\hyperlink{class_t_u_idioma_acaba14bf3a4631d2c4a842b3fbb11411}{testarCenarioFalha}}();}
+\DoxyCodeLine{00528     \mbox{\hyperlink{class_t_u_idioma_abc9aa86ccab266f9d548a425151b1001}{tearDown}}();}
+\DoxyCodeLine{00529     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}};}
+\DoxyCodeLine{00530 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00200}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00481}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00517}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00502}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00490}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_abaa5a34d7ca89cc59ef92ce9209253de}\label{class_t_u_idioma_abaa5a34d7ca89cc59ef92ce9209253de}} 
+\index{TUIdioma@{TUIdioma}!setUp@{setUp}}
+\index{setUp@{setUp}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUIdioma\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Criação do objeto de testes para \mbox{\hyperlink{class_idioma}{Idioma}} da excursão e atribuição de estado inicial. inicializa o objeto \mbox{\hyperlink{class_idioma}{Idioma}}
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00481}{481}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00481                     \{}
+\DoxyCodeLine{00482     \mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_idioma}{Idioma}}();                                }
+\DoxyCodeLine{00483     \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}} = \mbox{\hyperlink{class_t_u_idioma_a48c2d10268564d40d3dc3b78258e9aa5}{SUCESSO}};}
+\DoxyCodeLine{00484 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00200}{estado}}, \mbox{\hyperlink{testes_8h_source_l00199}{idioma}}, and \mbox{\hyperlink{testes_8h_source_l00207}{SUCESSO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00524}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_abc9aa86ccab266f9d548a425151b1001}\label{class_t_u_idioma_abc9aa86ccab266f9d548a425151b1001}} 
+\index{TUIdioma@{TUIdioma}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUIdioma\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+exclusão correta do objeto de testes Exclusão do objeto da maneira correta
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00517}{517}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00517                        \{}
+\DoxyCodeLine{00518     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}};                                      }
+\DoxyCodeLine{00519 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00199}{idioma}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00524}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_acaba14bf3a4631d2c4a842b3fbb11411}\label{class_t_u_idioma_acaba14bf3a4631d2c4a842b3fbb11411}} 
+\index{TUIdioma@{TUIdioma}!testarCenarioFalha@{testarCenarioFalha}}
+\index{testarCenarioFalha@{testarCenarioFalha}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{testarCenarioFalha()}{testarCenarioFalha()}}
+{\footnotesize\ttfamily void TUIdioma\+::testar\+Cenario\+Falha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Se o valor está INVALIDO, ele nem será incluido para a variável
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00502}{502}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00502                                  \{}
+\DoxyCodeLine{00503     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00504         \mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}}-\/>\mbox{\hyperlink{class_idioma_a5c45d14cdaa691a0ac06f54845f4443e}{setIdioma}}(\mbox{\hyperlink{class_t_u_idioma_a3c2800de54c41ba494c2542c73056d77}{VALOR\_INVALIDO}});}
+\DoxyCodeLine{00505         \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}} = \mbox{\hyperlink{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}{FALHA}};}
+\DoxyCodeLine{00506     \}}
+\DoxyCodeLine{00507     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{                           }
+\DoxyCodeLine{00508         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}}-\/>\mbox{\hyperlink{class_idioma_aed811d1088475cb801fe76b7668e6a6f}{getIdioma}}() == \mbox{\hyperlink{class_t_u_idioma_a3c2800de54c41ba494c2542c73056d77}{VALOR\_INVALIDO}})}
+\DoxyCodeLine{00509             \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}} = \mbox{\hyperlink{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}{FALHA}};}
+\DoxyCodeLine{00510     \}}
+\DoxyCodeLine{00511 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00200}{estado}}, \mbox{\hyperlink{testes_8h_source_l00208}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00213}{Idioma\+::get\+Idioma()}}, \mbox{\hyperlink{testes_8h_source_l00199}{idioma}}, \mbox{\hyperlink{dominio_8cpp_source_l00375}{Idioma\+::set\+Idioma()}}, and \mbox{\hyperlink{testes_8h_source_l00198}{VALOR\+\_\+\+INVALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00524}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_a868c73b446dae74e1c5c22d49c255fad}\label{class_t_u_idioma_a868c73b446dae74e1c5c22d49c255fad}} 
+\index{TUIdioma@{TUIdioma}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUIdioma\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Testes de cenário de sucesso e de falha. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00490}{490}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00490                                    \{}
+\DoxyCodeLine{00491     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00492         \mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}}-\/>\mbox{\hyperlink{class_idioma_a5c45d14cdaa691a0ac06f54845f4443e}{setIdioma}}(\mbox{\hyperlink{class_t_u_idioma_abdd017f90fc6d499d0e6e41e7f925a40}{VALOR\_VALIDO}});}
+\DoxyCodeLine{00493         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}{idioma}}-\/>\mbox{\hyperlink{class_idioma_aed811d1088475cb801fe76b7668e6a6f}{getIdioma}}() != \mbox{\hyperlink{class_t_u_idioma_abdd017f90fc6d499d0e6e41e7f925a40}{VALOR\_VALIDO}})}
+\DoxyCodeLine{00494             \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}} = \mbox{\hyperlink{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}{FALHA}};}
+\DoxyCodeLine{00495     \}}
+\DoxyCodeLine{00496     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{}
+\DoxyCodeLine{00497         \mbox{\hyperlink{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}{estado}} = \mbox{\hyperlink{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}{FALHA}};}
+\DoxyCodeLine{00498     \}}
+\DoxyCodeLine{00499 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00200}{estado}}, \mbox{\hyperlink{testes_8h_source_l00208}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00213}{Idioma\+::get\+Idioma()}}, \mbox{\hyperlink{testes_8h_source_l00199}{idioma}}, \mbox{\hyperlink{dominio_8cpp_source_l00375}{Idioma\+::set\+Idioma()}}, and \mbox{\hyperlink{testes_8h_source_l00196}{VALOR\+\_\+\+VALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00524}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}\label{class_t_u_idioma_abf305e4ca35646166e65543ba96cba46}} 
+\index{TUIdioma@{TUIdioma}!estado@{estado}}
+\index{estado@{estado}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUIdioma\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00200}{200}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00524}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00481}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00502}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00490}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}\label{class_t_u_idioma_a451a92507af957897cb15785a32f19fc}} 
+\index{TUIdioma@{TUIdioma}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUIdioma\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00208}{208}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00502}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00490}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}\label{class_t_u_idioma_a53ef7b4121eaf155351e441685dbe323}} 
+\index{TUIdioma@{TUIdioma}!idioma@{idioma}}
+\index{idioma@{idioma}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{idioma}{idioma}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_idioma}{Idioma}}$\ast$ TUIdioma\+::idioma\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ESTA LINHA FOI DE char PARA string // Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. 
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00199}{199}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00481}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00517}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00502}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00490}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_a48c2d10268564d40d3dc3b78258e9aa5}\label{class_t_u_idioma_a48c2d10268564d40d3dc3b78258e9aa5}} 
+\index{TUIdioma@{TUIdioma}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUIdioma\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00207}{207}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00481}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_a3c2800de54c41ba494c2542c73056d77}\label{class_t_u_idioma_a3c2800de54c41ba494c2542c73056d77}} 
+\index{TUIdioma@{TUIdioma}!VALOR\_INVALIDO@{VALOR\_INVALIDO}}
+\index{VALOR\_INVALIDO@{VALOR\_INVALIDO}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{VALOR\_INVALIDO}{VALOR\_INVALIDO}}
+{\footnotesize\ttfamily string TUIdioma\+::\+VALOR\+\_\+\+INVALIDO = \char`\"{}Sueco\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ESTA LINHA FOI DE char PARA string // Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. 
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00198}{198}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00502}{testar\+Cenario\+Falha()}}.
+
+\mbox{\Hypertarget{class_t_u_idioma_abdd017f90fc6d499d0e6e41e7f925a40}\label{class_t_u_idioma_abdd017f90fc6d499d0e6e41e7f925a40}} 
+\index{TUIdioma@{TUIdioma}!VALOR\_VALIDO@{VALOR\_VALIDO}}
+\index{VALOR\_VALIDO@{VALOR\_VALIDO}!TUIdioma@{TUIdioma}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO}{VALOR\_VALIDO}}
+{\footnotesize\ttfamily string TUIdioma\+::\+VALOR\+\_\+\+VALIDO = \char`\"{}Portug\+UES\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00196}{196}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00490}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}
