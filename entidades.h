@@ -189,5 +189,44 @@ inline Endereco Excursao::getEnderecoE() const {
     return endereco;
 }
 
+// ----------------------------------------------------------------------
+// Exemplo de declara��o de classe entidade e implementa��es de m�todos.
+
+class Usuario {        // Avaliação possui 3 set e 3 get.
+private:
+      Nome      nome;
+      Email     email;
+      Senha     senha;
+public:
+    void setNomeE(const Nome&);
+    Nome getNomeE() const;
+
+    void setEmailE(const Email&);
+    Email getEmailE() const;
+
+    void setSenhaE(const Senha&);
+    Senha getSenhaE() const;
+};
+//____________________________________________________________________________
+inline void Usuario::setNomeE(const Nome& nome){
+    this->nome = nome;
+}
+inline Nome Usuario::getNomeE() const {
+    return nome;
+}
+//____________________________________________________________________________
+inline void Usuario::setEmailE(const Email& email){
+    this->email = email;
+}
+inline Email Usuario::getEmailE() const {
+    return email;
+}
+//____________________________________________________________________________
+inline void Usuario::setSenhaE(const Senha& senha){
+    this->senha = senha;
+}
+inline Senha Usuario::getSenhaE() const {
+    return senha;
+}
 
 #endif // ENTIDADES_H_INCLUDED

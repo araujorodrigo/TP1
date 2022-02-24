@@ -30,9 +30,9 @@ int main ()
     TUDuracao testeDuracao;
 
     switch(testeDuracao.run()){
-        case TUDuracao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUDuracao::SUCESSO: cout << "SUCESSO - DURACAO" << endl;
                                 break;
-        case TUDuracao::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUDuracao::FALHA  : cout << "FALHA   - DURACAO" << endl;
                                 break;
     }
 
@@ -42,9 +42,9 @@ int main ()
     TUNota testeNota;
 
     switch(testeNota.run()){
-        case TUNota::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
                                 break;
-        case TUNota::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUNota::FALHA  : cout << "FALHA   - NOTA" << endl;
                                 break;
     }
 
@@ -54,9 +54,9 @@ int main ()
     TUCidade testeCidade;
 
     switch(testeCidade.run()){
-        case TUCidade::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
                                 break;
-        case TUCidade::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUCidade::FALHA  : cout << "FALHA   - CIDADE" << endl;
                                 break;
     }
 
@@ -78,9 +78,9 @@ int main ()
     TUData testeData;
 
     switch(testeData.run()){
-        case TUData::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUData::SUCESSO: cout << "SUCESSO - DATA" << endl;
                                 break;
-        case TUData::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUData::FALHA  : cout << "FALHA   - DATA" << endl;
                                 break;
     }
 
@@ -90,9 +90,9 @@ int main ()
     TUDescricao testeDescricao;
 
     switch(testeDescricao.run()){
-        case TUDescricao::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
                                 break;
-        case TUDescricao::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUDescricao::FALHA  : cout << "FALHA   - DESCRICAO" << endl;
                                 break;
     }
 
@@ -102,9 +102,9 @@ int main ()
     TUEndereco testeEndereco;
 
     switch(testeEndereco.run()){
-        case TUEndereco::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUEndereco::SUCESSO: cout << "SUCESSO - ENDERECO" << endl;
                                 break;
-        case TUEndereco::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUEndereco::FALHA  : cout << "FALHA   - ENDERECO" << endl;
                                 break;
     }
 
@@ -114,9 +114,9 @@ int main ()
     TUHorario testeHorario;
 
     switch(testeHorario.run()){
-        case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUHorario::SUCESSO: cout << "SUCESSO - HORARIO" << endl;
                                 break;
-        case TUHorario::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUHorario::FALHA  : cout << "FALHA   - HORARIO" << endl;
                                 break;
     }
 
@@ -126,9 +126,9 @@ int main ()
     TUIdioma testeIdioma;
 
     switch(testeIdioma.run()){
-        case TUHorario::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUHorario::SUCESSO: cout << "SUCESSO - IDIOMA" << endl;
                                 break;
-        case TUHorario::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUHorario::FALHA  : cout << "FALHA   - IDIOMA" << endl;
                                 break;
     }
 
@@ -138,9 +138,9 @@ int main ()
     TUTitulo testeTitulo;
 
     switch(testeTitulo.run()){
-        case TUTitulo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
                                 break;
-        case TUTitulo::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUTitulo::FALHA  : cout << "FALHA   - TITULO" << endl;
                                 break;
     }
 
@@ -150,9 +150,39 @@ int main ()
     TUSenha testeSenha;
 
     switch(testeSenha.run()){
-        case TUSenha::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+        case TUSenha::SUCESSO: cout << "SUCESSO - SENHA" << endl;
                                 break;
-        case TUSenha::FALHA  : cout << "FALHA   - CODIGO" << endl;
+        case TUSenha::FALHA  : cout << "FALHA   - SENHA" << endl;
+                                break;
+    }
+
+
+
+///
+/// Teste Unidade - Email
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUEmail testeEmail;
+
+    switch(testeEmail.run()){
+        case TUEmail::SUCESSO: cout << "SUCESSO - EMAIL" << endl;
+                                break;
+        case TUEmail::FALHA  : cout << "FALHA   - EMAIL" << endl;
+                                break;
+    }
+
+    ///
+/// Teste Unidade - Nome
+/// A função 'run' irá rodar ambos os teste, espera-se obter sucesso ao final.
+/// Isto significa que a função está funcionando corretamente.
+///
+    TUNome testeNome;
+
+    switch(testeNome.run()){
+        case TUNome::SUCESSO: cout << "SUCESSO - NOME" << endl;
+                                break;
+        case TUNome::FALHA  : cout << "FALHA   - NOME" << endl;
                                 break;
     }
 
@@ -165,9 +195,20 @@ int main ()
     TUAvaliacao testeAvaliacao;
 
     switch(testeAvaliacao.run()){
-        case TUAvaliacao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIACAO Ent" << endl;
                                 break;
-        case TUAvaliacao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - AVALIACAO Ent" << endl;
+                                break;
+    }
+
+ TUUsuario testeUsuario;
+
+    // Invocar m�todo e apresentar mensagem acerca do resultado do teste.
+
+    switch(testeUsuario.run()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO Ent" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO Ent" << endl;
                                 break;
     }
 
@@ -177,9 +218,9 @@ int main ()
     TUSessao testeSessao;
 
     switch(testeSessao.run()){
-        case TUSessao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO Ent" << endl;
                                 break;
-        case TUSessao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+        case TUSessao::FALHA  : cout << "FALHA   - SESSAO Ent" << endl;
                                 break;
     }
 
@@ -189,9 +230,9 @@ int main ()
     TUExcursao testeExcursao;
 
     switch(testeExcursao.run()){
-        case TUExcursao::SUCESSO: cout << "SUCESSO - PROJETO" << endl;
+        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO Ent" << endl;
                                 break;
-        case TUExcursao::FALHA  : cout << "FALHA   - PROJETO" << endl;
+        case TUExcursao::FALHA  : cout << "FALHA   - EXCURSAO Ent" << endl;
                                 break;
     }
 

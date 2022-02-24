@@ -500,3 +500,114 @@ void Senha::setSenha(string segredo){
     validar(segredo);
     this->senha = segredo;
 }
+
+//=========================================================================================
+//=========================================================================================
+
+
+
+///
+///     A validacao da email abrange parte-local@dominio
+///
+///     @param email
+///
+void Email::validar(string email){
+
+    smatch matches;
+    int i = 0;
+    stringstream full_email(email);
+    string intermediate;
+    regex EMAIL_VALIDO("[a-zA-Z0-9!#\\$%&'*\\+\\-\\/=^_`{|}~\\.]{1,64}[@][a-zA-Z0-9\\.\\-]{1,253}");
+///
+/// 1 verificação de email: caracteres invalidos, comprimento de email e formato.
+///
+
+    if(!regex_search(email,matches,EMAIL_VALIDO))
+        throw invalid_argument ("Email invalido 1");
+
+///
+/// 2 verificação de email: Ocorrência de ponto
+///
+    while(getline(full_email, intermediate, '@')){
+        if(i == 0 && (intermediate.front() == '.' || intermediate.back() == '.')){
+            throw invalid_argument ("Email invalido 2A");
+        }
+
+        if(i == 1 && intermediate.front() == '.'){
+            throw invalid_argument ("Email invalido 2B");
+        }
+
+        i++;
+    }
+
+///
+/// 3 verificacao de email: Pontos duplos
+///
+
+    if(email.find("..") != string::npos){
+        throw invalid_argument ("Email invalido 3");
+    }
+
+}
+
+///
+///     Inclusão do Endereco da excurssão
+///     @param endereco
+///
+void Email::setEmail(string email){
+    validar(email);
+    this->email = email;
+}
+
+//=========================================================================================
+//=========================================================================================
+
+
+
+///
+///     A validacao de nome
+///
+///     @param nome
+///
+void Nome::validar(string nome){
+
+    smatch matches;
+    stringstream ss_nome(nome);
+    string intermediate;
+    //regex NOME_VALIDO("[a-zA-Z \\.]{5,20}");
+    regex CAR_INVALIDO("[^a-zA-Z \\.]");
+    //
+    regex MINUSCULO_VALIDO_MEIO("[\\. ][a-z]");
+    regex MINUSCULO_VALIDO_INICIO("^[A-Z]");
+    //
+    regex PONTO_ESPACO_INVALIDO("([\\.][A-Za-z])|([\\.][\\.])|([ ][ ])|([ ][a-z\\.])");
+///
+/// 1 verificação de nome: caracteres invalidos, comprimento de nome e formato.
+///
+
+    if(nome.length() < 5 || nome.length() > 20 || regex_search(nome,matches,CAR_INVALIDO))
+        throw invalid_argument ("Erro: NOME_INVALIDO");
+
+///
+/// 2 verificação de nome: Ocorrência nome iniciando minusculo
+///
+    if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
+        throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
+
+///
+/// 3 verificação de nome: Ocorrências com ponto e espaço
+///
+    if(regex_search(nome,matches,PONTO_ESPACO_INVALIDO))
+        throw invalid_argument ("Erro: PONTO_ESPACO_INVALIDO");
+
+}
+
+///
+///     Inclusão do Endereco da excurssão
+///     @param nome
+///
+void Nome::setNome(string nome){
+    validar(nome);
+    this->nome = nome;
+}
+
