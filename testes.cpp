@@ -1,4 +1,12 @@
-///Inclusão de bibliotecas auxiliares
+///
+/// \file testes.cpp
+/// \version 1.0
+///
+
+// /***********************************************************************************************
+//                                        BIBLIOTECAS
+// ************************************************************************************************/
+
 #include <iostream>
 #include <exception>
 #include "dominio.h"
@@ -7,20 +15,22 @@
 
 using namespace std;
 
+// /***********************************************************************************************
+//                                  DESENVOLVIMENTO testes.cpp
+// ************************************************************************************************/
 
 ///
-///   setUp cria um objeto no proposito de completação dos testes
+/// \brief setUp cria o objeto de teste
 ///
-void TUDuracao::setUp(){
-    duracao = new Duracao();                          ///inicializa o objeto DURACAO -------- Já não havia sido criado em testes.h ???
+    void TUDuracao::setUp(){
+    duracao = new Duracao();                          ///inicializa o objeto DURACAO
     estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
+    }
 
 ///
-///   O Teste de cenário de sucesso provoca a classe com valor VALIDO.
-///   Somente recebe estado de FALHA em caso de erro na classe.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-void TUDuracao::testarCenarioSucesso(){
+    void TUDuracao::testarCenarioSucesso(){
     try{
         duracao->setValor(VALOR_VALIDO);
         if (duracao->getValor() != VALOR_VALIDO)
@@ -28,59 +38,55 @@ void TUDuracao::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
 ///
-///   O Teste de cenário de falha provoca a classe com valor INVALIDO.
-///   Espera-se obter erro de exceção
+/// \brief Testa cen&aacute;rio falha
 ///
-void TUDuracao::testarCenarioFalha(){
+    void TUDuracao::testarCenarioFalha(){
     try{
         duracao->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        //cout << "FALHA - CODIGO. Excessao: " << exc.what() << duracao->getValor() << VALOR_INVALIDO << endl;          CÓDIGO DE TESTE
-        if(duracao->getValor() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if(duracao->getValor() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 ///
-///   A aqui sera feita a destruição do objeto de testes.
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUDuracao::tearDown(){
-    delete duracao;                                   ///Exclusão do objeto da maneira correta
-}
+    void TUDuracao::tearDown(){
+    delete duracao;
+    }
 
 ///
-/// O procedimento de Testes é composto da etapas abaixo e retornará SUCESSO ou FALHA
+/// \brief Rotina de testes
 ///
-int TUDuracao::run(){
-    setUp();
-    testarCenarioSucesso();
-    testarCenarioFalha();
-    tearDown();
-    return estado;
-}
+    int TUDuracao::run(){
+        setUp();
+        testarCenarioSucesso();
+        testarCenarioFalha();
+        tearDown();
+        return estado;
+    }
 
-
-//===========================================================================================================
-
-///
-/// Criação do objeto de testes de nota
-/// e atribuição de estado inicial.
-///
-void TUNota::setUp(){
-    nota = new Nota();                                ///inicializa o objeto DURACAO -------- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
+// =================================================================================================
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief setUp cria o objeto de teste
 ///
-void TUNota::testarCenarioSucesso(){
+    void TUNota::setUp(){
+    nota = new Nota();
+    estado = SUCESSO;
+    }
+
+///
+/// \brief Testa cen&aacute;rio sucesso
+///
+    void TUNota::testarCenarioSucesso(){
     try{
         nota->setValor(VALOR_VALIDO);
         if (nota->getValor() != VALOR_VALIDO)
@@ -88,32 +94,33 @@ void TUNota::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUNota::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUNota::testarCenarioFalha(){
     try{
         nota->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                   ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (nota->getValor() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if (nota->getValor() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
 void TUNota::tearDown(){
-    delete nota;                                   ///Exclusão do objeto da maneira correta
+    delete nota;
 }
 
 ///
-/// Script de teste de unidade para nota.
-/// Retorna somente um estado, é passível de melhoria.
+/// \brief Rotina de testes
 ///
 int TUNota::run(){
     setUp();
@@ -123,21 +130,20 @@ int TUNota::run(){
     return estado;
 }
 
-//===========================================================================================================
+// =================================================================================================
 
 ///
-/// Criação do objeto de testes de nome de Cidade
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-void TUCidade::setUp(){
-    cidade = new Cidade();                            ///inicializa o objeto CIDADE ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
+    void TUCidade::setUp(){
+    cidade = new Cidade();
+    estado = SUCESSO;
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-void TUCidade::testarCenarioSucesso(){
+    void TUCidade::testarCenarioSucesso(){
     try{
         cidade->setCidade(VALOR_VALIDO);
         if (cidade->getCidade() != VALOR_VALIDO)
@@ -145,58 +151,55 @@ void TUCidade::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUCidade::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUCidade::testarCenarioFalha(){
     try{
         cidade->setCidade(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (cidade->getCidade() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if (cidade->getCidade() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
+
+///
+/// \brief O objeto de teste &eacute; exclu&iacute;do
+///
+    void TUCidade::tearDown(){
+    delete cidade;
+    }
+
+///
+/// \brief Rotina de testes
+///
+    int TUCidade::run(){
+        setUp();
+        testarCenarioSucesso();
+        testarCenarioFalha();
+        tearDown();
+        return estado;
+    }
+//==================================================================================================
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief setUp cria o objeto de teste
 ///
-void TUCidade::tearDown(){
-    delete cidade;                                   ///Exclusão do objeto da maneira correta
-}
+    void TUCodigo::setUp(){
+    codigo = new Codigo();
+    estado = SUCESSO;
+    }
 
 ///
-/// Script de teste de unidade para Cidade.
-/// Retorna somente um estado, é passível de melhoria.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-int TUCidade::run(){
-    setUp();
-    testarCenarioSucesso();
-    testarCenarioFalha();
-    tearDown();
-    return estado;
-}
-
-
-//===========================================================================================================
-
-
-///
-/// Criação do objeto de testes para código da excurssão
-/// e atribuição de estado inicial.
-///
-void TUCodigo::setUp(){
-    codigo = new Codigo();                            ///inicializa o objeto CIDADE ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
-
-///
-/// Testes de cenário de sucesso e de falha.
-///
-void TUCodigo::testarCenarioSucesso(){
+    void TUCodigo::testarCenarioSucesso(){
     try{
         codigo->setValor(VALOR_VALIDO);
         if (codigo->getValor() != VALOR_VALIDO)
@@ -204,56 +207,56 @@ void TUCodigo::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUCodigo::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUCodigo::testarCenarioFalha(){
     try{
         codigo->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (codigo->getValor() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if (codigo->getValor() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
+
+///
+/// \brief O objeto de teste &eacute; exclu&iacute;do
+///
+    void TUCodigo::tearDown(){
+    delete codigo;
+    }
+
+///
+/// \brief Rotina de testes
+///
+    int TUCodigo::run(){
+        setUp();
+        testarCenarioSucesso();
+        testarCenarioFalha();
+        tearDown();
+        return estado;
+    }
+
+//==================================================================================================
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief setUp cria o objeto de teste
 ///
-void TUCodigo::tearDown(){
-    delete codigo;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUData::setUp(){
+    data = new Data();
+    estado = SUCESSO;
+    }
 
 ///
-/// Script de teste de unidade para Código.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-int TUCodigo::run(){
-    setUp();
-    testarCenarioSucesso();
-    testarCenarioFalha();
-    tearDown();
-    return estado;
-}
-
-//===========================================================================================================
-
-
-///
-/// Criação do objeto de testes para Data da excurssão
-/// e atribuição de estado inicial.
-///
-void TUData::setUp(){
-    data = new Data();                            ///inicializa o objeto CIDADE ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
-
-///
-/// Testes de cenário de sucesso e de falha.
-///
-void TUData::testarCenarioSucesso(){
+    void TUData::testarCenarioSucesso(){
     try{
         data->setData(VALOR_VALIDO);
         if (data->getData() != VALOR_VALIDO)
@@ -261,57 +264,57 @@ void TUData::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUData::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUData::testarCenarioFalha(){
     try{
         data->setData(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (data->getData() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if (data->getData() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUData::tearDown(){
-    delete data;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUData::tearDown(){
+    delete data;
+    }
 
 ///
-/// Script de teste de unidade para Código.
+/// \brief Rotina de testes
 ///
-int TUData::run(){
+    int TUData::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-
-//===========================================================================================================
+//==================================================================================================
 
 
 ///
-/// Criação do objeto de testes para Descrição da excurssão
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-void TUDescricao::setUp(){
-    descricao = new Descricao();                            ///inicializa o objeto CIDADE ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                 ///inicializa a instância ESTADO
-}
+    void TUDescricao::setUp(){
+    descricao = new Descricao();
+    estado = SUCESSO;
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-void TUDescricao::testarCenarioSucesso(){
+    void TUDescricao::testarCenarioSucesso(){
     try{
         descricao->setDescricao(VALOR_VALIDO);
         if (descricao->getDescricao() != VALOR_VALIDO)
@@ -319,57 +322,57 @@ void TUDescricao::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUDescricao::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUDescricao::testarCenarioFalha(){
     try{
         descricao->setDescricao(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                      ///Se o valor está INVALIDO, ele nem será incluido para a variável
-        if (descricao->getDescricao() == VALOR_INVALIDO)     ///como então getvalor pode ser igual ao valor INVALIDO ???
+    catch(invalid_argument &exc){
+        if (descricao->getDescricao() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUDescricao::tearDown(){
-    delete descricao;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUDescricao::tearDown(){
+    delete descricao;
+    }
 
 ///
-/// Script de teste de unidade para Código.
+/// \brief Rotina de testes
 ///
-int TUDescricao::run(){
+    int TUDescricao::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-
-//===========================================================================================================
+//==================================================================================================
 
 
 ///
-/// Criação do objeto de testes para Endereco da excursão
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-void TUEndereco::setUp(){
-    endereco = new Endereco();                              ///inicializa o objeto Endereco ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                       ///inicializa a instância ESTADO
-}
+    void TUEndereco::setUp(){
+    endereco = new Endereco();
+    estado = SUCESSO;
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-void TUEndereco::testarCenarioSucesso(){
+    void TUEndereco::testarCenarioSucesso(){
     try{
         endereco->setEndereco(VALOR_VALIDO);
         if (endereco->getEndereco() != VALOR_VALIDO)
@@ -377,57 +380,57 @@ void TUEndereco::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUEndereco::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUEndereco::testarCenarioFalha(){
     try{
         endereco->setEndereco(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (endereco->getEndereco() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUEndereco::tearDown(){
-    delete endereco;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUEndereco::tearDown(){
+    delete endereco;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUEndereco::run(){
+    int TUEndereco::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-
-//===========================================================================================================
+//==================================================================================================
 
 
 ///
-/// Criação do objeto de testes para Horario da excursão
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-void TUHorario::setUp(){
-    horario = new Horario();                                ///inicializa o objeto Endereco ---- Já não havia sido criado em testes.h ???
-    estado = SUCESSO;                                       ///inicializa a instância ESTADO
-}
+    void TUHorario::setUp(){
+    horario = new Horario();
+    estado = SUCESSO;
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-void TUHorario::testarCenarioSucesso(){
+    void TUHorario::testarCenarioSucesso(){
     try{
         horario->setHorario(VALOR_VALIDO);
         if (horario->getHorario() != VALOR_VALIDO)
@@ -435,59 +438,57 @@ void TUHorario::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUHorario::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUHorario::testarCenarioFalha(){
     try{
         horario->setHorario(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (horario->getHorario() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUHorario::tearDown(){
-    delete horario;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUHorario::tearDown(){
+    delete horario;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUHorario::run(){
+    int TUHorario::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-
-//===========================================================================================================
+//==================================================================================================
 
 
 ///
-/// Criação do objeto de testes para Idioma da excursão
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-
-void TUIdioma::setUp(){
-    idioma = new Idioma();                                ///inicializa o objeto Idioma
+    void TUIdioma::setUp(){
+    idioma = new Idioma();
     estado = SUCESSO;
-}
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-
-void TUIdioma::testarCenarioSucesso(){
+    void TUIdioma::testarCenarioSucesso(){
     try{
         idioma->setIdioma(VALOR_VALIDO);
         if (idioma->getIdioma() != VALOR_VALIDO)
@@ -495,59 +496,57 @@ void TUIdioma::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUIdioma::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUIdioma::testarCenarioFalha(){
     try{
         idioma->setIdioma(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (idioma->getIdioma() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUIdioma::tearDown(){
-    delete idioma;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUIdioma::tearDown(){
+    delete idioma;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUIdioma::run(){
+    int TUIdioma::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-
-//===========================================================================================================
+//==================================================================================================
 
 
 ///
-/// Criação do objeto de testes para Titulo da excursão
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-
-void TUTitulo::setUp(){
-    titulo = new Titulo();                                ///inicializa o objeto Idioma
+    void TUTitulo::setUp(){
+    titulo = new Titulo();
     estado = SUCESSO;
-}
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-
-void TUTitulo::testarCenarioSucesso(){
+    void TUTitulo::testarCenarioSucesso(){
     try{
         titulo->setTitulo(VALOR_VALIDO);
         if (titulo->getTitulo() != VALOR_VALIDO)
@@ -555,55 +554,56 @@ void TUTitulo::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUTitulo::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUTitulo::testarCenarioFalha(){
     try{
         titulo->setTitulo(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (titulo->getTitulo() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
-
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUTitulo::tearDown(){
-    delete titulo;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUTitulo::tearDown(){
+    delete titulo;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUTitulo::run(){
+    int TUTitulo::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
+
+// =================================================================================================
+
 
 ///
-/// Criação do objeto de testes para senha de usuário
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-
-void TUSenha::setUp(){
-    senha = new Senha();                                ///inicializa o objeto Idioma
+    void TUSenha::setUp(){
+    senha = new Senha();
     estado = SUCESSO;
-}
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-
-void TUSenha::testarCenarioSucesso(){
+    void TUSenha::testarCenarioSucesso(){
     try{
         senha->setSenha(VALOR_VALIDO);
         if (senha->getSenha() != VALOR_VALIDO)
@@ -611,55 +611,58 @@ void TUSenha::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUSenha::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUSenha::testarCenarioFalha(){
     try{
         senha->setSenha(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (senha->getSenha() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUSenha::tearDown(){
-    delete senha;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUSenha::tearDown(){
+    delete senha;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUSenha::run(){
+    int TUSenha::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
+
+// =================================================================================================
+
 
 ///
-/// Criação do objeto de testes para email de usuário
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-
-void TUEmail::setUp(){
-    email = new Email();                                ///inicializa o objeto Idioma
+    void TUEmail::setUp(){
+    email = new Email();
     estado = SUCESSO;
-}
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
 
-void TUEmail::testarCenarioSucesso(){
+    void TUEmail::testarCenarioSucesso(){
     try{
         email->setEmail(VALOR_VALIDO);
         if (email->getEmail() != VALOR_VALIDO)
@@ -667,55 +670,57 @@ void TUEmail::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUEmail::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUEmail::testarCenarioFalha(){
     try{
         email->setEmail(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (email->getEmail() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
 
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUEmail::tearDown(){
-    delete email;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUEmail::tearDown(){
+    delete email;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUEmail::run(){
+    int TUEmail::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
+
+// =================================================================================================
+
 
 ///
-/// Criação do objeto de testes para nome de usuário
-/// e atribuição de estado inicial.
+/// \brief setUp cria o objeto de teste
 ///
-
-void TUNome::setUp(){
-    nome = new Nome();                                ///inicializa o objeto Idioma
+    void TUNome::setUp(){
+    nome = new Nome();
     estado = SUCESSO;
-}
+    }
 
 ///
-/// Testes de cenário de sucesso e de falha.
+/// \brief Testa cen&aacute;rio sucesso
 ///
-
-void TUNome::testarCenarioSucesso(){
+    void TUNome::testarCenarioSucesso(){
     try{
         nome->setNome(VALOR_VALIDO);
         if (nome->getNome() != VALOR_VALIDO)
@@ -723,229 +728,272 @@ void TUNome::testarCenarioSucesso(){
     }
     catch(invalid_argument &exc){
         estado = FALHA;
+        }
     }
-}
 
-
-void TUNome::testarCenarioFalha(){
+///
+/// \brief Testa cen&aacute;rio falha
+///
+    void TUNome::testarCenarioFalha(){
     try{
         nome->setNome(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exc){                           ///Se o valor está INVALIDO, ele nem será incluido para a variável
+    catch(invalid_argument &exc){
         if (nome->getNome() == VALOR_INVALIDO)
             estado = FALHA;
+        }
     }
-}
-
 
 ///
-/// exclusão correta do objeto de testes
+/// \brief O objeto de teste &eacute; exclu&iacute;do
 ///
-void TUNome::tearDown(){
-    delete nome;                                      ///Exclusão do objeto da maneira correta
-}
+    void TUNome::tearDown(){
+    delete nome;
+    }
 
 ///
-/// Script de teste de unidade para Endereco.
+/// \brief Rotina de testes
 ///
-int TUNome::run(){
+    int TUNome::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
     tearDown();
     return estado;
-}
+    }
 
-//__________________________________________________________________________________________________________
-//______________________     Testes de unidade de Entidades      ___________________________________________
-//__________________________________________________________________________________________________________
+// ************************************************************************************************
+//                                 Testes de unidade de Entidades
+// ************************************************************************************************/
 
-
-
-void TUAvaliacao::setUp(){
+///
+/// \brief setUp cria entidade de teste
+///
+    void TUAvaliacao::setUp(){
     avaliacao = new Avaliacao();
     estado = SUCESSO;
-}
+    }
 
+///
+/// \brief A entidade de teste &eacute; exclu&iacute;da
+///
 void TUAvaliacao::tearDown(){
     delete avaliacao;
 }
 
-void TUAvaliacao::testarCenarioSucesso(){
-    Codigo codigo;
-    codigo.setValor(VALOR_VALIDO1);
-    avaliacao->setCodigoE(codigo);
-    if(avaliacao->getCodigoE().getValor() != VALOR_VALIDO1)
-        estado = FALHA;
+///
+/// \brief Testa cen&aacute;rio sucesso
+///
+    void TUAvaliacao::testarCenarioSucesso(){
+        Codigo codigo;
+        codigo.setValor(VALOR_VALIDO1);
+        avaliacao->setCodigoE(codigo);
+        if(avaliacao->getCodigoE().getValor() != VALOR_VALIDO1)
+            estado = FALHA;
 
-    Nota nota;
-    nota.setValor(VALOR_VALIDO2);
-    avaliacao->setNotaE(nota);
-    if(avaliacao->getNotaE().getValor() != VALOR_VALIDO2)
-        estado = FALHA;
+        Nota nota;
+        nota.setValor(VALOR_VALIDO2);
+        avaliacao->setNotaE(nota);
+        if(avaliacao->getNotaE().getValor() != VALOR_VALIDO2)
+            estado = FALHA;
 
-    Descricao descricao;
-    descricao.setDescricao(VALOR_VALIDO3);
-    avaliacao->setDescricaoE(descricao);
-    if(avaliacao->getDescricaoE().getDescricao() != VALOR_VALIDO3)
-        estado = FALHA;
-}
+        Descricao descricao;
+        descricao.setDescricao(VALOR_VALIDO3);
+        avaliacao->setDescricaoE(descricao);
+        if(avaliacao->getDescricaoE().getDescricao() != VALOR_VALIDO3)
+            estado = FALHA;
+    }
 
-int TUAvaliacao::run(){
+///
+/// \brief Rotina de testes
+///
+    int TUAvaliacao::run(){
     setUp();
     testarCenarioSucesso();
     tearDown();
     return estado;
-}
+    }
 
-//__________________________________________________________________________________________________________
-//__________                TU - Usuario                     ________________________________________________
+// =================================================================================================
 
 
-void TUUsuario::setUp(){
+///
+/// \brief setUp cria o entidade de teste
+///
+    void TUUsuario::setUp(){
     usuario = new Usuario();
     estado = SUCESSO;
-}
+    }
 
-void TUUsuario::tearDown(){
+///
+/// \brief A entidade de teste &eacute; exclu&iacute;da
+///
+    void TUUsuario::tearDown(){
     delete usuario;
-}
+    }
 
-void TUUsuario::testarCenarioSucesso(){
-    Nome nome;
-    nome.setNome(VALOR_VALIDO1);
-    usuario->setNomeE(nome);
-    if(usuario->getNomeE().getNome() != VALOR_VALIDO1)
-        estado = FALHA;
+///
+/// \brief Testa cen&aacute;rio sucesso
+///
+    void TUUsuario::testarCenarioSucesso(){
+        Nome nome;
+        nome.setNome(VALOR_VALIDO1);
+        usuario->setNomeE(nome);
+        if(usuario->getNomeE().getNome() != VALOR_VALIDO1)
+            estado = FALHA;
 
-    Email email;
-    email.setEmail(VALOR_VALIDO2);
-    usuario->setEmailE(email);
-    if(usuario->getEmailE().getEmail() != VALOR_VALIDO2)
-        estado = FALHA;
+        Email email;
+        email.setEmail(VALOR_VALIDO2);
+        usuario->setEmailE(email);
+        if(usuario->getEmailE().getEmail() != VALOR_VALIDO2)
+            estado = FALHA;
 
-    Senha senha;
-    senha.setSenha(VALOR_VALIDO3);
-    usuario->setSenhaE(senha);
-    if(usuario->getSenhaE().getSenha() != VALOR_VALIDO3)
-        estado = FALHA;
-}
+        Senha senha;
+        senha.setSenha(VALOR_VALIDO3);
+        usuario->setSenhaE(senha);
+        if(usuario->getSenhaE().getSenha() != VALOR_VALIDO3)
+            estado = FALHA;
+    }
 
-int TUUsuario::run(){
+///
+/// \brief Rotina de testes
+///
+    int TUUsuario::run(){
     setUp();
     testarCenarioSucesso();
     tearDown();
     return estado;
-}
+    }
 
-//__________________________________________________________________________________________________________
-//__________                TU - Sessão                     ________________________________________________
+// =================================================================================================
 
 
-void TUSessao::setUp(){
+///
+/// \brief setUp cria o entidade de teste
+///
+    void TUSessao::setUp(){
     sessao = new Sessao();
     estado = SUCESSO;
-}
+    }
 
-void TUSessao::tearDown(){
+///
+/// \brief A entidade de teste &eacute; exclu&iacute;da
+///
+    void TUSessao::tearDown(){
     delete sessao;
-}
+    }
 
-void TUSessao::testarCenarioSucesso(){
-    Codigo codigo;
-    codigo.setValor(VALOR_VALIDO1);
-    sessao->setCodigoE(codigo);
-    if(sessao->getCodigoE().getValor() != VALOR_VALIDO1)
-        estado = FALHA;
+///
+/// \brief Testa cen&aacute;rio sucesso
+///
+    void TUSessao::testarCenarioSucesso(){
+        Codigo codigo;
+        codigo.setValor(VALOR_VALIDO1);
+        sessao->setCodigoE(codigo);
+        if(sessao->getCodigoE().getValor() != VALOR_VALIDO1)
+            estado = FALHA;
 
-    Data data;
-    data.setData(VALOR_VALIDO2);
-    sessao->setDataE(data);
-    if(sessao->getDataE().getData() != VALOR_VALIDO2)
-        estado = FALHA;
+        Data data;
+        data.setData(VALOR_VALIDO2);
+        sessao->setDataE(data);
+        if(sessao->getDataE().getData() != VALOR_VALIDO2)
+            estado = FALHA;
 
-    Horario horario;
-    horario.setHorario(VALOR_VALIDO3);
-    sessao->setHorarioE(horario);
-    if(sessao->getHorarioE().getHorario() != VALOR_VALIDO3)
-        estado = FALHA;
+        Horario horario;
+        horario.setHorario(VALOR_VALIDO3);
+        sessao->setHorarioE(horario);
+        if(sessao->getHorarioE().getHorario() != VALOR_VALIDO3)
+            estado = FALHA;
 
-    Idioma idioma;
-    idioma.setIdioma(VALOR_VALIDO4);
-    sessao->setIdiomaE(idioma);
-    if(sessao->getIdiomaE().getIdioma() != VALOR_VALIDO4)
-        estado = FALHA;
-}
+        Idioma idioma;
+        idioma.setIdioma(VALOR_VALIDO4);
+        sessao->setIdiomaE(idioma);
+        if(sessao->getIdiomaE().getIdioma() != VALOR_VALIDO4)
+            estado = FALHA;
+    }
 
-int TUSessao::run(){
+///
+/// \brief Rotina de testes
+///
+    int TUSessao::run(){
     setUp();
     testarCenarioSucesso();
     tearDown();
     return estado;
-}
+    }
+
+// =================================================================================================
 
 
-//__________________________________________________________________________________________________________
-//__________                TU - Excursão                   ________________________________________________
-
-
-void TUExcursao::setUp(){
+///
+/// \brief setUp cria o entidade de teste
+///
+    void TUExcursao::setUp(){
     excursao = new Excursao();
     estado = SUCESSO;
-}
+    }
 
-void TUExcursao::tearDown(){
+///
+/// \brief A entidade de teste &eacute; exclu&iacute;da
+///
+    void TUExcursao::tearDown(){
     delete excursao;
-}
+    }
 
-void TUExcursao::testarCenarioSucesso(){
-    Codigo codigo;
-    codigo.setValor(VALOR_VALIDO1);
-    excursao->setCodigoE(codigo);
-    if(excursao->getCodigoE().getValor() != VALOR_VALIDO1)
-        estado = FALHA;
+///
+/// \brief Testa cen&aacute;rio sucesso
+///
+    void TUExcursao::testarCenarioSucesso(){
+        Codigo codigo;
+        codigo.setValor(VALOR_VALIDO1);
+        excursao->setCodigoE(codigo);
+        if(excursao->getCodigoE().getValor() != VALOR_VALIDO1)
+            estado = FALHA;
 
-    Titulo titulo;
-    titulo.setTitulo(VALOR_VALIDO2);
-    excursao->setTituloE(titulo);
-    if(excursao->getTituloE().getTitulo() != VALOR_VALIDO2)
-        estado = FALHA;
+        Titulo titulo;
+        titulo.setTitulo(VALOR_VALIDO2);
+        excursao->setTituloE(titulo);
+        if(excursao->getTituloE().getTitulo() != VALOR_VALIDO2)
+            estado = FALHA;
 
-    Nota nota;
-    nota.setValor(VALOR_VALIDO3);
-    excursao->setNotaE(nota);
-    if(excursao->getNotaE().getValor() != VALOR_VALIDO3)
-        estado = FALHA;
+        Nota nota;
+        nota.setValor(VALOR_VALIDO3);
+        excursao->setNotaE(nota);
+        if(excursao->getNotaE().getValor() != VALOR_VALIDO3)
+            estado = FALHA;
 
-    Cidade cidade;
-    cidade.setCidade(VALOR_VALIDO4);
-    excursao->setCidadeE(cidade);
-    if(excursao->getCidadeE().getCidade() != VALOR_VALIDO4)
-        estado = FALHA;
+        Cidade cidade;
+        cidade.setCidade(VALOR_VALIDO4);
+        excursao->setCidadeE(cidade);
+        if(excursao->getCidadeE().getCidade() != VALOR_VALIDO4)
+            estado = FALHA;
 
-    Duracao duracao;
-    duracao.setValor(VALOR_VALIDO5);
-    excursao->setDuracaoE(duracao);
-    if(excursao->getDuracaoE().getValor() != VALOR_VALIDO5)
-        estado = FALHA;
+        Duracao duracao;
+        duracao.setValor(VALOR_VALIDO5);
+        excursao->setDuracaoE(duracao);
+        if(excursao->getDuracaoE().getValor() != VALOR_VALIDO5)
+            estado = FALHA;
 
-    Descricao descricao;
-    descricao.setDescricao(VALOR_VALIDO6);
-    excursao->setDescricaoE(descricao);
-    if(excursao->getDescricaoE().getDescricao() != VALOR_VALIDO6)
-        estado = FALHA;
+        Descricao descricao;
+        descricao.setDescricao(VALOR_VALIDO6);
+        excursao->setDescricaoE(descricao);
+        if(excursao->getDescricaoE().getDescricao() != VALOR_VALIDO6)
+            estado = FALHA;
 
-    Endereco endereco;
-    endereco.setEndereco(VALOR_VALIDO7);
-    excursao->setEnderecoE(endereco);
-    if(excursao->getEnderecoE().getEndereco() != VALOR_VALIDO7)
-        estado = FALHA;
-}
+        Endereco endereco;
+        endereco.setEndereco(VALOR_VALIDO7);
+        excursao->setEnderecoE(endereco);
+        if(excursao->getEnderecoE().getEndereco() != VALOR_VALIDO7)
+            estado = FALHA;
+    }
 
-int TUExcursao::run(){
+///
+/// \brief Rotina de testes
+///
+    int TUExcursao::run(){
     setUp();
     testarCenarioSucesso();
     tearDown();
     return estado;
-}
+    }

@@ -1,7 +1,12 @@
+///
+/// \file entidades.h
+/// \version 1.0
+///
+
 #ifndef TESTES_H_INCLUDED
 #define TESTES_H_INCLUDED
 
-///Inclusão de bibliotecas auxiliares
+//Inclusão de bibliotecas auxiliares
 #include <exception>
 #include "dominio.h"
 #include "entidades.h"
@@ -9,7 +14,7 @@
 using namespace std;
 
 ///
-///   Desenvolvimento da classe de Teste de unidade da classe Duração
+/// \brief Desenvolvimento da classe de Teste de unidade da classe Duração
 ///
 class TUDuracao {
 private:
@@ -30,7 +35,7 @@ public:
 
 
 ///
-///   Desenvolvimento da classe de Teste de unidade da classe Nota da excursão
+/// \brief Desenvolvimento da classe de Teste de unidade da classe Nota da excursão
 ///
 class TUNota {
 private:

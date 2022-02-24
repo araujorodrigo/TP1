@@ -1,6 +1,8 @@
-/** @file dominio
-*   @version 1.0
-*/
+///
+/// \file dominio.h
+/// \version 1.0
+///
+
 #ifndef DOMINIO_H_INCLUDED
 #define DOMINIO_H_INCLUDED
 
@@ -8,303 +10,311 @@
 
 using namespace std;
 
-/**
-*   Classe duração
-*
-*   O VALOR a ser armazenado sera antes validado em VALIDAR.
-*   O valor deve passar por SETVALOR antes de ser armazenado.
-*/
-class Duracao {
-    private:
-        int valor;
-        void validar(int);
-    public:
-        void setValor(int valor);
-        int getValor() const;
-};
+///
+/// \brief Classe dura&ccedil;&atilde;o
+///
+      class Duracao {
+          private:
+              int valor;                              ///< \var valor
+              void validar(int);                      ///< \param int
+          public:
+              void setValor(int valor);               ///< \param int
+              int getValor() const;
+      };
 
 ///
-///      O método GETVALOR é posto como inline para evitar custo computacional,
-///      visto que é apenas retorno de uma informação.
+/// \brief M&eacute;todo inline.
 ///
-inline int Duracao::getValor() const{
-    return valor;
-}
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// \return valor
+///
+      inline int Duracao::getValor() const{
+          return valor;
+      }
 
 ///
-/// Classe Nota permite o armazenamento da avaliação dada pelo usuário para aquela excursão
+/// \brief Classe nota
 ///
-class Nota{
-     private:
-        int valor;
-        void validar(int);
-    public:
-        void setValor(int valor);
-        int getValor() const;
-};
-
-inline int Nota::getValor() const{
-    return valor;
-}
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+      class Nota{
+           private:
+              int valor;                              ///< \var valor
+              void validar(int);                      ///< \param int
+          public:
+              void setValor(int valor);               ///< \param int
+              int getValor() const;
+      };
 
 ///
-/// A Classe cidade permite o armazenamento correto das cidades disponiveis.
+/// \brief M&eacute;todo inline.
 ///
-class Cidade{
-    private:
-        string    nomeCidade;
-        void    validar(string);  /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
-
-    public:
-        void  setCidade(string); /// ESTA LINHA FOI ALTERADA DE char * PARA string ===========================================================
-        const string getCidade(); //Deve ser somente leitura
-
-};
-
-inline const string Cidade::getCidade(){
-    return nomeCidade;
-}
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// \return valor
+///
+      inline int Nota::getValor() const{
+          return valor;
+      }
 
 ///
-/// A Classe Codigo determina o código para escurssão.
-/// Os 6 primeiros digitos são de código e o 7º é digito verificador.
-/// O algorítimo de verificação será "Módulo 11", também usado para determinar
-/// numero de identidade (RG) SSP-SP.
-
-class Codigo{
-    private:
-        string valor;
-        void   validar(string);
-
-    public:
-        void  setValor(string);
-        const string getValor(); //Deve ser somente leitura
-
-};
-
-inline const string Codigo::getValor(){
-    return valor;
-}
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// \brief Classe cidade
+///
+      class Cidade{
+          private:
+              string    nomeCidade;                   ///< \var nomeCidade
+              void    validar(string);                ///< \param string
+          public:
+              void  setCidade(string);                ///< \param string
+              const string getCidade();               // Deve ser somente leitura
+      };
 
 ///
-/// A Classe de Data
+/// \brief M&eacute;todo inline.
 ///
-class Data{
-    private:
-        string data;
-        void   validar(string);
-
-    public:
-        void  setData(string);
-        const string getData(); //Deve ser somente leitura
-
-};
-
-inline const string Data::getData(){
-    return data;
-}
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// \return nomeCidade
+///
+      inline const string Cidade::getCidade(){
+          return nomeCidade;
+      }
 
 ///
-/// Classe Descrição
+/// \brief A Classe C&oacute;digo determina o c&oacute;digo para excurs&atilde;o.
+/// Os 6 primeiros d&iacute;gitos s&atilde;o de c&oacute;digo e o 7&ordm; &eacute; d&iacute;gito verificador.
+/// O algor&iacute;timo de verifica&ccedil;&atilde;o: M&oacute;dulo 11, tamb&eacute;m usado para determinar
+/// T&iacute;tulo eleitoral.
 ///
-class Descricao{
-    private:
-        string descricao;
-        void   validar(string);
 
-    public:
-        void   setDescricao(string);
-        const string getDescricao(); //Deve ser somente leitura
-
-};
-
-inline const string Descricao::getDescricao(){
-    return descricao;
-}
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+      class Codigo{
+          private:
+              string valor;                           ///< \var valor
+              void   validar(string);                 ///< \param string
+          public:
+              void  setValor(string);                 ///< \param string
+              const string getValor();                //Deve ser somente leitura
+      };
 
 ///
-/// Classe Endereço
+/// \brief M&eacute;todo inline.
 ///
-class Endereco{
-    private:
-        string endereco;
-        void   validar(string);
-
-    public:
-        void   setEndereco(string);
-        const string getEndereco(); //Deve ser somente leitura
-
-};
-
-inline const string Endereco::getEndereco(){
-    return endereco;
-}
-
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// \return valor
+///
+      inline const string Codigo::getValor(){
+          return valor;
+      }
 
 ///
-/// Classe Horario
+/// \brief Classe de Data
 ///
-class Horario{
-    private:
-        string horario;
-        void   validar(string);
-
-    public:
-        void   setHorario(string);
-        const string getHorario(); //Deve ser somente leitura
-
-};
-
-inline const string Horario::getHorario(){
-    return horario;
-}
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// Mecanismo de data compreende desde o ano 2000 at&eacute; o ano 9999.
+/// Para o m&ecirc;s devem ser escritos os 3 primeiros caracteres.
+///
+      class Data{
+          private:
+              string data;                            ///< \var valor
+              void   validar(string);                 ///< \param string
+          public:
+              void  setData(string);                  ///< \param string
+              const string getData();                 //Deve ser somente leitura
+      };
 
 ///
-/// A Classe Idioma permite o armazenamento correto dos idiomas disponiveis.
+/// \brief M&eacute;todo inline.
 ///
-class Idioma{
-    private:
-        string  idioma;
-        void    validar(string);  /// ESTA LINHA FOI DE char* PARA string
+/// \return data
+///
+      inline const string Data::getData(){
+          return data;
+      }
 
-    public:
-        void  setIdioma(string);   /// ESTA LINHA FOI DE char* PARA string
-        const string getIdioma(); //Deve ser somente leitura
-
-};
-
-inline const string Idioma::getIdioma(){
-    return idioma;
-}
-
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
 
 ///
-/// A Classe Titulo permite o armazenamento correto.
+/// \brief Classe Descri&ccedil;&atilde;o
 ///
-class Titulo{
-    private:
-        string  titulo;
-        void    validar(string);
-
-    public:
-        void  setTitulo(string);
-        const string getTitulo(); //Deve ser somente leitura
-
-};
-
-inline const string Titulo::getTitulo(){
-    return titulo;
-}
-
-
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// Texto composto de 0 &agrave; 30 caracteres. Sem espa&ccedil;o ou ponto final duplos.
+///
+      class Descricao{
+          private:
+              string descricao;                       ///< \var descricao
+              void   validar(string);                 ///< \param string
+          public:
+              void   setDescricao(string);            ///< \param string
+              const string getDescricao();            //Deve ser somente leitura
+      };
 
 ///
-/// A Classe Senha permite o armazenamento correto.
+/// \brief M&eacute;todo inline.
 ///
-class Senha{
-    private:
-        string  senha;
-        void    validar(string);
+/// \return descricao
+///
+      inline const string Descricao::getDescricao(){
+          return descricao;
+      }
 
-    public:
-        void  setSenha(string);
-        const string getSenha(); //Deve ser somente leitura
-
-};
-
-inline const string Senha::getSenha(){
-    return senha;
-}
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
 
 ///
-/// A Classe Email permite o armazenamento correto.
+/// \brief Classe Endere&ccedil;o
 ///
-class Email{
-    private:
-        string  email;
-        void    validar(string);
-
-    public:
-        void  setEmail(string);
-        const string getEmail(); //Deve ser somente leitura
-
-};
-
-inline const string Email::getEmail(){
-    return email;
-}
-
-//=========================================================================================
-//=========================================================================================
-//=========================================================================================
+/// Texto composto de 0 &agrave; 20 caracteres. Sem espa&ccedil;o ou ponto final duplos.
+///
+      class Endereco{
+          private:
+              string endereco;                        ///< \var valor
+              void   validar(string);                 ///< \param string
+          public:
+              void   setEndereco(string);             ///< \param string
+              const string getEndereco();             //Deve ser somente leitura
+      };
 
 ///
-/// Classe Nome permite o armazenamento
+/// \brief M&eacute;todo inline.
 ///
-class Nome{
-    private:
-        string  nome;
-        void    validar(string);
+/// \return endereco
+///
+      inline const string Endereco::getEndereco(){
+          return endereco;
+      }
 
-    public:
-        void  setNome(string);
-        const string getNome(); //Deve ser somente leitura
 
-};
+///
+/// \brief Classe Horario
+///
+/// A hora compreende de 00 at&eacute; 23 horas.
+/// Os minutos compreendem de 00 at&eacute; 59 minutos.
+      class Horario{
+          private:
+              string horario;                         ///< \var horario
+              void   validar(string);                 ///< \param string
+          public:
+              void   setHorario(string);              ///< \param string
+              const string getHorario();              //Deve ser somente leitura
+      };
 
-inline const string Nome::getNome(){
-    return nome;
-}
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return horario
+///
+      inline const string Horario::getHorario(){
+          return horario;
+      }
+
+
+///
+/// \brief Classe Idioma
+/// Permite o armazenamento do idioma, caso esteja dentre os dispon&iacute;veis.
+///
+      class Idioma{
+          private:
+              string  idioma;                         ///< \var idioma
+              void    validar(string);                ///< \param string
+          public:
+              void  setIdioma(string);                ///< \param string
+              const string getIdioma();               //Deve ser somente leitura
+
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return idioma
+///
+      inline const string Idioma::getIdioma(){
+          return idioma;
+      }
+
+
+///
+/// \brief Classe Titulo
+/// O T&iacute;tulo deve conter de 5 &agrave; 20 letras e n&atilde;o h&aacute; espa&ccedil;o ou ponto final duplos.
+///
+      class Titulo{
+          private:
+              string  titulo;                         ///< \var titulo
+              void    validar(string);                ///< \param string
+          public:
+              void  setTitulo(string);                ///< \param string
+              const string getTitulo();               //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return titulo
+///
+      inline const string Titulo::getTitulo(){
+          return titulo;
+      }
+
+
+///
+/// \brief Classe Senha
+/// A senha deve ser composta de 6 d&iacute;gitos, pode ser letra ou n&uacute;mero.
+/// Entretanto, n&atilde;o &eacute; v&aacute;lido car&aacute;cter repetido.
+/// E tamb&eacute;m, deve conter pelo menos 1 car&aacute;cter mai&uacute;sculo, 1 min&uacute;sculo e 1 n&uacute;mero.
+///
+      class Senha{
+          private:
+              string  senha;                          ///< \var senha
+              void    validar(string);                ///< \param string
+          public:
+              void  setSenha(string);                 ///< \param string
+              const string getSenha();                //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return senha
+///
+      inline const string Senha::getSenha(){
+          return senha;
+      }
+
+
+///
+/// A Classe Email
+/// Email &eacute; composto por parte-local: at&eacute; 64 caracteres, n&atilde;o iniciado ou finalizado por ponto final e que n&atilde;o seja duplo.
+/// Email tamb&eacute;m &eacute; composto por dom&iacute;nio: at&eacute; 253 caracteres, podem ser letras, n&uacute;meros, h&iacute;fen e ponto final, desde que n&atilde;o esteja no in&iacute;cio, fim ou seja duplo.
+///
+      class Email{
+          private:
+              string  email;                          ///< \var email
+              void    validar(string);                ///< \param string
+          public:
+              void  setEmail(string);                 ///< \param string
+              const string getEmail();                //Deve ser somente leitura
+
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return email
+///
+      inline const string Email::getEmail(){
+          return email;
+      }
+
+
+///
+/// Classe Nome
+/// Nome &eacute; composto de 5 &agrave; 20 caracteres, podendo ser letra mai&uacute;scula ou min&uacute;scula, espa&ccedil;o ou ponto final.
+/// Primeiro car&aacute;cter deve ser letra mai&uacute;scula, n&atilde;o &eacute; permitido espa&ccdeil;os duplos.
+/// Ponto final &eacute; precedido por letra, estar antes de espa&ccedil;o ou &eacute; &uacute;ltimo car&aacute;cter.
+///
+      class Nome{
+          private:
+              string  nome;                           ///< \var nome
+              void    validar(string);                ///< \param string
+          public:
+              void  setNome(string);                  ///< \param string
+              const string getNome();                 //Deve ser somente leitura
+
+      };
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return nome
+///
+      inline const string Nome::getNome(){
+            return nome;
+      }
 
 #endif // DOMINIO_H_INCLUDED
 

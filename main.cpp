@@ -1,43 +1,45 @@
-/** @file main.cpp
-*   @version 1.0
-*/
-/**************************************************************************************************
-                                         BIBLIOTECAS
-***************************************************************************************************/
+///
+/// \file main.cpp
+/// \version 1.0
+///
+
+// /***********************************************************************************************
+//                                        BIBLIOTECAS
+// ************************************************************************************************/
 
 #include <iostream>
 #include <exception>
 #include <string>
-//#include <cstring>   <===   Tirar esta biblioteca
 #include <locale>
 #include "dominio.h"
 #include "testes.h"
 #include "entidades.h"
 using namespace std;
 
-/**************************************************************************************************
-*                                  DESENVOLVIMENTO main.cpp
-***************************************************************************************************/
+// /***********************************************************************************************
+//                                  DESENVOLVIMENTO main.cpp
+// ************************************************************************************************/
 
 int main ()
-{setlocale(LC_ALL, "portuguese");
+{setlocale(LC_ALL, "portuguese");                     // Permite acentuacao na saida do console.
 
-/**************************************************************************************************
-*      TESTES DE UNIDADE DE DOMÍNIOS: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
-**************************************************************************************************/
-/// @brief Teste de unidade: Duracao
+// /***********************************************************************************************
+//      TESTES DE UNIDADE DE DOMÍNIOS: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
+// ************************************************************************************************/
+///
+/// \brief Teste de unidade: Dura&ccedil;&atilde;o
 ///
     TUDuracao testeDuracao;
 
     switch(testeDuracao.run()){
-        case TUDuracao::SUCESSO: cout << "SUCESSO - DURACAO" << endl;
+        case TUDuracao::SUCESSO: cout << "SUCESSO - DURAÇÃO" << endl;
                                 break;
-        case TUDuracao::FALHA  : cout << "FALHA   - DURACAO" << endl;
+        case TUDuracao::FALHA  : cout << "FALHA   - DURAÇÃO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Nota
+///
+/// \brief Teste de unidade: Nota
 ///
     TUNota testeNota;
 
@@ -48,8 +50,8 @@ int main ()
                                 break;
     }
 
-
-/// @brief Teste de unidade: Cidade
+///
+/// \brief Teste de unidade: Cidade
 ///
     TUCidade testeCidade;
 
@@ -60,8 +62,8 @@ int main ()
                                 break;
     }
 
-
-/// @brief Teste de unidade: Codigo
+///
+/// \brief Teste de unidade: C&oacute;digo
 ///
     TUCodigo testeCodigo;
 
@@ -72,8 +74,8 @@ int main ()
                                 break;
     }
 
-
-/// @brief Teste de unidade: Data
+///
+/// \brief Teste de unidade: Data
 ///
     TUData testeData;
 
@@ -84,44 +86,44 @@ int main ()
                                 break;
     }
 
-
-/// @brief Teste de unidade: Descricao
+///
+/// \brief Teste de unidade: Descri&ccedil;&atilde;o
 ///
     TUDescricao testeDescricao;
 
     switch(testeDescricao.run()){
-        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
+        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRIÇÃO" << endl;
                                 break;
-        case TUDescricao::FALHA  : cout << "FALHA   - DESCRICAO" << endl;
+        case TUDescricao::FALHA  : cout << "FALHA   - DESCRIÇÃO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Endereco
+///
+/// \brief Teste de unidade: Endere&ccedil;o
 ///
     TUEndereco testeEndereco;
 
     switch(testeEndereco.run()){
-        case TUEndereco::SUCESSO: cout << "SUCESSO - ENDERECO" << endl;
+        case TUEndereco::SUCESSO: cout << "SUCESSO - ENDEREÇO" << endl;
                                 break;
-        case TUEndereco::FALHA  : cout << "FALHA   - ENDERECO" << endl;
+        case TUEndereco::FALHA  : cout << "FALHA   - ENDEREÇO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Horario
+///
+/// \brief Teste de unidade: Hor&aacute;rio
 ///
     TUHorario testeHorario;
 
     switch(testeHorario.run()){
-        case TUHorario::SUCESSO: cout << "SUCESSO - HORARIO" << endl;
+        case TUHorario::SUCESSO: cout << "SUCESSO - HORÁRIO" << endl;
                                 break;
-        case TUHorario::FALHA  : cout << "FALHA   - HORARIO" << endl;
+        case TUHorario::FALHA  : cout << "FALHA   - HORÁRIO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Idioma
+///
+/// \brief Teste de unidade: Idioma
 ///
     TUIdioma testeIdioma;
 
@@ -132,20 +134,20 @@ int main ()
                                 break;
     }
 
-
-/// @brief Teste de unidade: Titulo
+///
+/// \brief Teste de unidade: T&iacute;tulo
 ///
     TUTitulo testeTitulo;
 
     switch(testeTitulo.run()){
-        case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
+        case TUTitulo::SUCESSO: cout << "SUCESSO - TÍTULO" << endl;
                                 break;
-        case TUTitulo::FALHA  : cout << "FALHA   - TITULO" << endl;
+        case TUTitulo::FALHA  : cout << "FALHA   - TÍTULO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Senha
+///
+/// \brief Teste de unidade: Senha
 ///
     TUSenha testeSenha;
 
@@ -156,12 +158,8 @@ int main ()
                                 break;
     }
 
-
-
 ///
-/// Teste Unidade - Email
-/// A funÃ§Ã£o 'run' irÃ¡ rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÃ§Ã£o estÃ¡ funcionando corretamente.
+/// \brief Teste Unidade: Email
 ///
     TUEmail testeEmail;
 
@@ -172,10 +170,8 @@ int main ()
                                 break;
     }
 
-    ///
-/// Teste Unidade - Nome
-/// A funÃ§Ã£o 'run' irÃ¡ rodar ambos os teste, espera-se obter sucesso ao final.
-/// Isto significa que a funÃ§Ã£o estÃ¡ funcionando corretamente.
+///
+/// Teste Unidade: Nome
 ///
     TUNome testeNome;
 
@@ -187,52 +183,54 @@ int main ()
     }
 
 
-/**************************************************************************************************
-*    TESTES DE UNIDADE DE ENTIDADES: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
-**************************************************************************************************/
-/// @brief Teste de unidade: Avaliacao
+// /***********************************************************************************************
+//     TESTES DE UNIDADE DE ENTIDADES: Invocam metodo 'run' e aguardam SUCESSO/FALHA do teste.
+// ************************************************************************************************/
+///
+/// \brief Teste de unidade: Entidade Avaliacao
 ///
     TUAvaliacao testeAvaliacao;
 
     switch(testeAvaliacao.run()){
-        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIACAO Ent" << endl;
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - ENT AVALIAÇÃO" << endl;
                                 break;
-        case TUAvaliacao::FALHA  : cout << "FALHA   - AVALIACAO Ent" << endl;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - ENT AVALIAÇÃO" << endl;
                                 break;
     }
 
- TUUsuario testeUsuario;
-
-    // Invocar mï¿½todo e apresentar mensagem acerca do resultado do teste.
+///
+/// \brief Teste de unidade: Entidade Usuario
+///
+    TUUsuario testeUsuario;
 
     switch(testeUsuario.run()){
-        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO Ent" << endl;
+        case TUUsuario::SUCESSO: cout << "SUCESSO - ENT USUÁRIO" << endl;
                                 break;
-        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO Ent" << endl;
+        case TUUsuario::FALHA  : cout << "FALHA   - ENT USUÁRIO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Sessao
+///
+/// \brief Teste de unidade: Entidade Sessao
 ///
     TUSessao testeSessao;
 
     switch(testeSessao.run()){
-        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO Ent" << endl;
+        case TUSessao::SUCESSO: cout << "SUCESSO - ENT SESSÃO" << endl;
                                 break;
-        case TUSessao::FALHA  : cout << "FALHA   - SESSAO Ent" << endl;
+        case TUSessao::FALHA  : cout << "FALHA   - ENT SESSÃO" << endl;
                                 break;
     }
 
-
-/// @brief Teste de unidade: Excursao
+///
+/// \brief Teste de unidade: Entidade Excursao
 ///
     TUExcursao testeExcursao;
 
     switch(testeExcursao.run()){
-        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO Ent" << endl;
+        case TUExcursao::SUCESSO: cout << "SUCESSO - ENT EXCURSÃO" << endl;
                                 break;
-        case TUExcursao::FALHA  : cout << "FALHA   - EXCURSAO Ent" << endl;
+        case TUExcursao::FALHA  : cout << "FALHA   - ENT EXCURSÃO" << endl;
                                 break;
     }
 
