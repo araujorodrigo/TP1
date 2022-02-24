@@ -1,0 +1,315 @@
+\hypertarget{class_t_u_duracao}{}\doxysection{TUDuracao Class Reference}
+\label{class_t_u_duracao}\index{TUDuracao@{TUDuracao}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_duracao_ae1b82a9f2b93befc6a64601b6d051517}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_duracao_a6a0754cf3ffd57cb7fddea9217018cc7}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_duracao_a1da90c366102944cd5c6ac9cb7229109}{set\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Estado do teste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_u_duracao_a0a0aa40e87005f45d1e72391e33f3f27}{tear\+Down}} ()
+\begin{DoxyCompactList}\small\item\em M{\ucr}todo para criar unidade em teste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_u_duracao_ad3058be5fcd2cade73db224ca0a2a21c}{testar\+Cenario\+Sucesso}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_duracao_af92cc56237deb1b85ca1b707914722ce}{testar\+Cenario\+Falha}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_duracao}{Duracao}} $\ast$ \mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}}
+\begin{DoxyCompactList}\small\item\em Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}}
+\begin{DoxyCompactList}\small\item\em Refer{\ucr}ncia para unidade em teste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_duracao_acd97a8e155a938f3dd19e1ea784828de}{VALOR\+\_\+\+VALIDO}} = 30
+\item 
+static const int \mbox{\hyperlink{class_t_u_duracao_a9d1f4f2e28580cf39f3c2ebc6c0ed852}{VALOR\+\_\+\+INVALIDO}} = 10
+\begin{DoxyCompactList}\small\item\em Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Desenvolvimento da classe de Teste de unidade da classe DuraÃ§Ã£o 
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00014}{14}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_duracao_ae1b82a9f2b93befc6a64601b6d051517}\label{class_t_u_duracao_ae1b82a9f2b93befc6a64601b6d051517}} 
+\index{TUDuracao@{TUDuracao}!run@{run}}
+\index{run@{run}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUDuracao\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+O procedimento de Testes é composto da etapas abaixo e retornará SUCESSO ou FALHA 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                   \{}
+\DoxyCodeLine{00061     \mbox{\hyperlink{class_t_u_duracao_a1da90c366102944cd5c6ac9cb7229109}{setUp}}();}
+\DoxyCodeLine{00062     \mbox{\hyperlink{class_t_u_duracao_ad3058be5fcd2cade73db224ca0a2a21c}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00063     \mbox{\hyperlink{class_t_u_duracao_af92cc56237deb1b85ca1b707914722ce}{testarCenarioFalha}}();}
+\DoxyCodeLine{00064     \mbox{\hyperlink{class_t_u_duracao_a0a0aa40e87005f45d1e72391e33f3f27}{tearDown}}();}
+\DoxyCodeLine{00065     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}};}
+\DoxyCodeLine{00066 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00019}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00014}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00053}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00038}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00023}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a1da90c366102944cd5c6ac9cb7229109}\label{class_t_u_duracao_a1da90c366102944cd5c6ac9cb7229109}} 
+\index{TUDuracao@{TUDuracao}!setUp@{setUp}}
+\index{setUp@{setUp}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUDuracao\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Estado do teste. 
+
+set\+Up cria um objeto no proposito de completação dos testes inicializa o objeto DURACAO -\/-\/-\/-\/-\/--- Já não havia sido criado em \mbox{\hyperlink{testes_8h}{testes.\+h}} ???
+
+inicializa a instância ESTADO
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014                      \{}
+\DoxyCodeLine{00015     \mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_duracao}{Duracao}}();                          }
+\DoxyCodeLine{00016     \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}} = \mbox{\hyperlink{class_t_u_duracao_a6a0754cf3ffd57cb7fddea9217018cc7}{SUCESSO}};                                 }
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00018}{duracao}}, \mbox{\hyperlink{testes_8h_source_l00019}{estado}}, and \mbox{\hyperlink{testes_8h_source_l00026}{SUCESSO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00060}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a0a0aa40e87005f45d1e72391e33f3f27}\label{class_t_u_duracao_a0a0aa40e87005f45d1e72391e33f3f27}} 
+\index{TUDuracao@{TUDuracao}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUDuracao\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+M{\ucr}todo para criar unidade em teste. 
+
+A aqui sera feita a destruição do objeto de testes. Exclusão do objeto da maneira correta
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053                         \{}
+\DoxyCodeLine{00054     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}};                                   }
+\DoxyCodeLine{00055 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00018}{duracao}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00060}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_af92cc56237deb1b85ca1b707914722ce}\label{class_t_u_duracao_af92cc56237deb1b85ca1b707914722ce}} 
+\index{TUDuracao@{TUDuracao}!testarCenarioFalha@{testarCenarioFalha}}
+\index{testarCenarioFalha@{testarCenarioFalha}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{testarCenarioFalha()}{testarCenarioFalha()}}
+{\footnotesize\ttfamily void TUDuracao\+::testar\+Cenario\+Falha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+O Teste de cenário de falha provoca a classe com valor INVALIDO. Espera-\/se obter erro de exceção Se o valor está INVALIDO, ele nem será incluido para a variável
+
+como então getvalor pode ser igual ao valor INVALIDO ???
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                                   \{}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00040         \mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}}-\/>\mbox{\hyperlink{class_duracao_adbac25345a732a7ef54c4427ff0a4584}{setValor}}(\mbox{\hyperlink{class_t_u_duracao_a9d1f4f2e28580cf39f3c2ebc6c0ed852}{VALOR\_INVALIDO}});}
+\DoxyCodeLine{00041         \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}} = \mbox{\hyperlink{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}{FALHA}};}
+\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00043     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{                      }
+\DoxyCodeLine{00044         \textcolor{comment}{//cout << "{}FALHA -\/ CODIGO. Excessao: "{} << exc.what() << duracao-\/>getValor() << VALOR\_INVALIDO << endl;          CÓDIGO DE TESTE}}
+\DoxyCodeLine{00045         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}}-\/>\mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{getValor}}() == \mbox{\hyperlink{class_t_u_duracao_a9d1f4f2e28580cf39f3c2ebc6c0ed852}{VALOR\_INVALIDO}})     }
+\DoxyCodeLine{00046             \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}} = \mbox{\hyperlink{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}{FALHA}};}
+\DoxyCodeLine{00047     \}}
+\DoxyCodeLine{00048 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00018}{duracao}}, \mbox{\hyperlink{testes_8h_source_l00019}{estado}}, \mbox{\hyperlink{testes_8h_source_l00027}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00030}{Duracao\+::get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00043}{Duracao\+::set\+Valor()}}, and \mbox{\hyperlink{testes_8h_source_l00017}{VALOR\+\_\+\+INVALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00060}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_ad3058be5fcd2cade73db224ca0a2a21c}\label{class_t_u_duracao_ad3058be5fcd2cade73db224ca0a2a21c}} 
+\index{TUDuracao@{TUDuracao}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUDuracao\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+O Teste de cenário de sucesso provoca a classe com valor VALIDO. Somente recebe estado de FALHA em caso de erro na classe. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023                                     \{}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00025         \mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}}-\/>\mbox{\hyperlink{class_duracao_adbac25345a732a7ef54c4427ff0a4584}{setValor}}(\mbox{\hyperlink{class_t_u_duracao_acd97a8e155a938f3dd19e1ea784828de}{VALOR\_VALIDO}});}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}{duracao}}-\/>\mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{getValor}}() != \mbox{\hyperlink{class_t_u_duracao_acd97a8e155a938f3dd19e1ea784828de}{VALOR\_VALIDO}})}
+\DoxyCodeLine{00027             \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}} = \mbox{\hyperlink{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}{FALHA}};}
+\DoxyCodeLine{00028     \}}
+\DoxyCodeLine{00029     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{}
+\DoxyCodeLine{00030         \mbox{\hyperlink{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}{estado}} = \mbox{\hyperlink{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}{FALHA}};}
+\DoxyCodeLine{00031     \}}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00018}{duracao}}, \mbox{\hyperlink{testes_8h_source_l00019}{estado}}, \mbox{\hyperlink{testes_8h_source_l00027}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00030}{Duracao\+::get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00043}{Duracao\+::set\+Valor()}}, and \mbox{\hyperlink{testes_8h_source_l00016}{VALOR\+\_\+\+VALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00060}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}\label{class_t_u_duracao_a9f83c9f3524b910e20281015db8f8375}} 
+\index{TUDuracao@{TUDuracao}!duracao@{duracao}}
+\index{duracao@{duracao}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{duracao}{duracao}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_duracao}{Duracao}}$\ast$ TUDuracao\+::duracao\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. 
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00018}{18}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00014}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00053}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00038}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00023}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}\label{class_t_u_duracao_a3b79c689a3b89ef20cd7a43c04ba3f1b}} 
+\index{TUDuracao@{TUDuracao}!estado@{estado}}
+\index{estado@{estado}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUDuracao\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Refer{\ucr}ncia para unidade em teste. 
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00019}{19}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00060}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00014}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00038}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00023}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}\label{class_t_u_duracao_a4a2c5d2f7449bb017266148c97b9fc13}} 
+\index{TUDuracao@{TUDuracao}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUDuracao\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00027}{27}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, \mbox{\hyperlink{testes_8cpp_source_l00038}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00023}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a6a0754cf3ffd57cb7fddea9217018cc7}\label{class_t_u_duracao_a6a0754cf3ffd57cb7fddea9217018cc7}} 
+\index{TUDuracao@{TUDuracao}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUDuracao\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00026}{26}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00014}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_a9d1f4f2e28580cf39f3c2ebc6c0ed852}\label{class_t_u_duracao_a9d1f4f2e28580cf39f3c2ebc6c0ed852}} 
+\index{TUDuracao@{TUDuracao}!VALOR\_INVALIDO@{VALOR\_INVALIDO}}
+\index{VALOR\_INVALIDO@{VALOR\_INVALIDO}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_INVALIDO}{VALOR\_INVALIDO}}
+{\footnotesize\ttfamily const int TUDuracao\+::\+VALOR\+\_\+\+INVALIDO = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Defini{\ucr}{\ucr}o de constante para evitar n{\ucr}mero m{\ucr}gico. 
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00017}{17}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00038}{testar\+Cenario\+Falha()}}.
+
+\mbox{\Hypertarget{class_t_u_duracao_acd97a8e155a938f3dd19e1ea784828de}\label{class_t_u_duracao_acd97a8e155a938f3dd19e1ea784828de}} 
+\index{TUDuracao@{TUDuracao}!VALOR\_VALIDO@{VALOR\_VALIDO}}
+\index{VALOR\_VALIDO@{VALOR\_VALIDO}!TUDuracao@{TUDuracao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO}{VALOR\_VALIDO}}
+{\footnotesize\ttfamily const int TUDuracao\+::\+VALOR\+\_\+\+VALIDO = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00016}{16}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00023}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}

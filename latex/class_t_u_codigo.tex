@@ -1,0 +1,291 @@
+\hypertarget{class_t_u_codigo}{}\doxysection{TUCodigo Class Reference}
+\label{class_t_u_codigo}\index{TUCodigo@{TUCodigo}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_codigo_a4e6994bcde0011cdf0b0bb7a2c4d94d9}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_codigo_ae74fd939ebced94047b47878406f53d1}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_codigo_a5a7caf4ace9b7efdfdd06984f6b763d0}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_codigo_a91920ce947913dbf05c7723bb8aa4b3e}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_codigo_afafff58fc1ba1fc6bbb522702e0d883b}{testar\+Cenario\+Sucesso}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_codigo_aa7677f6c65fee7ab474be49f5ebc09a7}{testar\+Cenario\+Falha}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_u_codigo_a49cd3146d9caede34fa0ddd56001d88d}{VALOR\+\_\+\+VALIDO}} = \char`\"{}123456\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_codigo_a1c526f420c132966245508f68203c09c}{VALOR\+\_\+\+INVALIDO}} = \char`\"{}012\char`\"{}
+\item 
+\mbox{\hyperlink{class_codigo}{Codigo}} $\ast$ \mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}}
+\item 
+int \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Desenvolvimento da classe de Teste de unidade da classe CÃ³digo de excursÃ£o 
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00078}{78}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_codigo_a4e6994bcde0011cdf0b0bb7a2c4d94d9}\label{class_t_u_codigo_a4e6994bcde0011cdf0b0bb7a2c4d94d9}} 
+\index{TUCodigo@{TUCodigo}!run@{run}}
+\index{run@{run}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUCodigo\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Script de teste de unidade para Código. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00233}{233}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233                  \{}
+\DoxyCodeLine{00234     \mbox{\hyperlink{class_t_u_codigo_a5a7caf4ace9b7efdfdd06984f6b763d0}{setUp}}();}
+\DoxyCodeLine{00235     \mbox{\hyperlink{class_t_u_codigo_afafff58fc1ba1fc6bbb522702e0d883b}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00236     \mbox{\hyperlink{class_t_u_codigo_aa7677f6c65fee7ab474be49f5ebc09a7}{testarCenarioFalha}}();}
+\DoxyCodeLine{00237     \mbox{\hyperlink{class_t_u_codigo_a91920ce947913dbf05c7723bb8aa4b3e}{tearDown}}();}
+\DoxyCodeLine{00238     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}};}
+\DoxyCodeLine{00239 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00085}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00191}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00226}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00211}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00199}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_a5a7caf4ace9b7efdfdd06984f6b763d0}\label{class_t_u_codigo_a5a7caf4ace9b7efdfdd06984f6b763d0}} 
+\index{TUCodigo@{TUCodigo}!setUp@{setUp}}
+\index{setUp@{setUp}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUCodigo\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Criação do objeto de testes para código da excurssão e atribuição de estado inicial. inicializa o objeto CIDADE -\/--- Já não havia sido criado em \mbox{\hyperlink{testes_8h}{testes.\+h}} ???
+
+inicializa a instância ESTADO
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191                     \{}
+\DoxyCodeLine{00192     \mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_codigo}{Codigo}}();                            }
+\DoxyCodeLine{00193     \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}} = \mbox{\hyperlink{class_t_u_codigo_ae74fd939ebced94047b47878406f53d1}{SUCESSO}};                                 }
+\DoxyCodeLine{00194 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00084}{codigo}}, \mbox{\hyperlink{testes_8h_source_l00085}{estado}}, and \mbox{\hyperlink{testes_8h_source_l00092}{SUCESSO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00233}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_a91920ce947913dbf05c7723bb8aa4b3e}\label{class_t_u_codigo_a91920ce947913dbf05c7723bb8aa4b3e}} 
+\index{TUCodigo@{TUCodigo}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUCodigo\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+exclusão correta do objeto de testes Exclusão do objeto da maneira correta
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00226}{226}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226                        \{}
+\DoxyCodeLine{00227     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}};                                      }
+\DoxyCodeLine{00228 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00084}{codigo}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00233}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_aa7677f6c65fee7ab474be49f5ebc09a7}\label{class_t_u_codigo_aa7677f6c65fee7ab474be49f5ebc09a7}} 
+\index{TUCodigo@{TUCodigo}!testarCenarioFalha@{testarCenarioFalha}}
+\index{testarCenarioFalha@{testarCenarioFalha}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{testarCenarioFalha()}{testarCenarioFalha()}}
+{\footnotesize\ttfamily void TUCodigo\+::testar\+Cenario\+Falha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Se o valor está INVALIDO, ele nem será incluido para a variável
+
+como então getvalor pode ser igual ao valor INVALIDO ???
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00211}{211}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00211                                  \{}
+\DoxyCodeLine{00212     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00213         \mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}}-\/>\mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{setValor}}(\mbox{\hyperlink{class_t_u_codigo_a1c526f420c132966245508f68203c09c}{VALOR\_INVALIDO}});}
+\DoxyCodeLine{00214         \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}} = \mbox{\hyperlink{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}{FALHA}};}
+\DoxyCodeLine{00215     \}}
+\DoxyCodeLine{00216     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{                      }
+\DoxyCodeLine{00217         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}}-\/>\mbox{\hyperlink{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}{getValor}}() == \mbox{\hyperlink{class_t_u_codigo_a1c526f420c132966245508f68203c09c}{VALOR\_INVALIDO}})     }
+\DoxyCodeLine{00218             \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}} = \mbox{\hyperlink{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}{FALHA}};}
+\DoxyCodeLine{00219     \}}
+\DoxyCodeLine{00220 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00084}{codigo}}, \mbox{\hyperlink{testes_8h_source_l00085}{estado}}, \mbox{\hyperlink{testes_8h_source_l00093}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00098}{Codigo\+::get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00146}{Codigo\+::set\+Valor()}}, and \mbox{\hyperlink{testes_8h_source_l00083}{VALOR\+\_\+\+INVALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00233}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_afafff58fc1ba1fc6bbb522702e0d883b}\label{class_t_u_codigo_afafff58fc1ba1fc6bbb522702e0d883b}} 
+\index{TUCodigo@{TUCodigo}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUCodigo\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Testes de cenário de sucesso e de falha. 
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199                                    \{}
+\DoxyCodeLine{00200     \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00201         \mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}}-\/>\mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{setValor}}(\mbox{\hyperlink{class_t_u_codigo_a49cd3146d9caede34fa0ddd56001d88d}{VALOR\_VALIDO}});}
+\DoxyCodeLine{00202         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}{codigo}}-\/>\mbox{\hyperlink{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}{getValor}}() != \mbox{\hyperlink{class_t_u_codigo_a49cd3146d9caede34fa0ddd56001d88d}{VALOR\_VALIDO}})}
+\DoxyCodeLine{00203             \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}} = \mbox{\hyperlink{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}{FALHA}};}
+\DoxyCodeLine{00204     \}}
+\DoxyCodeLine{00205     \textcolor{keywordflow}{catch}(invalid\_argument \&exc)\{}
+\DoxyCodeLine{00206         \mbox{\hyperlink{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}{estado}} = \mbox{\hyperlink{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}{FALHA}};}
+\DoxyCodeLine{00207     \}}
+\DoxyCodeLine{00208 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00084}{codigo}}, \mbox{\hyperlink{testes_8h_source_l00085}{estado}}, \mbox{\hyperlink{testes_8h_source_l00093}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00098}{Codigo\+::get\+Valor()}}, \mbox{\hyperlink{dominio_8cpp_source_l00146}{Codigo\+::set\+Valor()}}, and \mbox{\hyperlink{testes_8h_source_l00081}{VALOR\+\_\+\+VALIDO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00233}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}\label{class_t_u_codigo_a7fac6fdbdcfb17606c6b12bd65840c5c}} 
+\index{TUCodigo@{TUCodigo}!codigo@{codigo}}
+\index{codigo@{codigo}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{codigo}{codigo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_codigo}{Codigo}}$\ast$ TUCodigo\+::codigo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00084}{84}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00191}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00226}{tear\+Down()}}, \mbox{\hyperlink{testes_8cpp_source_l00211}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00199}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}\label{class_t_u_codigo_a165392df9e64ae08b737b0b7728d5526}} 
+\index{TUCodigo@{TUCodigo}!estado@{estado}}
+\index{estado@{estado}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUCodigo\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00085}{85}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00233}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00191}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00211}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00199}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}\label{class_t_u_codigo_abff6dd7b04006df40462c76f8b769123}} 
+\index{TUCodigo@{TUCodigo}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUCodigo\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00093}{93}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, \mbox{\hyperlink{testes_8cpp_source_l00211}{testar\+Cenario\+Falha()}}, and \mbox{\hyperlink{testes_8cpp_source_l00199}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_ae74fd939ebced94047b47878406f53d1}\label{class_t_u_codigo_ae74fd939ebced94047b47878406f53d1}} 
+\index{TUCodigo@{TUCodigo}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUCodigo\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00092}{92}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00191}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_a1c526f420c132966245508f68203c09c}\label{class_t_u_codigo_a1c526f420c132966245508f68203c09c}} 
+\index{TUCodigo@{TUCodigo}!VALOR\_INVALIDO@{VALOR\_INVALIDO}}
+\index{VALOR\_INVALIDO@{VALOR\_INVALIDO}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{VALOR\_INVALIDO}{VALOR\_INVALIDO}}
+{\footnotesize\ttfamily string TUCodigo\+::\+VALOR\+\_\+\+INVALIDO = \char`\"{}012\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00083}{83}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00211}{testar\+Cenario\+Falha()}}.
+
+\mbox{\Hypertarget{class_t_u_codigo_a49cd3146d9caede34fa0ddd56001d88d}\label{class_t_u_codigo_a49cd3146d9caede34fa0ddd56001d88d}} 
+\index{TUCodigo@{TUCodigo}!VALOR\_VALIDO@{VALOR\_VALIDO}}
+\index{VALOR\_VALIDO@{VALOR\_VALIDO}!TUCodigo@{TUCodigo}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO}{VALOR\_VALIDO}}
+{\footnotesize\ttfamily string TUCodigo\+::\+VALOR\+\_\+\+VALIDO = \char`\"{}123456\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00081}{81}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00199}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}

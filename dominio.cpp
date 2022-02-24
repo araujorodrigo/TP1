@@ -27,8 +27,14 @@ using namespace std;
 
 
 ///
+<<<<<<< HEAD
 /// \brief Duraç&atilde;o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
 ///
+=======
+/// \brief Dura&ccedil;&atilde;o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
+/// O instrutor pode oferecer seu passeio dentre estas op&ccedil;&otilde;es de dura&ccedil;&atilde;o.
+/// A fun&ccedil;&atilde;o abaixo busca validar o valor de entrada.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 /// \param valor
 ///
 /// \throw invalid_argument("Duracao invalida.")
@@ -48,8 +54,13 @@ using namespace std;
     this->valor = valor;
     }
 
+<<<<<<< HEAD
 ///
 /// \brief Nota pode ser valor de 0 &agrave; 5.
+=======
+
+/// \brief Valida&ccedil;&atilde;o de nota.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param valor
 ///
@@ -60,6 +71,10 @@ using namespace std;
         throw invalid_argument("Nota invalida.");
     }
 
+<<<<<<< HEAD
+=======
+/// @brief M&eacute;todo setValor permite salvar n&uacute;meros v&aacute;lidos.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \brief M&eacute;todo setValor permite salvar n&uacute;meros v&aacute;lidos.
 ///
@@ -70,9 +85,14 @@ using namespace std;
     this->valor = valor;
     }
 
+<<<<<<< HEAD
 ///
 /// \brief H&aacute; 16 cidades v&aacute;lidas para excurs&atilde;o:
 ///
+=======
+
+/// @brief Ha 16 cidades v&aacute;lidas para excurs&atilde;o.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 /// hong kong, bangkok, macau, singapura, londres, paris, dubai, delhi, istambul,
 /// kuala, lumpur, nova iorque, antalya, mumbai, shenzhen, phuket.
 ///
@@ -82,7 +102,7 @@ using namespace std;
 ///
     void Cidade::validar(string nomeCidade){
 
-    // O vetor estatico e sulficiente para a aplicacao
+    // O vetor estatico e suficiente para a aplicacao
     string cidadeDisponivel[16] = {"hong kong", "bangkok", "macau", "singapura", "londres", "paris",
                                  "dubai", "delhi", "istambul", "kuala", "lumpur", "nova iorque",
                                  "antalya", "mumbai", "shenzhen", "phuket"};
@@ -107,6 +127,10 @@ using namespace std;
         }
     }
 
+<<<<<<< HEAD
+=======
+/// @brief M&eacute;todo setCidade permite salvar cidade v&aacute;lida.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \brief M&eacute;todo setCidade permite salvar cidades v&aacute;lidas.
 ///
@@ -118,6 +142,7 @@ void Cidade::setCidade (string nomeCidade){
 }
 
 
+<<<<<<< HEAD
 ///
 /// \brief C&oacute;digo deve ser 6 d&iacute;gitos n&uacute;mericos diferentes de '000000'.
 ///
@@ -132,6 +157,19 @@ void Cidade::setCidade (string nomeCidade){
     int somatorio = 0;                                            // Somatario dos digitos
     int resto = 0;                                                // resto da div por 11
     int i=0;                                                      // Indice Multiplicativo.
+=======
+/// @brief Validacao de codigo de excurs&atilde;o.
+///
+/// C&oacute;digo deve ser composto por 6 digitos n&uacute;mericos, salvo c&oacute;digo '000000'.
+/// O s&eacute;timo car&aacute;cter e o d&iacute;gito verificador.
+/// algoritmo de verifica&ccedil;&atilde;o => T&iacute;tulo eleitoral <A HREF = "http://ghiorzi.org/DVnew.htm" </A>
+/// @param string valor
+void Codigo::validar(string valor){
+    int numerador = stoi(valor);                                  // Conversão de string para int;
+    int somatorio = 0;
+    int resto = 0;
+    int i=0;                                                      // Índice Multiplicativo.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 
     regex CODIGO_VALIDO ("[0-9]{6}");                             // codigo aceitavel
     regex CODIGO_INVALIDO ("[0]{1,6}");                           // codigo invalido.
@@ -141,7 +179,11 @@ void Cidade::setCidade (string nomeCidade){
         throw invalid_argument("Codigo invalido. O codigo deve conter 6 algarismos diferente de 000000.");
 
 ///
+<<<<<<< HEAD
 ///   Algor&iacute;tmo de D&iacute;gito de verifica&ccedil;&atilde;o (T&iacute;tulo Eleitoral)
+=======
+///   Algoritmo de D&iacute;gito de verifica&ccedil;&atilde;o (T&iacute;tulo Eleitoral)
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
     while(numerador>0){                                           // Neste laco cada algarismo e multiplicado por
         resto = (numerador%10)*(9-i);                             // uma constante diferente, conforme o algoritmo.
@@ -151,15 +193,23 @@ void Cidade::setCidade (string nomeCidade){
     }
 
     DV = somatorio % 11;                                          //O resto esta em INT
+<<<<<<< HEAD
 
     if(DV == 10)                                                  // Condicao para %11=10 (div. por 11) = 10
+=======
+    if(DV == 10)                                                  // Condicao para %11 (div. por 11) = 10
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
         DV=0;
 
     valor = valor+to_string(DV);
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setValor permite salvar c&oacute;digos v&aacute;lidos.
+=======
+/// Ap&oacute;s a valida&ccedil;&atilde;o do c&oacute;digo, este &eacute; passado para o interior da classe
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
     void Codigo::setValor(string valor){
     validar(valor);
@@ -168,8 +218,13 @@ void Cidade::setCidade (string nomeCidade){
 
 
 ///
+<<<<<<< HEAD
 /// Valida&ccedil;&atilde;o da Data em que: dia, m&&ecirc;s e ano, serão representados por
 /// DIA, MES, ANO, respectivamente.
+=======
+///   Valida&ccedil;&atilde;o da Data em que dia, m&ecirc;s e ano, ser&atilde;o representados por
+///   ANO, MES, ANO, respectivamente.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param data
 ///
@@ -202,7 +257,11 @@ void Cidade::setCidade (string nomeCidade){
 
     // Tratamento do ano
         int ano = stoi(ANO);
+<<<<<<< HEAD
         if (ano<2000 || ano>9999){
+=======
+        if (ano<2000 || ano>9999){                  // Verificacao do ano.
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
             throw invalid_argument("Entrada invalida. O ano deve ser entre 2000 - 9999.");
         }
 
@@ -224,7 +283,14 @@ void Cidade::setCidade (string nomeCidade){
                 throw invalid_argument("Entrada invalida. Este mes possui 31 dias.");
         }
 
+<<<<<<< HEAD
     // Tratamento do mes de Fevereiro.
+=======
+///
+/// Tratamento do m&ecirc;s de Fevereiro.
+///
+
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
         if (regex_match(MES, FEV)){
             int diaMaxFev = stoi(DIA);
             if(diaMaxFev>29){
@@ -235,12 +301,20 @@ void Cidade::setCidade (string nomeCidade){
         }
 
     }else{
+<<<<<<< HEAD
         throw invalid_argument("Data invalida, deve ser DIA-MES-ANO, numeros para DIA e ANO e 3 letras para o MES.");
         }
+=======
+        throw invalid_argument("Data invalida, deve ser DIA-MES-ANO, n&uacute;meros para DIA e ANO e 3 letras para o MES.");
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setData permite salvar data v&aacute;lida.
+=======
+/// Ap&oacute;s a valida&ccedil;&atilde;o da data, este &eacute; passado para o interior da classe
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
     void Data::setData(string data){
     validar(data);
@@ -248,8 +322,14 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief Descricao cont&eacute;m de 0 &agrave; 30 car&aacute;cteres
 ///  nao deve haver espa&ccedil;o em branco, nem ponto final em sequ&ecirc;ncia.
+=======
+///     A valida&ccedil;&atilde;o da descri&ccedil;&atilde;o abrange de 0 a 30 caracteres
+///     e nao h&aacute; nem espaco em branco nem ponto final em sequ&ecirc;ncia.
+///     @param descricao
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 ///  @param descricao
 ///
@@ -272,7 +352,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setDescricao permite salvar descri&ccedil;&atilde;o v&aacute;lida.
+=======
+///     Inclus&atilde;o da descri&ccedil;&atilde;o da excurs&atilde;o
+///     @param descricao
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param descricao
 ///
@@ -282,8 +367,14 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief Endere&ccedil;o deve ser de 0 &agrave; 20 caracteres
 ///  e n&atilde;o h&aacute; nem espa&ccedil;o em branco, nem ponto final em sequ&ecirc;ncia.
+=======
+///     A valida&ccedil;&atilde;o do endere&ccedil;o abrange de 0 a 20 caracteres
+///     e nao h&aacute; nem espa&ccedil;o em branco nem ponto final em sequ&ecirc;ncia.
+///     @param descricao
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param descri&ccedil;&atilde;o
 ///
@@ -306,17 +397,33 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setEndereco permite salvar endere&ccedil;o v&aacute;lido.
+=======
+///     Inclus&atilde;o do Endere&ccedil;o da excurs&atilde;o
+///     @param endereco
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param endereco
 ///
     void Endereco::setEndereco (string endereco){
     validar(endereco);
     this->endereco = endereco;
+<<<<<<< HEAD
     }
 
 ///
 /// \brief Valida&ccedil;&atilde;o do Hor&aacute;rio abrange de 00-23 Horas e 00-59 minutos.
+=======
+}
+
+//=========================================================================================
+//=========================================================================================
+
+///
+///     A valida&ccedil;&atilde;o do Hor&aacute;rio abrange de 00-23 Horas e 00-59 minutos.
+///     @param horario
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param horario
 ///
@@ -343,7 +450,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setHorario permite salvar hor&aacute;rio v&aacute;lido.
+=======
+///     Inclus&atilde;o do Hor&aacute;rio da excurs&atilde;o
+///     @param endereco
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param horario
 ///
@@ -361,11 +473,28 @@ void Cidade::setCidade (string nomeCidade){
 ///
     void Idioma::validar(string linguagem){
 
+<<<<<<< HEAD
     // O vetor de string estatico e sulficiente para a aplicacao, pois os Idiomas nao sao alterados.
     string idiomaDisponivel[10] = {"ingles", "chines mandarim", "hindi", "espanhol", "frances", "arabe",
                                    "bengali", "russo", "portugues", "indonesio"};
 
     lowerstr(linguagem);        ///<  Manipula a string para min&uacute;sculo e salva na mesma vari&aacute;vel.
+=======
+///
+///     A fun&ccedil;&atilde;o recebe um vetor de char pois &eacute; mais pratico de se manipular.
+///     Apos transformar a string para padrao min&uacute;sculo, pode ser feita comparacao.
+///     @param idioma
+///
+void Idioma::validar(string linguagem){   /// ESTA LINHA FOI DE char* PARA string
+///
+///     O vetor de string est&aacute;tico e sulficiente para a aplica&ccedil;&atilde;o, pois os Idiomas sao constante
+///
+    string idiomaDisponivel[10] = {"ingles", "chines mandarim", "hindi", "espanhol", "frances", "arabe",
+                                   "bengali", "russo", "portugues", "indonesio"};
+
+    lowerstr(linguagem);
+    //strlwr(linguagem);                                     //  Manipula a string para min&uacute;sculo e salva na mesma vari&aacute;vel
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
     string idiomaAux = linguagem;
 
     int selecao = 0;                                        // Contador de igualdade entre idiomas.
@@ -383,7 +512,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setIdioma permite salvar idioma v&aacute;lido.
+=======
+///     Antes de incluir o idioma deve-se verificar se esta na lista de idiomas dispon&iacute;veis.
+///     @param idioma
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param linguagem
 ///
@@ -397,7 +531,13 @@ void Cidade::setCidade (string nomeCidade){
 //=========================================================================================
 
 ///
+<<<<<<< HEAD
 /// \brief T&iacute;tulo deve cont&eacute;r de 0 &agrave; 20 caracteres
+=======
+///     A valida&ccedil;&atilde;o do endere&ccedil;o abrange de 0 a 20 caracteres
+///     e nao h&aacute; nem espa&ccedil;o em branco nem ponto final em sequencia.
+///     @param descricao l
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// e n&atilde;o h&aacute; nem espaco em branco, nem ponto final em sequ&ecirc;ncia.
 ///
@@ -420,7 +560,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setTitulo permite salvar t&iacute;tulo v&aacute;lido.
+=======
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
+///     @param endereco
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param titulo
 ///
@@ -431,8 +576,14 @@ void Cidade::setCidade (string nomeCidade){
 
 
 ///
+<<<<<<< HEAD
 /// \brief Valida&ccedil;&atilde;o da senha abrange 6 caracteres.
 /// N&atilde;o &eacute; permitido car&aacute;cter repetido e deve conter, no min: 1 letra "M", 1 letra "m" e 1 n&uacute;m.
+=======
+///     A validacao da senha abrange 6 caracteres
+///     N&atilde;o é permitido caracter repetido e deve conter, no minimo, 1 letra Mais., 1 letra min. e 1 num.
+///     @param segredo
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param segredo
 ///
@@ -448,6 +599,12 @@ void Cidade::setCidade (string nomeCidade){
     regex CAR_MAI("[A-Z]");
     regex CAR_NUM("[0-9]");
     regex SENHA_INVALIDA("[ ]|[\\.]|[!@#$%&¨&*)\(+=£¢¬§]");
+<<<<<<< HEAD
+=======
+///
+/// 1 verifica&ccedil;&atilde;o de senha: caracteres inv&aacute;lidos e comprimento de senha.
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 
     // 1 verificacao de senha: caracteres invalidos e comprimento de senha.
     if (segredo.length()<6 || segredo.length()>6 || regex_search(segredo,matches,SENHA_INVALIDA))
@@ -467,6 +624,12 @@ void Cidade::setCidade (string nomeCidade){
                 }
         }
 
+<<<<<<< HEAD
+=======
+///
+/// 2 verifica&ccedil;&atilde;o de senha: Vedada ocorrencia de 'char' repetido em sequencia.
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 
         // 2 verificação de senha: Vedada ocorrencia de 'char' repetido em sequencia.
         if(i != (segredo.length()-1)){
@@ -482,7 +645,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief M&eacute;todo setSenha permite salvar senha v&aacute;lida.
+=======
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
+///     @param endereco
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param segredo
 ///
@@ -506,12 +674,24 @@ void Cidade::setCidade (string nomeCidade){
     stringstream full_email(email);
     string intermediate;
     regex EMAIL_VALIDO("[a-zA-Z0-9!#\\$%&'*\\+\\-\\/=^_`{|}~\\.]{1,64}[@][a-zA-Z0-9\\.\\-]{1,253}");
+<<<<<<< HEAD
+=======
+///
+/// 1 verifica&ccedil;&atilde;o de email: caracteres inv&aacute;lidos, comprimento de email e formato.
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 
     // 1 verificacao de email: caracteres invalidos, comprimento de email e formato.
     if(!regex_search(email,matches,EMAIL_VALIDO))
         throw invalid_argument ("Email invalido 1");
 
+<<<<<<< HEAD
     // 2 verificacao de email: Ocorrencia de ponto
+=======
+///
+/// 2 verifica&ccedil;&atilde;o de email: Ocorrência de ponto
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
     while(getline(full_email, intermediate, '@')){
         if(i == 0 && (intermediate.front() == '.' || intermediate.back() == '.')){
             throw invalid_argument ("Email invalido 2A");
@@ -533,7 +713,12 @@ void Cidade::setCidade (string nomeCidade){
     }
 
 ///
+<<<<<<< HEAD
 /// \brief Inclus&atilde;o do Endere&ccedil;o da excurs&atilde;o
+=======
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
+///     @param endereco
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param email
 ///
@@ -562,23 +747,46 @@ void Cidade::setCidade (string nomeCidade){
     regex MINUSCULO_VALIDO_INICIO("^[A-Z]");
     //
     regex PONTO_ESPACO_INVALIDO("([\\.][A-Za-z])|([\\.][\\.])|([ ][ ])|([ ][a-z\\.])");
+<<<<<<< HEAD
+=======
+///
+/// 1 verifica&ccedil;&atilde;o de nome: caracteres inv&aacute;lidos, comprimento de nome e formato.
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 
     // 1 verificacao de nome: caracteres invalidos, comprimento de nome e formato.
     if(nome.length() < 5 || nome.length() > 20 || regex_search(nome,matches,CAR_INVALIDO))
         throw invalid_argument ("Erro: NOME_INVALIDO");
 
+<<<<<<< HEAD
     // 2 verificacao de nome: Ocorrencia nome iniciando minusculo
     if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
         throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
 
     // 3 verificacao de nome: Ocorrencias com ponto e espaco
+=======
+///
+/// 2 verifica&ccedil;&atilde;o de nome: Ocorrência nome iniciando min&uacute;sculo
+///
+    if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
+        throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
+
+///
+/// 3 verifica&ccedil;&atilde;o de nome: Ocorrências com ponto e espa&ccedil;o
+///
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
     if(regex_search(nome,matches,PONTO_ESPACO_INVALIDO))
         throw invalid_argument ("Erro: PONTO_ESPACO_INVALIDO");
 
 }
 
 ///
+<<<<<<< HEAD
 /// \brief Inclus&atilde;o do Endere&ccedil;o da excurs&atilde;o
+=======
+///     Inclus&atilde;o do Endereco da excurs&atilde;o
+///     @param nome
+>>>>>>> 283bc9b4d9c3236873a085b3c432bfbfb2470f50
 ///
 /// \param nome
 ///

@@ -1,0 +1,277 @@
+\hypertarget{class_t_u_usuario}{}\doxysection{TUUsuario Class Reference}
+\label{class_t_u_usuario}\index{TUUsuario@{TUUsuario}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_usuario_af12e1b9020cfb11a1f659373a70268fa}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_usuario_aa9302e7d6f13452c83f21224fd335e54}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_usuario_ad064824e7eb484de55f561f1d59813ef}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_usuario_a3ed7b7fd0171d2354331dcf2f19f7d39}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_usuario_aacbf165a32963205fb3c0b5c5244ffc2}{testar\+Cenario\+Sucesso}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_u_usuario_a388c82c4fa89f4df1b2fe62fa5108f45}{VALOR\+\_\+\+VALIDO1}} = \char`\"{}Iago C.\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_usuario_aee05548045b3e808294600575421674d}{VALOR\+\_\+\+VALIDO2}} = \char`\"{}iago.\+cossentino@gmail.\+com\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_usuario_a766bae46b25b2b8021d4bdca07a936a1}{VALOR\+\_\+\+VALIDO3}} = \char`\"{}5En\+H4a\char`\"{}
+\item 
+\mbox{\hyperlink{class_usuario}{Usuario}} $\ast$ \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}
+\item 
+int \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00323}{323}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_usuario_af12e1b9020cfb11a1f659373a70268fa}\label{class_t_u_usuario_af12e1b9020cfb11a1f659373a70268fa}} 
+\index{TUUsuario@{TUUsuario}!run@{run}}
+\index{run@{run}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUUsuario\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00835}{835}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00835                   \{}
+\DoxyCodeLine{00836     \mbox{\hyperlink{class_t_u_usuario_ad064824e7eb484de55f561f1d59813ef}{setUp}}();}
+\DoxyCodeLine{00837     \mbox{\hyperlink{class_t_u_usuario_aacbf165a32963205fb3c0b5c5244ffc2}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00838     \mbox{\hyperlink{class_t_u_usuario_a3ed7b7fd0171d2354331dcf2f19f7d39}{tearDown}}();}
+\DoxyCodeLine{00839     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}};}
+\DoxyCodeLine{00840 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00329}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00806}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00811}{tear\+Down()}}, and \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_ad064824e7eb484de55f561f1d59813ef}\label{class_t_u_usuario_ad064824e7eb484de55f561f1d59813ef}} 
+\index{TUUsuario@{TUUsuario}!setUp@{setUp}}
+\index{setUp@{setUp}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUUsuario\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00806}{806}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00806                      \{}
+\DoxyCodeLine{00807     \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_usuario}{Usuario}}();}
+\DoxyCodeLine{00808     \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}} = \mbox{\hyperlink{class_t_u_usuario_aa9302e7d6f13452c83f21224fd335e54}{SUCESSO}};}
+\DoxyCodeLine{00809 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00329}{estado}}, \mbox{\hyperlink{testes_8h_source_l00334}{SUCESSO}}, and \mbox{\hyperlink{testes_8h_source_l00328}{usuario}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00835}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_a3ed7b7fd0171d2354331dcf2f19f7d39}\label{class_t_u_usuario_a3ed7b7fd0171d2354331dcf2f19f7d39}} 
+\index{TUUsuario@{TUUsuario}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUUsuario\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00811}{811}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00811                         \{}
+\DoxyCodeLine{00812     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}};}
+\DoxyCodeLine{00813 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00328}{usuario}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00835}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_aacbf165a32963205fb3c0b5c5244ffc2}\label{class_t_u_usuario_aacbf165a32963205fb3c0b5c5244ffc2}} 
+\index{TUUsuario@{TUUsuario}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUUsuario\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00815}{815}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00815                                     \{}
+\DoxyCodeLine{00816     \mbox{\hyperlink{class_nome}{Nome}} nome;}
+\DoxyCodeLine{00817     nome.\mbox{\hyperlink{class_nome_ab1507b81047efb89b50b6be0d33c08e5}{setNome}}(\mbox{\hyperlink{class_t_u_usuario_a388c82c4fa89f4df1b2fe62fa5108f45}{VALOR\_VALIDO1}});}
+\DoxyCodeLine{00818     \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_a9ebb749f2ea23b5ecf2010980e83ba6a}{setNomeE}}(nome);}
+\DoxyCodeLine{00819     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_ace7f359e6de2bab992e9f4e00f366240}{getNomeE}}().\mbox{\hyperlink{class_nome_ab37ae19d367bc181bb7d7f3517d8833c}{getNome}}() != \mbox{\hyperlink{class_t_u_usuario_a388c82c4fa89f4df1b2fe62fa5108f45}{VALOR\_VALIDO1}})}
+\DoxyCodeLine{00820         \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}} = \mbox{\hyperlink{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}{FALHA}};}
+\DoxyCodeLine{00821 }
+\DoxyCodeLine{00822     \mbox{\hyperlink{class_email}{Email}} email;}
+\DoxyCodeLine{00823     email.\mbox{\hyperlink{class_email_a47fc9d4d76a2e2a7bc502f16c1d034be}{setEmail}}(\mbox{\hyperlink{class_t_u_usuario_aee05548045b3e808294600575421674d}{VALOR\_VALIDO2}});}
+\DoxyCodeLine{00824     \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_a57c6bbbd355e22ff70479b27ea4f9e51}{setEmailE}}(email);}
+\DoxyCodeLine{00825     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_a6fa5348df5abe7225b581bdd56b5d29c}{getEmailE}}().\mbox{\hyperlink{class_email_a9b2dae1aa67ec678c782b7777c0ce6ba}{getEmail}}() != \mbox{\hyperlink{class_t_u_usuario_aee05548045b3e808294600575421674d}{VALOR\_VALIDO2}})}
+\DoxyCodeLine{00826         \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}} = \mbox{\hyperlink{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}{FALHA}};}
+\DoxyCodeLine{00827 }
+\DoxyCodeLine{00828     \mbox{\hyperlink{class_senha}{Senha}} senha;}
+\DoxyCodeLine{00829     senha.\mbox{\hyperlink{class_senha_a735e4bf5f65cc8d28daa7dbf202fd999}{setSenha}}(\mbox{\hyperlink{class_t_u_usuario_a766bae46b25b2b8021d4bdca07a936a1}{VALOR\_VALIDO3}});}
+\DoxyCodeLine{00830     \mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_af6fa27e9a9de91c90665552f284e0454}{setSenhaE}}(senha);}
+\DoxyCodeLine{00831     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}{usuario}}-\/>\mbox{\hyperlink{class_usuario_a3c876e65914601c6c930b253c71d320a}{getSenhaE}}().\mbox{\hyperlink{class_senha_a093c2a544f5a59e3936e387f90b0a526}{getSenha}}() != \mbox{\hyperlink{class_t_u_usuario_a766bae46b25b2b8021d4bdca07a936a1}{VALOR\_VALIDO3}})}
+\DoxyCodeLine{00832         \mbox{\hyperlink{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}{estado}} = \mbox{\hyperlink{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}{FALHA}};}
+\DoxyCodeLine{00833 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00329}{estado}}, \mbox{\hyperlink{testes_8h_source_l00335}{FALHA}}, \mbox{\hyperlink{dominio_8h_source_l00283}{Email\+::get\+Email()}}, \mbox{\hyperlink{entidades_8h_source_l00221}{Usuario\+::get\+Email\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00305}{Nome\+::get\+Nome()}}, \mbox{\hyperlink{entidades_8h_source_l00214}{Usuario\+::get\+Nome\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00261}{Senha\+::get\+Senha()}}, \mbox{\hyperlink{entidades_8h_source_l00228}{Usuario\+::get\+Senha\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00539}{Email\+::set\+Email()}}, \mbox{\hyperlink{entidades_8h_source_l00218}{Usuario\+::set\+Email\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00591}{Nome\+::set\+Nome()}}, \mbox{\hyperlink{entidades_8h_source_l00211}{Usuario\+::set\+Nome\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00481}{Senha\+::set\+Senha()}}, \mbox{\hyperlink{entidades_8h_source_l00225}{Usuario\+::set\+Senha\+E()}}, \mbox{\hyperlink{testes_8h_source_l00328}{usuario}}, \mbox{\hyperlink{testes_8h_source_l00325}{VALOR\+\_\+\+VALIDO1}}, \mbox{\hyperlink{testes_8h_source_l00326}{VALOR\+\_\+\+VALIDO2}}, and \mbox{\hyperlink{testes_8h_source_l00327}{VALOR\+\_\+\+VALIDO3}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00835}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}\label{class_t_u_usuario_a8d4a06c4a14b02a8d033b204ed7c69a7}} 
+\index{TUUsuario@{TUUsuario}!estado@{estado}}
+\index{estado@{estado}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUUsuario\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00329}{329}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00835}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00806}{set\+Up()}}, and \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}\label{class_t_u_usuario_af1a7217e0d002f0d0b524c901bb75c98}} 
+\index{TUUsuario@{TUUsuario}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUUsuario\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00335}{335}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_aa9302e7d6f13452c83f21224fd335e54}\label{class_t_u_usuario_aa9302e7d6f13452c83f21224fd335e54}} 
+\index{TUUsuario@{TUUsuario}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUUsuario\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00334}{334}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00806}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}\label{class_t_u_usuario_a908ea66dbbce2a2a2454d8c53b04d4ef}} 
+\index{TUUsuario@{TUUsuario}!usuario@{usuario}}
+\index{usuario@{usuario}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{usuario}{usuario}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_usuario}{Usuario}}$\ast$ TUUsuario\+::usuario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00328}{328}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00806}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00811}{tear\+Down()}}, and \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_a388c82c4fa89f4df1b2fe62fa5108f45}\label{class_t_u_usuario_a388c82c4fa89f4df1b2fe62fa5108f45}} 
+\index{TUUsuario@{TUUsuario}!VALOR\_VALIDO1@{VALOR\_VALIDO1}}
+\index{VALOR\_VALIDO1@{VALOR\_VALIDO1}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO1}{VALOR\_VALIDO1}}
+{\footnotesize\ttfamily string TUUsuario\+::\+VALOR\+\_\+\+VALIDO1 = \char`\"{}Iago C.\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00325}{325}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_aee05548045b3e808294600575421674d}\label{class_t_u_usuario_aee05548045b3e808294600575421674d}} 
+\index{TUUsuario@{TUUsuario}!VALOR\_VALIDO2@{VALOR\_VALIDO2}}
+\index{VALOR\_VALIDO2@{VALOR\_VALIDO2}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO2}{VALOR\_VALIDO2}}
+{\footnotesize\ttfamily string TUUsuario\+::\+VALOR\+\_\+\+VALIDO2 = \char`\"{}iago.\+cossentino@gmail.\+com\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00326}{326}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_usuario_a766bae46b25b2b8021d4bdca07a936a1}\label{class_t_u_usuario_a766bae46b25b2b8021d4bdca07a936a1}} 
+\index{TUUsuario@{TUUsuario}!VALOR\_VALIDO3@{VALOR\_VALIDO3}}
+\index{VALOR\_VALIDO3@{VALOR\_VALIDO3}!TUUsuario@{TUUsuario}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO3}{VALOR\_VALIDO3}}
+{\footnotesize\ttfamily string TUUsuario\+::\+VALOR\+\_\+\+VALIDO3 = \char`\"{}5En\+H4a\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00327}{327}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00815}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}

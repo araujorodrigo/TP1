@@ -1,0 +1,299 @@
+\hypertarget{class_t_u_sessao}{}\doxysection{TUSessao Class Reference}
+\label{class_t_u_sessao}\index{TUSessao@{TUSessao}}
+
+
+{\ttfamily \#include \char`\"{}testes.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_u_sessao_a8b7da304bdc9a78148ee32742b65ec31}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_t_u_sessao_a03506f1cbd2dc9cb5ec98e0b44b651bf}{SUCESSO}} = 0
+\item 
+static const int \mbox{\hyperlink{class_t_u_sessao_ad873b713232b6caeddea909743531689}{FALHA}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_u_sessao_aafcdb6df9038aa13d14f1ee62487ff3e}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_sessao_af6ae8c714d5af9dae09e2e32e5ddcf38}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_t_u_sessao_a1a0790d5362e1b9b11ff3de038631dcc}{testar\+Cenario\+Sucesso}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_u_sessao_a6847c8c19c8938b04eb6891b150ef7d2}{VALOR\+\_\+\+VALIDO1}} = \char`\"{}123456\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_sessao_a19b0b5e4d664f3dd740128c14a531617}{VALOR\+\_\+\+VALIDO2}} = \char`\"{}12 abr 2007\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_sessao_ad32490a814dafe42f8a437d651bda0bd}{VALOR\+\_\+\+VALIDO3}} = \char`\"{}23\+:59\char`\"{}
+\item 
+string \mbox{\hyperlink{class_t_u_sessao_a8af381baf071db7f1e49ff87c50cfdb7}{VALOR\+\_\+\+VALIDO4}} = \char`\"{}Portug\+UES\char`\"{}
+\item 
+\mbox{\hyperlink{class_sessao}{Sessao}} $\ast$ \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}
+\item 
+int \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00339}{339}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_u_sessao_a8b7da304bdc9a78148ee32742b65ec31}\label{class_t_u_sessao_a8b7da304bdc9a78148ee32742b65ec31}} 
+\index{TUSessao@{TUSessao}!run@{run}}
+\index{run@{run}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int TUSessao\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00881}{881}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00881                  \{}
+\DoxyCodeLine{00882     \mbox{\hyperlink{class_t_u_sessao_aafcdb6df9038aa13d14f1ee62487ff3e}{setUp}}();}
+\DoxyCodeLine{00883     \mbox{\hyperlink{class_t_u_sessao_a1a0790d5362e1b9b11ff3de038631dcc}{testarCenarioSucesso}}();}
+\DoxyCodeLine{00884     \mbox{\hyperlink{class_t_u_sessao_af6ae8c714d5af9dae09e2e32e5ddcf38}{tearDown}}();}
+\DoxyCodeLine{00885     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}};}
+\DoxyCodeLine{00886 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00346}{estado}}, \mbox{\hyperlink{testes_8cpp_source_l00846}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00851}{tear\+Down()}}, and \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_aafcdb6df9038aa13d14f1ee62487ff3e}\label{class_t_u_sessao_aafcdb6df9038aa13d14f1ee62487ff3e}} 
+\index{TUSessao@{TUSessao}!setUp@{setUp}}
+\index{setUp@{setUp}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void TUSessao\+::set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00846}{846}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00846                     \{}
+\DoxyCodeLine{00847     \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_sessao}{Sessao}}();}
+\DoxyCodeLine{00848     \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}} = \mbox{\hyperlink{class_t_u_sessao_a03506f1cbd2dc9cb5ec98e0b44b651bf}{SUCESSO}};}
+\DoxyCodeLine{00849 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00346}{estado}}, \mbox{\hyperlink{testes_8h_source_l00345}{sessao}}, and \mbox{\hyperlink{testes_8h_source_l00351}{SUCESSO}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00881}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_af6ae8c714d5af9dae09e2e32e5ddcf38}\label{class_t_u_sessao_af6ae8c714d5af9dae09e2e32e5ddcf38}} 
+\index{TUSessao@{TUSessao}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void TUSessao\+::tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00851}{851}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00851                        \{}
+\DoxyCodeLine{00852     \textcolor{keyword}{delete} \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}};}
+\DoxyCodeLine{00853 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00345}{sessao}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00881}{run()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a1a0790d5362e1b9b11ff3de038631dcc}\label{class_t_u_sessao_a1a0790d5362e1b9b11ff3de038631dcc}} 
+\index{TUSessao@{TUSessao}!testarCenarioSucesso@{testarCenarioSucesso}}
+\index{testarCenarioSucesso@{testarCenarioSucesso}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{testarCenarioSucesso()}{testarCenarioSucesso()}}
+{\footnotesize\ttfamily void TUSessao\+::testar\+Cenario\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8cpp_source_l00855}{855}} of file \mbox{\hyperlink{testes_8cpp_source}{testes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00855                                    \{}
+\DoxyCodeLine{00856     \mbox{\hyperlink{class_codigo}{Codigo}} codigo;}
+\DoxyCodeLine{00857     codigo.\mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{setValor}}(\mbox{\hyperlink{class_t_u_sessao_a6847c8c19c8938b04eb6891b150ef7d2}{VALOR\_VALIDO1}});}
+\DoxyCodeLine{00858     \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_aaff6d4f66c8621ca31e8020b399b2d21}{setCodigoE}}(codigo);}
+\DoxyCodeLine{00859     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_ad2d6ffa7a2ec1cbccb444d65c4f31b14}{getCodigoE}}().\mbox{\hyperlink{class_codigo_a6e2ed5bae94dfb53ee3d63f92cad1e47}{getValor}}() != \mbox{\hyperlink{class_t_u_sessao_a6847c8c19c8938b04eb6891b150ef7d2}{VALOR\_VALIDO1}})}
+\DoxyCodeLine{00860         \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}} = \mbox{\hyperlink{class_t_u_sessao_ad873b713232b6caeddea909743531689}{FALHA}};}
+\DoxyCodeLine{00861 }
+\DoxyCodeLine{00862     \mbox{\hyperlink{class_data}{Data}} data;}
+\DoxyCodeLine{00863     data.\mbox{\hyperlink{class_data_a75a50f88bc966f20826a3959717a5acc}{setData}}(\mbox{\hyperlink{class_t_u_sessao_a19b0b5e4d664f3dd740128c14a531617}{VALOR\_VALIDO2}});}
+\DoxyCodeLine{00864     \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_aaf4bf15bd68f6aadfbd86fcd6ab813a5}{setDataE}}(data);}
+\DoxyCodeLine{00865     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_a58e446277da2cbb25b450619c36ccb0e}{getDataE}}().\mbox{\hyperlink{class_data_a999feee401e4e3cefeb0b4c21e825d68}{getData}}() != \mbox{\hyperlink{class_t_u_sessao_a19b0b5e4d664f3dd740128c14a531617}{VALOR\_VALIDO2}})}
+\DoxyCodeLine{00866         \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}} = \mbox{\hyperlink{class_t_u_sessao_ad873b713232b6caeddea909743531689}{FALHA}};}
+\DoxyCodeLine{00867 }
+\DoxyCodeLine{00868     \mbox{\hyperlink{class_horario}{Horario}} horario;}
+\DoxyCodeLine{00869     horario.\mbox{\hyperlink{class_horario_a40c8660aecd2725dccd830b6248d1772}{setHorario}}(\mbox{\hyperlink{class_t_u_sessao_ad32490a814dafe42f8a437d651bda0bd}{VALOR\_VALIDO3}});}
+\DoxyCodeLine{00870     \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_ae56f4689ffbabceb4b7a16fd8ee384a9}{setHorarioE}}(horario);}
+\DoxyCodeLine{00871     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_a2ffeecd74f60e5f9f47691a4dce4b611}{getHorarioE}}().\mbox{\hyperlink{class_horario_aeed412eacf1d33c37ffffaed4686451e}{getHorario}}() != \mbox{\hyperlink{class_t_u_sessao_ad32490a814dafe42f8a437d651bda0bd}{VALOR\_VALIDO3}})}
+\DoxyCodeLine{00872         \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}} = \mbox{\hyperlink{class_t_u_sessao_ad873b713232b6caeddea909743531689}{FALHA}};}
+\DoxyCodeLine{00873 }
+\DoxyCodeLine{00874     \mbox{\hyperlink{class_idioma}{Idioma}} idioma;}
+\DoxyCodeLine{00875     idioma.\mbox{\hyperlink{class_idioma_a5c45d14cdaa691a0ac06f54845f4443e}{setIdioma}}(\mbox{\hyperlink{class_t_u_sessao_a8af381baf071db7f1e49ff87c50cfdb7}{VALOR\_VALIDO4}});}
+\DoxyCodeLine{00876     \mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_a42319c643a32108557afcb6a541f7b0c}{setIdiomaE}}(idioma);}
+\DoxyCodeLine{00877     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}{sessao}}-\/>\mbox{\hyperlink{class_sessao_a4e1f3235849b613ac6ec23e84400130c}{getIdiomaE}}().\mbox{\hyperlink{class_idioma_aed811d1088475cb801fe76b7668e6a6f}{getIdioma}}() != \mbox{\hyperlink{class_t_u_sessao_a8af381baf071db7f1e49ff87c50cfdb7}{VALOR\_VALIDO4}})}
+\DoxyCodeLine{00878         \mbox{\hyperlink{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}{estado}} = \mbox{\hyperlink{class_t_u_sessao_ad873b713232b6caeddea909743531689}{FALHA}};}
+\DoxyCodeLine{00879 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{testes_8h_source_l00346}{estado}}, \mbox{\hyperlink{testes_8h_source_l00352}{FALHA}}, \mbox{\hyperlink{entidades_8h_source_l00079}{Sessao\+::get\+Codigo\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00120}{Data\+::get\+Data()}}, \mbox{\hyperlink{entidades_8h_source_l00086}{Sessao\+::get\+Data\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00190}{Horario\+::get\+Horario()}}, \mbox{\hyperlink{entidades_8h_source_l00093}{Sessao\+::get\+Horario\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00213}{Idioma\+::get\+Idioma()}}, \mbox{\hyperlink{entidades_8h_source_l00100}{Sessao\+::get\+Idioma\+E()}}, \mbox{\hyperlink{dominio_8h_source_l00098}{Codigo\+::get\+Valor()}}, \mbox{\hyperlink{testes_8h_source_l00345}{sessao}}, \mbox{\hyperlink{entidades_8h_source_l00076}{Sessao\+::set\+Codigo\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00236}{Data\+::set\+Data()}}, \mbox{\hyperlink{entidades_8h_source_l00083}{Sessao\+::set\+Data\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00333}{Horario\+::set\+Horario()}}, \mbox{\hyperlink{entidades_8h_source_l00090}{Sessao\+::set\+Horario\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00375}{Idioma\+::set\+Idioma()}}, \mbox{\hyperlink{entidades_8h_source_l00097}{Sessao\+::set\+Idioma\+E()}}, \mbox{\hyperlink{dominio_8cpp_source_l00146}{Codigo\+::set\+Valor()}}, \mbox{\hyperlink{testes_8h_source_l00341}{VALOR\+\_\+\+VALIDO1}}, \mbox{\hyperlink{testes_8h_source_l00342}{VALOR\+\_\+\+VALIDO2}}, \mbox{\hyperlink{testes_8h_source_l00343}{VALOR\+\_\+\+VALIDO3}}, and \mbox{\hyperlink{testes_8h_source_l00344}{VALOR\+\_\+\+VALIDO4}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00881}{run()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}\label{class_t_u_sessao_a680ccebd0bc435850f0e83259b5c4c57}} 
+\index{TUSessao@{TUSessao}!estado@{estado}}
+\index{estado@{estado}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily int TUSessao\+::estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00346}{346}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00881}{run()}}, \mbox{\hyperlink{testes_8cpp_source_l00846}{set\+Up()}}, and \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_ad873b713232b6caeddea909743531689}\label{class_t_u_sessao_ad873b713232b6caeddea909743531689}} 
+\index{TUSessao@{TUSessao}!FALHA@{FALHA}}
+\index{FALHA@{FALHA}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{FALHA}{FALHA}}
+{\footnotesize\ttfamily const int TUSessao\+::\+FALHA = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00352}{352}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}\label{class_t_u_sessao_a7351a1384c0af3226c61faf12bf0b158}} 
+\index{TUSessao@{TUSessao}!sessao@{sessao}}
+\index{sessao@{sessao}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{sessao}{sessao}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sessao}{Sessao}}$\ast$ TUSessao\+::sessao\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00345}{345}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00846}{set\+Up()}}, \mbox{\hyperlink{testes_8cpp_source_l00851}{tear\+Down()}}, and \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a03506f1cbd2dc9cb5ec98e0b44b651bf}\label{class_t_u_sessao_a03506f1cbd2dc9cb5ec98e0b44b651bf}} 
+\index{TUSessao@{TUSessao}!SUCESSO@{SUCESSO}}
+\index{SUCESSO@{SUCESSO}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{SUCESSO}{SUCESSO}}
+{\footnotesize\ttfamily const int TUSessao\+::\+SUCESSO = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00351}{351}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00022}{main()}}, and \mbox{\hyperlink{testes_8cpp_source_l00846}{set\+Up()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a6847c8c19c8938b04eb6891b150ef7d2}\label{class_t_u_sessao_a6847c8c19c8938b04eb6891b150ef7d2}} 
+\index{TUSessao@{TUSessao}!VALOR\_VALIDO1@{VALOR\_VALIDO1}}
+\index{VALOR\_VALIDO1@{VALOR\_VALIDO1}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO1}{VALOR\_VALIDO1}}
+{\footnotesize\ttfamily string TUSessao\+::\+VALOR\+\_\+\+VALIDO1 = \char`\"{}123456\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00341}{341}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a19b0b5e4d664f3dd740128c14a531617}\label{class_t_u_sessao_a19b0b5e4d664f3dd740128c14a531617}} 
+\index{TUSessao@{TUSessao}!VALOR\_VALIDO2@{VALOR\_VALIDO2}}
+\index{VALOR\_VALIDO2@{VALOR\_VALIDO2}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO2}{VALOR\_VALIDO2}}
+{\footnotesize\ttfamily string TUSessao\+::\+VALOR\+\_\+\+VALIDO2 = \char`\"{}12 abr 2007\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00342}{342}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_ad32490a814dafe42f8a437d651bda0bd}\label{class_t_u_sessao_ad32490a814dafe42f8a437d651bda0bd}} 
+\index{TUSessao@{TUSessao}!VALOR\_VALIDO3@{VALOR\_VALIDO3}}
+\index{VALOR\_VALIDO3@{VALOR\_VALIDO3}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO3}{VALOR\_VALIDO3}}
+{\footnotesize\ttfamily string TUSessao\+::\+VALOR\+\_\+\+VALIDO3 = \char`\"{}23\+:59\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00343}{343}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+\mbox{\Hypertarget{class_t_u_sessao_a8af381baf071db7f1e49ff87c50cfdb7}\label{class_t_u_sessao_a8af381baf071db7f1e49ff87c50cfdb7}} 
+\index{TUSessao@{TUSessao}!VALOR\_VALIDO4@{VALOR\_VALIDO4}}
+\index{VALOR\_VALIDO4@{VALOR\_VALIDO4}!TUSessao@{TUSessao}}
+\doxysubsubsection{\texorpdfstring{VALOR\_VALIDO4}{VALOR\_VALIDO4}}
+{\footnotesize\ttfamily string TUSessao\+::\+VALOR\+\_\+\+VALIDO4 = \char`\"{}Portug\+UES\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{testes_8h_source_l00344}{344}} of file \mbox{\hyperlink{testes_8h_source}{testes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{testes_8cpp_source_l00855}{testar\+Cenario\+Sucesso()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testes_8h}{testes.\+h}}\item 
+\mbox{\hyperlink{testes_8cpp}{testes.\+cpp}}\end{DoxyCompactItemize}
