@@ -12,7 +12,7 @@
 #include <locale>
 #include "dominio.h"
 #include "testes.h"
-
+#include "entidades.h"
 using namespace std;
 
 /**************************************************************************************************

@@ -4,7 +4,7 @@
 #ifndef DOMINIO_H_INCLUDED
 #define DOMINIO_H_INCLUDED
 
-//#include <exception>
+#include <exception>
 
 using namespace std;
 
@@ -305,5 +305,6 @@ class Nome{
 inline const string Nome::getNome(){
     return nome;
 }
+
 #endif // DOMINIO_H_INCLUDED
 

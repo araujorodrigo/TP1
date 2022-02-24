@@ -2,9 +2,9 @@
 *   \version 1.0
 */
 
-/**************************************************************************************************
-                                         BIBLIOTECAS
-***************************************************************************************************/
+//  /**************************************************************************************************
+//                                         BIBLIOTECAS
+//  ***************************************************************************************************/
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -15,32 +15,17 @@
 #include <bits/stdc++.h>
 #include "dominio.h"
 #include "testes.h"
+#include "func.h"
 
 using namespace std;
 
-/**************************************************************************************************
-*                                  DESENVOLVIMENTO dominio.cpp
-**************************************************************************************************/
-///
-/// \brief Esta Funcao transforma os caracteres da string passada como parametro.
-/// lowerstr transforma caracteres maiusculos em minusculos.
-/// upperstr transforma caracteres minusculos em maiusculos.
-/// \param str
-/// \return void
-///
-void lowerstr(string &str){
-
-	transform(str.begin(), str.end(), str.begin(), ::tolower);
-}
-
-void upperstr(string &str){
-
-	transform(str.begin(), str.end(), str.begin(), ::toupper);
-}
+// **************************************************************************************************
+// *                                  DESENVOLVIMENTO dominio.cpp
+// **************************************************************************************************/
 
 
 ///
-/// \brief Duração do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
+/// \brief Duraç&atilde;o do passeio pode ser de 30, 60, 90, 120 ou 180 minutos.
 /// O instrutor pode oferecer seu passeio dentre estas opções de duração.
 /// A função abaixo busca validar o valor de entrada.
 /// \param valor

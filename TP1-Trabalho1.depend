@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1645671407 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\func.cpp
+	"func.h"
+
+1645671482 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\func.h
+	<iostream>
+	<string>
+	<cstring>
+	<algorithm>
+	<exception>
+	<cstdlib>
+	<regex>
+	<bits/stdc++.h>
+	"dominio.h"
+	"testes.h"
+	"func.h"
+
+1645671049 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.h
+	<exception>
+
+1645671049 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.h
+	<exception>
+	"dominio.h"
+	"entidades.h"
+
+1645669024 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\entidades.h
+	"dominio.h"
+	"testes.h"
+
+1645668482 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<locale>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+
+1645667262 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+
