@@ -510,19 +510,20 @@ void Cidade::setCidade (string nomeCidade){
     stringstream full_email(email);
     string intermediate;
     regex EMAIL_VALIDO("[a-zA-Z0-9!#\\$%&'*\\+\\-\\/=^_`{|}~\\.]{1,64}[@][a-zA-Z0-9\\.\\-]{1,253}");
+    regex CAR_INVALIDO("[\\[\\];:,<>¨ \"()ç\\ ]");
 
     // 1 verificacao de email: caracteres invalidos, comprimento de email e formato.
     if(!regex_search(email,matches,EMAIL_VALIDO))
-        throw invalid_argument ("Email invalido 1");
+        throw invalid_argument ("Email invalido. Tamanho ou formato invalido.");
 
     // 2 verificacao de email: Ocorrencia de ponto
     while(getline(full_email, intermediate, '@')){
         if(i == 0 && (intermediate.front() == '.' || intermediate.back() == '.')){
-            throw invalid_argument ("Email invalido 2A");
+            throw invalid_argument ("Email invalido. Parte-local iniciando ou terminado com ponto.");
         }
 
         if(i == 1 && intermediate.front() == '.'){
-            throw invalid_argument ("Email invalido 2B");
+            throw invalid_argument ("Email invalido. Parte dominio iniciando com ponto.");
         }
 
         i++;
@@ -531,7 +532,17 @@ void Cidade::setCidade (string nomeCidade){
 
     // 3 verificacao de email: Pontos duplos
     if(email.find("..") != string::npos){
-        throw invalid_argument ("Email invalido 3");
+        throw invalid_argument ("Email invalido. Pontos multiplos.");
+        }
+
+    // 4 verificacao de email: Char invalido
+    if(regex_search(email,matches,CAR_INVALIDO)){
+        throw invalid_argument ("Email invalido. Caractere invalido.");
+        }
+
+    // 5 verificacao de email: @ multiplo
+    if(count(email.begin(), email.end(), '@') > 1){
+        throw invalid_argument ("Email invalido. @ multiplos.");
         }
 
     }
@@ -569,15 +580,15 @@ void Cidade::setCidade (string nomeCidade){
 
     // 1 verificacao de nome: caracteres invalidos, comprimento de nome e formato.
     if(nome.length() < 5 || nome.length() > 20 || regex_search(nome,matches,CAR_INVALIDO))
-        throw invalid_argument ("Erro: NOME_INVALIDO");
+        throw invalid_argument ("Nome invalido: Tamanho ou formato invalido.");
 
     // 2 verificacao de nome: Ocorrencia nome iniciando minusculo
     if(regex_search(nome,matches,MINUSCULO_VALIDO_MEIO) || !regex_search(nome,matches,MINUSCULO_VALIDO_INICIO))
-        throw invalid_argument ("Erro: not MINUSCULO_VALIDO");
+        throw invalid_argument ("Nome invalido: Nome minusculo.");
 
     // 3 verificacao de nome: Ocorrencias com ponto e espaco
     if(regex_search(nome,matches,PONTO_ESPACO_INVALIDO))
-        throw invalid_argument ("Erro: PONTO_ESPACO_INVALIDO");
+        throw invalid_argument ("Nome invalido: Ponto usado de maneira incorreta.");
 
 }
 

@@ -46,7 +46,7 @@
 	"testes.h"
 	"func.h"
 
-1645746887 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.cpp
+1645749542 source:d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -62,7 +62,7 @@
 1645740360 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\dominio.h
 	<exception>
 
-1645746328 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.h
+1645749620 d:\users\iagoc\documents\unb_2021_2\tp1\trabalhos\trabalho1\tp1\testes.h
 	<exception>
 	"dominio.h"
 	"entidades.h"

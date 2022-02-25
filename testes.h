@@ -63,6 +63,7 @@ private:
     string VALOR_VALIDO   = "macau";    // char PARA string
     //const static
     string VALOR_INVALIDO = "brasilia"; // char PARA string
+
     Cidade *cidade;
     int estado;
     void setUp();
@@ -201,6 +202,7 @@ private:
     string VALOR_VALIDO = "PortugUES";
     //const static
     string VALOR_INVALIDO = "Sueco";
+
     Idioma *idioma;
     int estado;
     void setUp();
@@ -318,6 +320,7 @@ private:
      string             VALOR_VALIDO1   = "123456";                     // Codigo
     const static int    VALOR_VALIDO2   = 1;                            // Nota
      string             VALOR_VALIDO3   = "Excursao a pe em Macau.";    // Descrição
+
     Avaliacao *avaliacao;
     int estado;
     void setUp();
@@ -379,7 +382,8 @@ private:
      string             VALOR_VALIDO4   = "macau";                      // Cidade
      const static int   VALOR_VALIDO5   = 30;                           // Duracao
      string             VALOR_VALIDO6   = "Excursao a pe em Macau.";    // Descrição
-     string             VALOR_VALIDO7   = "Praca Civica  av. L2.";      // Endereço
+     string             VALOR_VALIDO7   = "Praca Civica av. L2.";       // Endereço
+
     Excursao *excursao;
     int estado;
     void setUp();
