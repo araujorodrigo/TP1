@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1645715740 source:c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\func.cpp
+	"func.h"
+
+1645763715 c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\func.h
+	<bits/stdc++.h>
+
+1645719059 source:c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<locale>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+
+1645765630 c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\dominio.h
+
+1645763790 c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\testes.h
+	"entidades.h"
+
+1645763762 c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\entidades.h
+
+1645763321 source:c:\users\rodry\desktop\doc-tp1\cÛdigo fonte\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+
+1645764852 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.cpp
+	<iostream>
+	<string>
+	<exception>
+	<regex>
+	"dominio.h"
+	"testes.h"
+	"func.h"
+
+1645765630 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\dominio.h
+
+1645763790 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.h
+	"entidades.h"
+
+1645763762 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\entidades.h
+
+1645763715 d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\func.h
+	<bits/stdc++.h>
+
+1645715740 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\func.cpp
+	"func.h"
+
+1645719059 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\main.cpp
+	<iostream>
+	<exception>
+	<string>
+	<locale>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+
+1645763321 source:d:\rodrigo\1-faculdade\gradua«√o\9∫ semestre\3. tp1\7. github\testes.cpp
+	<iostream>
+	<exception>
+	"dominio.h"
+	"testes.h"
+	"entidades.h"
+

@@ -6,53 +6,10 @@
 #ifndef DOMINIO_H_INCLUDED
 #define DOMINIO_H_INCLUDED
 
-#include <exception>
 
 using namespace std;
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe dura&ccedil;&atilde;o \n
-/// Dura&ccedil;&otilde;es poss&iacute;veis: 30, 60, 90, 120 e 180 minutos.
-///
-      class Duracao {
-          private:
-              int valor;                              ///< \var valor
-              void validar(int);                      ///< \param int
-          public:
-              void setValor(int valor);               ///< \param int
-              int getValor() const;
-      };
 
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return valor
-///
-      inline int Duracao::getValor() const{
-          return valor;
-      }
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe nota \n
-/// A nota da escurs&atilde;o &eacute; de 1 &agrave; 5.
-///
-      class Nota{
-           private:
-              int valor;                              ///< \var valor
-              void validar(int);                      ///< \param int
-          public:
-              void setValor(int valor);               ///< \param int
-              int getValor() const;
-      };
 
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return valor
-///
-      inline int Nota::getValor() const{
-          return valor;
-      }
 // Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe cidade \n
@@ -78,9 +35,11 @@ using namespace std;
           return nomeCidade;
       }
 
+
 // Rodrigo Alves Araujo 150147279
 ///
-/// \brief A Classe C&oacute;digo determina o c&oacute;digo para excurs&atilde;o. \n
+/// \brief A Classe C&oacute;digo \n
+/// Determina o c&oacute;digo para excurs&atilde;o. \n
 /// Os 6 primeiros d&iacute;gitos s&atilde;o de c&oacute;digo e o 7&ordm; &eacute; d&iacute;gito verificador.
 /// O algor&iacute;timo de verifica&ccedil;&atilde;o: M&oacute;dulo 11, tamb&eacute;m usado para determinar
 /// T&iacute;tulo eleitoral.
@@ -103,6 +62,8 @@ using namespace std;
       inline const string Codigo::getValor(){
           return valor;
       }
+
+
 // Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe de Data \n
@@ -128,6 +89,7 @@ using namespace std;
           return data;
       }
 
+
 // Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Descri&ccedil;&atilde;o \n
@@ -152,125 +114,30 @@ using namespace std;
           return descricao;
       }
 
+
 // Rodrigo Alves Araujo 150147279
 ///
-/// \brief Classe Endere&ccedil;o \n
+/// \brief Classe dura&ccedil;&atilde;o \n
+/// Dura&ccedil;&otilde;es poss&iacute;veis: 30, 60, 90, 120 e 180 minutos.
 ///
-/// Texto composto de 0 &agrave; 20 caracteres. Sem espa&ccedil;o ou ponto final duplos.
-///
-      class Endereco{
+      class Duracao {
           private:
-              string endereco;                        ///< \var valor
-              void   validar(string);                 ///< \param string
+              int valor;                              ///< \var valor
+              void validar(int);                      ///< \param int
           public:
-              void   setEndereco(string);             ///< \param string
-              const string getEndereco();             //Deve ser somente leitura
+              void setValor(int valor);               ///< \param int
+              int getValor() const;
       };
 
 ///
 /// \brief M&eacute;todo inline.
 ///
-/// \return endereco
+/// \return valor
 ///
-      inline const string Endereco::getEndereco(){
-          return endereco;
+      inline int Duracao::getValor() const{
+          return valor;
       }
 
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe Horario \n
-///
-/// A hora compreende de 00 at&eacute; 23 horas.
-/// Os minutos compreendem de 00 at&eacute; 59 minutos.
-      class Horario{
-          private:
-              string horario;                         ///< \var horario
-              void   validar(string);                 ///< \param string
-          public:
-              void   setHorario(string);              ///< \param string
-              const string getHorario();              //Deve ser somente leitura
-      };
-
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return horario
-///
-      inline const string Horario::getHorario(){
-          return horario;
-      }
-
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe Idioma \n
-/// Permite o armazenamento do idioma, caso esteja dentre os dispon&iacute;veis.
-///
-      class Idioma{
-          private:
-              string  idioma;                         ///< \var idioma
-              void    validar(string);                ///< \param string
-          public:
-              void  setIdioma(string);                ///< \param string
-              const string getIdioma();               //Deve ser somente leitura
-
-      };
-
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return idioma
-///
-      inline const string Idioma::getIdioma(){
-          return idioma;
-      }
-
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe Titulo \n
-/// O T&iacute;tulo deve conter de 5 &agrave; 20 letras e n&atilde;o h&aacute; espa&ccedil;o ou ponto final duplos.
-///
-      class Titulo{
-          private:
-              string  titulo;                         ///< \var titulo
-              void    validar(string);                ///< \param string
-          public:
-              void  setTitulo(string);                ///< \param string
-              const string getTitulo();               //Deve ser somente leitura
-      };
-
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return titulo
-///
-      inline const string Titulo::getTitulo(){
-          return titulo;
-      }
-
-// Rodrigo Alves Araujo 150147279
-///
-/// \brief Classe Senha \n
-/// A senha deve ser composta de 6 d&iacute;gitos, pode ser letra ou n&uacute;mero.
-/// Entretanto, n&atilde;o &eacute; v&aacute;lido car&aacute;cter repetido.
-/// E tamb&eacute;m, deve conter pelo menos 1 car&aacute;cter mai&uacute;sculo, 1 min&uacute;sculo e 1 n&uacute;mero.
-///
-      class Senha{
-          private:
-              string  senha;                          ///< \var senha
-              void    validar(string);                ///< \param string
-          public:
-              void  setSenha(string);                 ///< \param string
-              const string getSenha();                //Deve ser somente leitura
-      };
-
-///
-/// \brief M&eacute;todo inline.
-///
-/// \return senha
-///
-      inline const string Senha::getSenha(){
-          return senha;
-      }
 
 // Iago Cossentino de Andrade 170012441
 ///
@@ -297,6 +164,82 @@ using namespace std;
           return email;
       }
 
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe Endere&ccedil;o \n
+///
+/// Texto composto de 0 &agrave; 20 caracteres. Sem espa&ccedil;o ou ponto final duplos.
+///
+      class Endereco{
+          private:
+              string endereco;                        ///< \var valor
+              void   validar(string);                 ///< \param string
+          public:
+              void   setEndereco(string);             ///< \param string
+              const string getEndereco();             //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return endereco
+///
+      inline const string Endereco::getEndereco(){
+          return endereco;
+      }
+
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe Horario \n
+///
+/// A hora compreende de 00 at&eacute; 23 horas.
+/// Os minutos compreendem de 00 at&eacute; 59 minutos.
+      class Horario{
+          private:
+              string horario;                         ///< \var horario
+              void   validar(string);                 ///< \param string
+          public:
+              void   setHorario(string);              ///< \param string
+              const string getHorario();              //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return horario
+///
+      inline const string Horario::getHorario(){
+          return horario;
+      }
+
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe Idioma \n
+/// Permite o armazenamento do idioma, caso esteja dentre os dispon&iacute;veis.
+///
+      class Idioma{
+          private:
+              string  idioma;                         ///< \var idioma
+              void    validar(string);                ///< \param string
+          public:
+              void  setIdioma(string);                ///< \param string
+              const string getIdioma();               //Deve ser somente leitura
+
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return idioma
+///
+      inline const string Idioma::getIdioma(){
+          return idioma;
+      }
+
+
 // Iago Cossentino de Andrade 170012441
 ///
 /// Classe Nome \n
@@ -313,6 +256,7 @@ using namespace std;
               const string getNome();                 //Deve ser somente leitura
 
       };
+
 ///
 /// \brief M&eacute;todo inline.
 ///
@@ -321,6 +265,81 @@ using namespace std;
       inline const string Nome::getNome(){
             return nome;
       }
+
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe nota \n
+/// A nota da escurs&atilde;o &eacute; de 1 &agrave; 5.
+///
+      class Nota{
+           private:
+              int valor;                              ///< \var valor
+              void validar(int);                      ///< \param int
+          public:
+              void setValor(int valor);               ///< \param int
+              int getValor() const;
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return valor
+///
+      inline int Nota::getValor() const{
+          return valor;
+      }
+
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe Senha \n
+/// A senha deve ser composta de 6 d&iacute;gitos, pode ser letra ou n&uacute;mero.
+/// Entretanto, n&atilde;o &eacute; v&aacute;lido car&aacute;cter repetido.
+/// E tamb&eacute;m, deve conter pelo menos 1 car&aacute;cter mai&uacute;sculo, 1 min&uacute;sculo e 1 n&uacute;mero.
+///
+      class Senha{
+          private:
+              string  senha;                          ///< \var senha
+              void    validar(string);                ///< \param string
+          public:
+              void  setSenha(string);                 ///< \param string
+              const string getSenha();                //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return senha
+///
+      inline const string Senha::getSenha(){
+          return senha;
+      }
+
+
+// Rodrigo Alves Araujo 150147279
+///
+/// \brief Classe Titulo \n
+/// O T&iacute;tulo deve conter de 5 &agrave; 20 letras e n&atilde;o h&aacute; espa&ccedil;o ou ponto final duplos.
+///
+      class Titulo{
+          private:
+              string  titulo;                         ///< \var titulo
+              void    validar(string);                ///< \param string
+          public:
+              void  setTitulo(string);                ///< \param string
+              const string getTitulo();               //Deve ser somente leitura
+      };
+
+///
+/// \brief M&eacute;todo inline.
+///
+/// \return titulo
+///
+      inline const string Titulo::getTitulo(){
+          return titulo;
+      }
+
 
 #endif // DOMINIO_H_INCLUDED
 

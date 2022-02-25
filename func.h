@@ -6,8 +6,7 @@
 #ifndef FUNC_H_INCLUDED
 #define FUNC_H_INCLUDED
 
-
-#include <string>
+// Biblioteca auxiliar
 #include <bits/stdc++.h>
 
 

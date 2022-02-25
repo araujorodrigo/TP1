@@ -9,12 +9,8 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
-#include <algorithm>
 #include <exception>
-#include <cstdlib>
 #include <regex>
-#include <bits/stdc++.h>
 #include "dominio.h"
 #include "testes.h"
 #include "func.h"
@@ -327,7 +323,7 @@ void Cidade::setCidade (string nomeCidade){
 ///
 /// \param horario
 ///
-/// \throw invalid argment("Horario invalido.")
+/// \throw invalid argument("Horario invalido.")
 ///
     void Horario::validar(string horario){
     smatch matches;

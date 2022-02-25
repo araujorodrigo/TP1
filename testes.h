@@ -6,9 +6,7 @@
 #ifndef TESTES_H_INCLUDED
 #define TESTES_H_INCLUDED
 
-//Inclusão de bibliotecas auxiliares
-#include <exception>
-#include "dominio.h"
+// biblioteca auxiliar
 #include "entidades.h"
 
 using namespace std;
