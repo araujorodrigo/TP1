@@ -11,7 +11,8 @@
 using namespace std;
 
 ///
-/// \brief Classe dura&ccedil;&atilde;o
+/// \brief Classe dura&ccedil;&atilde;o \n
+/// Dura&ccedil;&otilde;es poss&iacute;veis: 30, 60, 90, 120 e 180 minutos.
 ///
       class Duracao {
           private:
@@ -32,7 +33,8 @@ using namespace std;
       }
 
 ///
-/// \brief Classe nota
+/// \brief Classe nota \n
+/// A nota da escurs&atilde;o &eacute; de 1 &agrave; 5.
 ///
       class Nota{
            private:
@@ -53,7 +55,10 @@ using namespace std;
       }
 
 ///
-/// \brief Classe cidade
+/// \brief Classe cidade \n
+///
+/// H&aacute; 16 cidades poss&iacute;veis: hong kong, bangkok, macau, singapura, londres, paris, dubai, delhi, istambul, kuala,
+/// lumpur, nova iorque, antalya, mumbai, shenzhen, phuket.
 ///
       class Cidade{
           private:
@@ -74,7 +79,7 @@ using namespace std;
       }
 
 ///
-/// \brief A Classe C&oacute;digo determina o c&oacute;digo para excurs&atilde;o.
+/// \brief A Classe C&oacute;digo determina o c&oacute;digo para excurs&atilde;o. \n
 /// Os 6 primeiros d&iacute;gitos s&atilde;o de c&oacute;digo e o 7&ordm; &eacute; d&iacute;gito verificador.
 /// O algor&iacute;timo de verifica&ccedil;&atilde;o: M&oacute;dulo 11, tamb&eacute;m usado para determinar
 /// T&iacute;tulo eleitoral.
@@ -99,7 +104,7 @@ using namespace std;
       }
 
 ///
-/// \brief Classe de Data
+/// \brief Classe de Data \n
 ///
 /// Mecanismo de data compreende desde o ano 2000 at&eacute; o ano 9999.
 /// Para o m&ecirc;s devem ser escritos os 3 primeiros caracteres.
@@ -124,7 +129,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Descri&ccedil;&atilde;o
+/// \brief Classe Descri&ccedil;&atilde;o \n
 ///
 /// Texto composto de 0 &agrave; 30 caracteres. Sem espa&ccedil;o ou ponto final duplos.
 ///
@@ -148,7 +153,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Endere&ccedil;o
+/// \brief Classe Endere&ccedil;o \n
 ///
 /// Texto composto de 0 &agrave; 20 caracteres. Sem espa&ccedil;o ou ponto final duplos.
 ///
@@ -172,7 +177,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Horario
+/// \brief Classe Horario \n
 ///
 /// A hora compreende de 00 at&eacute; 23 horas.
 /// Os minutos compreendem de 00 at&eacute; 59 minutos.
@@ -196,7 +201,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Idioma
+/// \brief Classe Idioma \n
 /// Permite o armazenamento do idioma, caso esteja dentre os dispon&iacute;veis.
 ///
       class Idioma{
@@ -220,7 +225,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Titulo
+/// \brief Classe Titulo \n
 /// O T&iacute;tulo deve conter de 5 &agrave; 20 letras e n&atilde;o h&aacute; espa&ccedil;o ou ponto final duplos.
 ///
       class Titulo{
@@ -243,7 +248,7 @@ using namespace std;
 
 
 ///
-/// \brief Classe Senha
+/// \brief Classe Senha \n
 /// A senha deve ser composta de 6 d&iacute;gitos, pode ser letra ou n&uacute;mero.
 /// Entretanto, n&atilde;o &eacute; v&aacute;lido car&aacute;cter repetido.
 /// E tamb&eacute;m, deve conter pelo menos 1 car&aacute;cter mai&uacute;sculo, 1 min&uacute;sculo e 1 n&uacute;mero.
@@ -268,7 +273,7 @@ using namespace std;
 
 
 ///
-/// A Classe Email
+/// A Classe Email \n
 /// Email &eacute; composto por parte-local: at&eacute; 64 caracteres, n&atilde;o iniciado ou finalizado por ponto final e que n&atilde;o seja duplo.
 /// Email tamb&eacute;m &eacute; composto por dom&iacute;nio: at&eacute; 253 caracteres, podem ser letras, n&uacute;meros, h&iacute;fen e ponto final, desde que n&atilde;o esteja no in&iacute;cio, fim ou seja duplo.
 ///
@@ -293,7 +298,7 @@ using namespace std;
 
 
 ///
-/// Classe Nome
+/// Classe Nome \n
 /// Nome &eacute; composto de 5 &agrave; 20 caracteres, podendo ser letra mai&uacute;scula ou min&uacute;scula, espa&ccedil;o ou ponto final.
 /// Primeiro car&aacute;cter deve ser letra mai&uacute;scula, n&atilde;o &eacute; permitido espa&ccdeil;os duplos.
 /// Ponto final &eacute; precedido por letra, estar antes de espa&ccedil;o ou &eacute; &uacute;ltimo car&aacute;cter.

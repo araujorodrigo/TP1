@@ -18,19 +18,19 @@ using namespace std;
 ///
 class TUDuracao {
 private:
-    const static int VALOR_VALIDO   = 30;   
-    const static int VALOR_INVALIDO = 10;   
-    Duracao *duracao;                       
-    int estado;                             
-    void setUp();                           
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    const static int VALOR_VALIDO   = 30;
+    const static int VALOR_INVALIDO = 10;
+    Duracao *duracao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -39,40 +39,41 @@ public:
 ///
 class TUNota {
 private:
-    const static int VALOR_VALIDO   = 1;   
-    const static int VALOR_INVALIDO = 10;  
-    Nota *nota;                            
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    const static int VALOR_VALIDO   = 1;
+    const static int VALOR_INVALIDO = 10;
+    Nota *nota;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
 /// \brief Classe de Teste de unidade da classe Cidade
+///
 class TUCidade {
 private:
     //const static
-    string VALOR_VALIDO   = "macau";    /// char PARA string
+    string VALOR_VALIDO   = "macau";    // char PARA string
     //const static
-    string VALOR_INVALIDO = "brasilia"; /// char PARA string
-    Cidade *cidade;                            
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    string VALOR_INVALIDO = "brasilia"; // char PARA string
+    Cidade *cidade;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -82,20 +83,20 @@ public:
 class TUCodigo {
 private:
     //const static
-    string VALOR_VALIDO = "123456";        
+    string VALOR_VALIDO = "123456";
     //const static
-    string VALOR_INVALIDO = "012";         
-    Codigo *codigo;                        
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    string VALOR_INVALIDO = "012";
+    Codigo *codigo;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -104,20 +105,20 @@ public:
 class TUData {
 private:
     //const static
-    string VALOR_VALIDO = "12 abr 2007";        
+    string VALOR_VALIDO = "12 abr 2007";
     //const static
-    string VALOR_INVALIDO = "29 fev 2005";         
-    Data *data;                        
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    string VALOR_INVALIDO = "29 fev 2005";
+    Data *data;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -126,20 +127,20 @@ public:
 class TUDescricao {
 private:
     //const static
-    string VALOR_VALIDO = "Excursao a pe em Macau.";        
+    string VALOR_VALIDO = "Excursao a pe em Macau.";
     //const static
-    string VALOR_INVALIDO = "Excursao a  pe em Macau.";         
-    Descricao *descricao;                        
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
-    void testarCenarioFalha();              
+    string VALOR_INVALIDO = "Excursao a  pe em Macau.";
+    Descricao *descricao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -149,20 +150,20 @@ public:
 class TUEndereco {
 private:
     //const static
-    string VALOR_VALIDO = "Praca Civica av. L2.";              
+    string VALOR_VALIDO = "Praca Civica av. L2.";
     //const static
-    string VALOR_INVALIDO = "Praca Civica av..L2.";           
-    Endereco *endereco;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "Praca Civica av..L2.";
+    Endereco *endereco;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -173,20 +174,20 @@ public:
 class TUHorario {
 private:
     //const static
-    string VALOR_VALIDO = "23:59";              
+    string VALOR_VALIDO = "23:59";
     //const static
-    string VALOR_INVALIDO = "24:00";           
-    Horario *horario;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "24:00";
+    Horario *horario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -197,20 +198,20 @@ public:
 class TUIdioma {
 private:
     //const static
-    string VALOR_VALIDO = "PortugUES";   /// ESTA LINHA FOI DE char PARA string           
+    string VALOR_VALIDO = "PortugUES";
     //const static
-    string VALOR_INVALIDO = "Sueco";     /// ESTA LINHA FOI DE char PARA string      
-    Idioma *idioma;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "Sueco";
+    Idioma *idioma;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -221,20 +222,20 @@ public:
 class TUTitulo {
 private:
     //const static
-    string VALOR_VALIDO = "Excursao Safari";              
+    string VALOR_VALIDO = "Excursao Safari";
     //const static
-    string VALOR_INVALIDO = "Excursa0  Safari..";           
-    Titulo *titulo;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "Excursa0  Safari..";
+    Titulo *titulo;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 
@@ -245,20 +246,20 @@ public:
 class TUSenha {
 private:
     //const static
-    string VALOR_VALIDO = "5EnH4a";              
+    string VALOR_VALIDO = "5EnH4a";
     //const static
-    string VALOR_INVALIDO = "%5EnH4";           
-    Senha *senha;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "%5EnH4";
+    Senha *senha;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -267,20 +268,20 @@ public:
 class TUEmail {
 private:
     //const static
-    string VALOR_VALIDO = "iago.cossentino@gmailcom";              
+    string VALOR_VALIDO = "iago.cossentino@gmailcom";
     //const static
-    string VALOR_INVALIDO = "ya.@mail!";           
-    Email *email;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "ya.@mail!";
+    Email *email;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -289,20 +290,20 @@ public:
 class TUNome {
 private:
     //const static
-    string VALOR_VALIDO = "Iago C.";              
+    string VALOR_VALIDO = "Iago C.";
     //const static
-    string VALOR_INVALIDO = "Ya.go";           
-    Nome *nome;                                            
-    int estado;                                                    
-    void setUp();                                                  
-    void tearDown();                                               
-    void testarCenarioSucesso();                                    
-    void testarCenarioFalha();                                      
+    string VALOR_INVALIDO = "Ya.go";
+    Nome *nome;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
 
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 // ************************************************************************************************/
@@ -316,16 +317,16 @@ class TUAvaliacao {
 private:
      string             VALOR_VALIDO1   = "123456";                     // Codigo
     const static int    VALOR_VALIDO2   = 1;                            // Nota
-     string             VALOR_VALIDO3   = "Excursao a pe em Macau.";   // Descrição
-    Avaliacao *avaliacao;                  
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
+     string             VALOR_VALIDO3   = "Excursao a pe em Macau.";    // Descrição
+    Avaliacao *avaliacao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -333,18 +334,18 @@ public:
 ///
 class TUUsuario {
 private:
-     string             VALOR_VALIDO1   = "Iago C.";                       // Nome
+     string             VALOR_VALIDO1   = "Iago C.";                    // Nome
      string             VALOR_VALIDO2   = "iago.cossentino@gmail.com";  // Email
      string             VALOR_VALIDO3   = "5EnH4a";                     // Senha
-    Usuario *usuario;                      
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
+    Usuario *usuario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -356,15 +357,15 @@ private:
      string             VALOR_VALIDO2   = "12 abr 2007";                // Data
      string             VALOR_VALIDO3   = "23:59";                      // Horario
      string             VALOR_VALIDO4   = "PortugUES";                  // Idioma
-    Sessao *sessao;                        
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
+    Sessao *sessao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 
 ///
@@ -377,16 +378,16 @@ private:
      const static int   VALOR_VALIDO3   = 1;                            // Nota
      string             VALOR_VALIDO4   = "macau";                      // Cidade
      const static int   VALOR_VALIDO5   = 30;                           // Duracao
-     string             VALOR_VALIDO6   = "Excursao a pe em Macau.";   // Descrição
-     string             VALOR_VALIDO7   = "Praca Civica av. L2.";       // Endereço
-    Excursao *excursao;                   
-    int estado;                            
-    void setUp();                          
-    void tearDown();                       
-    void testarCenarioSucesso();            
+     string             VALOR_VALIDO6   = "Excursao a pe em Macau.";    // Descrição
+     string             VALOR_VALIDO7   = "Praca Civica  av. L2.";      // Endereço
+    Excursao *excursao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
 public:
-    const static int SUCESSO =  0;          
-    const static int FALHA   = -1;          
-    int run();                              
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
 };
 #endif //TESTES_H_INCLUDED
