@@ -1,8 +1,8 @@
 @mainpage Excurs&atilde;o guiada &agrave; p&eacute;.
 
-@author Iago Cossentino
+@author Iago Cossentino 170012441
 _______
-@author Rodrigo Alves
+@author Rodrigo Alves 150147279
 _______
 @date 23 de Fevereiro de 2022
 

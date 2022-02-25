@@ -9,7 +9,7 @@
 #include <exception>
 
 using namespace std;
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe dura&ccedil;&atilde;o \n
 /// Dura&ccedil;&otilde;es poss&iacute;veis: 30, 60, 90, 120 e 180 minutos.
@@ -31,7 +31,7 @@ using namespace std;
       inline int Duracao::getValor() const{
           return valor;
       }
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe nota \n
 /// A nota da escurs&atilde;o &eacute; de 1 &agrave; 5.
@@ -53,7 +53,7 @@ using namespace std;
       inline int Nota::getValor() const{
           return valor;
       }
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe cidade \n
 ///
@@ -78,6 +78,7 @@ using namespace std;
           return nomeCidade;
       }
 
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief A Classe C&oacute;digo determina o c&oacute;digo para excurs&atilde;o. \n
 /// Os 6 primeiros d&iacute;gitos s&atilde;o de c&oacute;digo e o 7&ordm; &eacute; d&iacute;gito verificador.
@@ -102,7 +103,7 @@ using namespace std;
       inline const string Codigo::getValor(){
           return valor;
       }
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe de Data \n
 ///
@@ -127,7 +128,7 @@ using namespace std;
           return data;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Descri&ccedil;&atilde;o \n
 ///
@@ -151,7 +152,7 @@ using namespace std;
           return descricao;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Endere&ccedil;o \n
 ///
@@ -175,7 +176,7 @@ using namespace std;
           return endereco;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Horario \n
 ///
@@ -199,7 +200,7 @@ using namespace std;
           return horario;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Idioma \n
 /// Permite o armazenamento do idioma, caso esteja dentre os dispon&iacute;veis.
@@ -223,7 +224,7 @@ using namespace std;
           return idioma;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Titulo \n
 /// O T&iacute;tulo deve conter de 5 &agrave; 20 letras e n&atilde;o h&aacute; espa&ccedil;o ou ponto final duplos.
@@ -246,7 +247,7 @@ using namespace std;
           return titulo;
       }
 
-
+// Rodrigo Alves Araujo 150147279
 ///
 /// \brief Classe Senha \n
 /// A senha deve ser composta de 6 d&iacute;gitos, pode ser letra ou n&uacute;mero.
@@ -271,7 +272,7 @@ using namespace std;
           return senha;
       }
 
-
+// Iago Cossentino de Andrade 170012441
 ///
 /// A Classe Email \n
 /// Email &eacute; composto por parte-local: at&eacute; 64 caracteres, n&atilde;o iniciado ou finalizado por ponto final e que n&atilde;o seja duplo.
@@ -296,7 +297,7 @@ using namespace std;
           return email;
       }
 
-
+// Iago Cossentino de Andrade 170012441
 ///
 /// Classe Nome \n
 /// Nome &eacute; composto de 5 &agrave; 20 caracteres, podendo ser letra mai&uacute;scula ou min&uacute;scula, espa&ccedil;o ou ponto final.
