@@ -38,6 +38,7 @@
 		<Unit filename="entidades.h" />
 		<Unit filename="func.cpp" />
 		<Unit filename="func.h" />
+		<Unit filename="interfaces.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="testes.cpp" />
 		<Unit filename="testes.h" />
